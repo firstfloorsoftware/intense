@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PackageManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011" xmlns:d="http://schemas.microsoft.com/developer/vsx-schema-design/2011">
+  <Metadata>
+    <Identity Id="UWPTemplates.FirstFloorSoftware.41bbea9a-56db-4624-b59b-62b70adcc598" Version="0.1" Language="en-US" Publisher="First Floor Software" />
+    <DisplayName>UWP Templates</DisplayName>
+    <Description xml:space="preserve">A collection of additional project and item templates for creating Universal Windows Platform (UWP) apps.</Description>
+    <MoreInfo>https://github.com/firstfloorsoftware/uwptemplates</MoreInfo>
+    <Tags>uwp</Tags>
+  </Metadata>
+  <Installation>
+    <InstallationTarget Id="Microsoft.VisualStudio.Community" Version="[14.0]" />
+  </Installation>
+  <Dependencies>
+  </Dependencies>
+  <Assets>
+    <Asset Type="Microsoft.VisualStudio.ProjectTemplate" d:Source="Project" d:ProjectName="CompositionAppTemplate" d:TargetPath="|CompositionAppTemplate;TemplateProjectOutputGroup|" Path="ProjectTemplates" d:VsixSubPath="ProjectTemplates" />
+    <Asset Type="Microsoft.VisualStudio.ProjectTemplate" d:Source="Project" d:ProjectName="BlankAppTemplate" d:TargetPath="|BlankAppTemplate;TemplateProjectOutputGroup|" Path="ProjectTemplates" d:VsixSubPath="ProjectTemplates" />
+    <Asset Type="Microsoft.VisualStudio.ProjectTemplate" d:Source="Project" d:ProjectName="CompositionXamlAppTemplate" d:TargetPath="|CompositionXamlAppTemplate;TemplateProjectOutputGroup|" Path="ProjectTemplates" d:VsixSubPath="ProjectTemplates" />
+  </Assets>
+</PackageManifest>
