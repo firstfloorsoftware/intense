@@ -1,0 +1,30 @@
+﻿<Page
+    x:Class="$safeprojectname$.Pages.WelcomePage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:$safeprojectname$.Pages"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <ScrollViewer Style="{StaticResource PageScrollViewerStyle}">
+            <StackPanel>
+                <TextBlock Text="Welcome" Style="{StaticResource TitleTextBlockStyle}" />
+                <TextBlock Style="{StaticResource ParagraphTextBlockStyle}">
+                    <Run Text="Thank you for installing the UWP templates. This is a Univeral Windows project template for multi-page apps. Among others this project uses the following concepts and patterns;" />
+                    <LineBreak /><LineBreak />
+                    <Run Text="• SplitView navigation pattern" /><LineBreak />
+                    <Run Text="• Adaptive layout using the new AdaptiveTrigger of the VisualStateManager" /><LineBreak />
+                    <Run Text="• Basic MVVM (easily swappable for a 3rd party alternative, or your own version)" /><LineBreak />
+                    <Run Text="• Soft- and hardware back button support" /><LineBreak />
+                    <Run Text="• Proper use of font styles according to the " /><Hyperlink NavigateUri="https://msdn.microsoft.com/en-us/library/windows/apps/hh700394.aspx"><Run Text="Universal Windows Platform font guidelines" /></Hyperlink><LineBreak />
+                    <Run Text="• Extensive use of Segoe MDL2 Assets for icons" /><LineBreak />
+                    <Run Text="• {x:Bind} for performant bindings" />
+                </TextBlock>
+                
+                <TextBlock Text="Happy coding!" />
+            </StackPanel>
+        </ScrollViewer>
+    </Grid>
+</Page>

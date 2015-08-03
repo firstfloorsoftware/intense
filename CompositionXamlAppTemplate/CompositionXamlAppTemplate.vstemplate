@@ -7,7 +7,7 @@
     <TemplateID>FirstFloor.CS.UWP.CompositionXamlApp</TemplateID>
     <TemplateGroupID>WinRT-Managed</TemplateGroupID>
     <ProjectType>CSharp</ProjectType>
-    <SortOrder>1002</SortOrder>
+    <SortOrder>1003</SortOrder>
     <CreateNewFolder>true</CreateNewFolder>
     <DefaultName>CompositionXamlApp</DefaultName>
     <ProvideDefaultName>true</ProvideDefaultName>

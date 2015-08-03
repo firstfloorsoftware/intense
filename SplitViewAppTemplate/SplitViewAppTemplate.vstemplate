@@ -1,15 +1,15 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <VSTemplate Version="3.0.0" Type="Project" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005">
   <TemplateData>
-    <Name>🌼 Composition App (Universal Windows)</Name>
-    <Description>A framework-less project for starting with the Windows.UI.Composition APIs in Universal Windows Apps.</Description>
-    <Icon>CompositionAppTemplate.ico</Icon>
-    <TemplateID>FirstFloor.CS.UWP.CompositionApp</TemplateID>
+    <Name>🌼 SplitView App (Universal Windows)</Name>
+    <Description>A project for a multi-page Universal Windows Platform app with an adaptive split view layout.</Description>
+    <Icon>SplitViewAppTemplate.ico</Icon>
+    <TemplateID>FirstFloor.CS.UWP.SplitViewApp</TemplateID>
     <TemplateGroupID>WinRT-Managed</TemplateGroupID>
     <ProjectType>CSharp</ProjectType>
-    <SortOrder>1002</SortOrder>
+    <SortOrder>1001</SortOrder>
     <CreateNewFolder>true</CreateNewFolder>
-    <DefaultName>CompositionApp</DefaultName>
+    <DefaultName>SplitViewApp</DefaultName>
     <ProvideDefaultName>true</ProvideDefaultName>
     <LocationField>Enabled</LocationField>
     <EnableLocationBrowseButton>true</EnableLocationBrowseButton>
@@ -17,13 +17,15 @@
     <TargetPlatformName>Windows</TargetPlatformName>
     <RequiredPlatformVersion>6.1.0</RequiredPlatformVersion>
     <CreateInPlace>true</CreateInPlace>
-    <PreviewImage>CompositionApp.png</PreviewImage>
+    <PreviewImage>SplitViewApp.png</PreviewImage>
     <AppIdFilter>blend</AppIdFilter>
   </TemplateData>
   <TemplateContent PreferedSolutionConfiguration="Debug|x86">
     <Project File="ProjectTemplate.csproj" ReplaceParameters="true">
-      <ProjectItem ReplaceParameters="true" TargetFileName="MainView.cs">MainView.cs</ProjectItem>
-      <ProjectItem ReplaceParameters="true" TargetFileName="MainViewFactory.cs">MainViewFactory.cs</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="App.xaml">App.xaml</ProjectItem>
+      <ProjectItem ReplaceParameters="true" OpenInEditor="!blend" TargetFileName="App.xaml.cs">App.xaml.cs</ProjectItem>
+      <ProjectItem ReplaceParameters="true" OpenInEditor="blend" TargetFileName="Shell.xaml">Shell.xaml</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="Shell.xaml.cs">Shell.xaml.cs</ProjectItem>
       <ProjectItem ReplaceParameters="false" TargetFileName="project.json">template.project.json</ProjectItem>
       <ProjectItem ReplaceParameters="true" TargetFileName="Package.appxmanifest">template.Package.appxmanifest</ProjectItem>
       <ProjectItem ReplaceParameters="false" TargetFileName="$projectname$_TemporaryKey.pfx" BlendDoNotCreate="true">Application_TemporaryKey.pfx</ProjectItem>
@@ -40,7 +42,24 @@
         <ProjectItem ReplaceParameters="false" TargetFileName="StoreLogo.png">StoreLogo.png</ProjectItem>
         <ProjectItem ReplaceParameters="false" TargetFileName="Wide310x150Logo.scale-200.png">Wide310x150Logo.scale-200.png</ProjectItem>
       </Folder>
-    </Project>
+      <Folder Name="Pages" TargetFolderName="Pages">
+        <ProjectItem ReplaceParameters="true" OpenInEditor="blend" TargetFileName="Page1.xaml">Page1.xaml</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="Page1.xaml.cs">Page1.xaml.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" OpenInEditor="blend" TargetFileName="Page2.xaml">Page2.xaml</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="Page2.xaml.cs">Page2.xaml.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" OpenInEditor="blend" TargetFileName="Page3.xaml">Page3.xaml</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="Page3.xaml.cs">Page3.xaml.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" OpenInEditor="blend" TargetFileName="WelcomePage.xaml">WelcomePage.xaml</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="WelcomePage.xaml.cs">WelcomePage.xaml.cs</ProjectItem>
+      </Folder>
+      <Folder Name="Presentation" TargetFolderName="Presentation">
+        <ProjectItem ReplaceParameters="true" TargetFileName="Command.cs">Command.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="MenuItem.cs">MenuItem.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="NotifyPropertyChanged.cs">NotifyPropertyChanged.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="ObjectToMenuItemConverter.cs">ObjectToMenuItemConverter.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="ShellViewModel.cs">ShellViewModel.cs</ProjectItem>
+      </Folder>
+      </Project>
   </TemplateContent>
   <WizardExtension>
     <Assembly>Microsoft.VisualStudio.WinRT.TemplateWizards, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</Assembly>
