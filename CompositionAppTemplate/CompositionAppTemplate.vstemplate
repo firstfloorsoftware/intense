@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <VSTemplate Version="3.0.0" Type="Project" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005">
   <TemplateData>
-    <Name>Composition App (Universal Windows) 🌼</Name>
+    <Name>🌼 Composition App (Universal Windows)</Name>
     <Description>A framework-less project for starting with the Windows.UI.Composition APIs in Universal Windows Apps.</Description>
     <Icon>CompositionAppTemplate.ico</Icon>
     <TemplateID>FirstFloor.CS.UWP.CompositionApp</TemplateID>
@@ -9,7 +9,7 @@
     <ProjectType>CSharp</ProjectType>
     <SortOrder>1001</SortOrder>
     <CreateNewFolder>true</CreateNewFolder>
-    <DefaultName>App</DefaultName>
+    <DefaultName>CompositionApp</DefaultName>
     <ProvideDefaultName>true</ProvideDefaultName>
     <LocationField>Enabled</LocationField>
     <EnableLocationBrowseButton>true</EnableLocationBrowseButton>
