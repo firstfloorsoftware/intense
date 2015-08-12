@@ -24,14 +24,14 @@
 
         <Style x:Key="IconButtonStyle" TargetType="Button" BasedOn="{StaticResource TextBlockButtonStyle}">
             <Setter Property="FontFamily" Value="Segoe MDL2 Assets" />
-            <Setter Property="FontSize" Value="24" />
+            <Setter Property="FontSize" Value="20" />
             <Setter Property="Width" Value="48" />
             <Setter Property="Height" Value="48" />
         </Style>
 
         <Style x:Key="IconTextBlockStyle" TargetType="TextBlock">
             <Setter Property="FontFamily" Value="Segoe MDL2 Assets" />
-            <Setter Property="FontSize" Value="24" />
+            <Setter Property="FontSize" Value="16" />
             <Setter Property="Width" Value="48" />
             <Setter Property="HorizontalAlignment" Value="Center" />
             <Setter Property="VerticalAlignment" Value="Center" />
