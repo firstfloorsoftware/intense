@@ -42,10 +42,7 @@ namespace $safeprojectname$.Presentation
         {
             get
             {
-                if (this.selectedMenuItem != null) {
-                    return this.selectedMenuItem.PageType;
-                }
-                return null;
+                return this.selectedMenuItem?.PageType;
             }
             set
             {

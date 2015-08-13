@@ -20,7 +20,8 @@
                     <Run Text="• Soft- and hardware back button support" /><LineBreak />
                     <Run Text="• Proper use of font styles according to the " /><Hyperlink NavigateUri="https://msdn.microsoft.com/en-us/library/windows/apps/hh700394.aspx"><Run Text="Universal Windows Platform font guidelines" /></Hyperlink><LineBreak />
                     <Run Text="• Extensive use of Segoe MDL2 Assets for icons" /><LineBreak />
-                    <Run Text="• {x:Bind} for performant bindings" />
+                    <Run Text="• {x:Bind} for performant bindings" /><LineBreak />
+                    <Run Text="• Uses new C# 6 language features such as nameof, and the null-conditional operator" />
                 </TextBlock>
                 
                 <TextBlock Text="Happy coding!" />

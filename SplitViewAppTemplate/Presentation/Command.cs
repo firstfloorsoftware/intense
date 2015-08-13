@@ -13,7 +13,7 @@ namespace $safeprojectname$.Presentation
         public Command(Action execute, Func<bool> canexecute = null)
         {
             if (execute == null) {
-                throw new ArgumentNullException("execute");
+                throw new ArgumentNullException(nameof(execute));
             }
             this.execute = execute;
             this.canExecute = canexecute ?? (() => true);
