@@ -1,0 +1,68 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.23107.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CSharp", "CSharp", "{9F0F1D50-5B87-45C6-9D69-B4B2AB83013F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "VisualBasic", "VisualBasic", "{25B6348C-C93D-4F43-9373-B91E859B39CB}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ItemTemplates", "ItemTemplates", "{10EE97AB-0970-4226-AA86-5214C4C56300}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ProjectTemplates", "ProjectTemplates", "{6F7054F4-DB82-4925-94A7-4373F5CA4A0B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ItemTemplates", "ItemTemplates", "{979C7C3A-8B25-4EDD-9C97-C98B909B9638}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ProjectTemplates", "ProjectTemplates", "{A9255C39-9F6F-43A7-BDE8-C279926BF6B6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlankAppTemplate", "CSharp\ProjectTemplates\BlankAppTemplate\BlankAppTemplate.csproj", "{6CD5EBCF-7203-4BD5-A5F7-96192189582B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CompositionAppTemplate", "CSharp\ProjectTemplates\CompositionAppTemplate\CompositionAppTemplate.csproj", "{482B7306-6FD0-4AE9-AF1A-FD248F982B28}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CompositionXamlAppTemplate", "CSharp\ProjectTemplates\CompositionXamlAppTemplate\CompositionXamlAppTemplate.csproj", "{36D0E10A-404A-4EE7-A689-78B2FF5E3A5F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SplitViewAppTemplate", "CSharp\ProjectTemplates\SplitViewAppTemplate\SplitViewAppTemplate.csproj", "{6AFD94FD-29BB-46C0-BB88-B7A5FA5575E0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IntenseTemplates", "IntenseTemplates\IntenseTemplates.csproj", "{27B83927-F080-4015-B296-A6D90EC73B95}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6CD5EBCF-7203-4BD5-A5F7-96192189582B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6CD5EBCF-7203-4BD5-A5F7-96192189582B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6CD5EBCF-7203-4BD5-A5F7-96192189582B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6CD5EBCF-7203-4BD5-A5F7-96192189582B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{482B7306-6FD0-4AE9-AF1A-FD248F982B28}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{482B7306-6FD0-4AE9-AF1A-FD248F982B28}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{482B7306-6FD0-4AE9-AF1A-FD248F982B28}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{482B7306-6FD0-4AE9-AF1A-FD248F982B28}.Release|Any CPU.Build.0 = Release|Any CPU
+		{36D0E10A-404A-4EE7-A689-78B2FF5E3A5F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{36D0E10A-404A-4EE7-A689-78B2FF5E3A5F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{36D0E10A-404A-4EE7-A689-78B2FF5E3A5F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{36D0E10A-404A-4EE7-A689-78B2FF5E3A5F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6AFD94FD-29BB-46C0-BB88-B7A5FA5575E0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6AFD94FD-29BB-46C0-BB88-B7A5FA5575E0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6AFD94FD-29BB-46C0-BB88-B7A5FA5575E0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6AFD94FD-29BB-46C0-BB88-B7A5FA5575E0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{27B83927-F080-4015-B296-A6D90EC73B95}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{27B83927-F080-4015-B296-A6D90EC73B95}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{27B83927-F080-4015-B296-A6D90EC73B95}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{27B83927-F080-4015-B296-A6D90EC73B95}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{10EE97AB-0970-4226-AA86-5214C4C56300} = {9F0F1D50-5B87-45C6-9D69-B4B2AB83013F}
+		{6F7054F4-DB82-4925-94A7-4373F5CA4A0B} = {9F0F1D50-5B87-45C6-9D69-B4B2AB83013F}
+		{979C7C3A-8B25-4EDD-9C97-C98B909B9638} = {25B6348C-C93D-4F43-9373-B91E859B39CB}
+		{A9255C39-9F6F-43A7-BDE8-C279926BF6B6} = {25B6348C-C93D-4F43-9373-B91E859B39CB}
+		{6CD5EBCF-7203-4BD5-A5F7-96192189582B} = {6F7054F4-DB82-4925-94A7-4373F5CA4A0B}
+		{482B7306-6FD0-4AE9-AF1A-FD248F982B28} = {6F7054F4-DB82-4925-94A7-4373F5CA4A0B}
+		{36D0E10A-404A-4EE7-A689-78B2FF5E3A5F} = {6F7054F4-DB82-4925-94A7-4373F5CA4A0B}
+		{6AFD94FD-29BB-46C0-BB88-B7A5FA5575E0} = {6F7054F4-DB82-4925-94A7-4373F5CA4A0B}
+	EndGlobalSection
+EndGlobal
