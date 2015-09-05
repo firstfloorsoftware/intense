@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <VSTemplate Version="3.0.0" Type="Project" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005">
   <TemplateData>
-    <Name>🌼 Blank App (Universal Windows)</Name>
+    <Name>🔟 Blank App (Universal Windows)</Name>
     <Description>A project for a single-page Universal Windows Platform app that has no predefined controls or layout.</Description>
     <Icon>BlankAppTemplate.ico</Icon>
     <TemplateID>Intense.CSharp.BlankApp</TemplateID>
