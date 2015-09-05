@@ -4,7 +4,7 @@
     <Name>🌼 Blank App (Universal Windows)</Name>
     <Description>A project for a single-page Universal Windows Platform app that has no predefined controls or layout.</Description>
     <Icon>BlankAppTemplate.ico</Icon>
-    <TemplateID>FirstFloor.CS.UWP.BlankApp</TemplateID>
+    <TemplateID>Intense.CSharp.BlankApp</TemplateID>
     <TemplateGroupID>WinRT-Managed</TemplateGroupID>
     <ProjectType>CSharp</ProjectType>
     <SortOrder>1000</SortOrder>

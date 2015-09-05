@@ -4,7 +4,7 @@
     <Name>🌼 Composition XAML App (Universal Windows)</Name>
     <Description>A project for starting with XAML and the Windows.UI.Composition APIs in Universal Windows Apps.</Description>
     <Icon>CompositionXamlAppTemplate.ico</Icon>
-    <TemplateID>FirstFloor.CS.UWP.CompositionXamlApp</TemplateID>
+    <TemplateID>Intense.CSharp.CompositionXamlApp</TemplateID>
     <TemplateGroupID>WinRT-Managed</TemplateGroupID>
     <ProjectType>CSharp</ProjectType>
     <SortOrder>1003</SortOrder>

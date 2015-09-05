@@ -4,7 +4,7 @@
     <Name>🌼 Composition App (Universal Windows)</Name>
     <Description>A framework-less project for starting with the Windows.UI.Composition APIs in Universal Windows Apps.</Description>
     <Icon>CompositionAppTemplate.ico</Icon>
-    <TemplateID>FirstFloor.CS.UWP.CompositionApp</TemplateID>
+    <TemplateID>Intense.CSharp.CompositionApp</TemplateID>
     <TemplateGroupID>WinRT-Managed</TemplateGroupID>
     <ProjectType>CSharp</ProjectType>
     <SortOrder>1002</SortOrder>

@@ -12,7 +12,7 @@
             <StackPanel>
                 <TextBlock Text="Welcome" Style="{StaticResource TitleTextBlockStyle}" />
                 <TextBlock Style="{StaticResource ParagraphTextBlockStyle}">
-                    <Run Text="Thank you for installing the UWP templates. This is a Univeral Windows project template for multi-page apps. Among others this project uses the following concepts and patterns;" />
+                    <Run Text="Thank you for installing the Intense templates. This is a Univeral Windows project template for multi-page apps. Among others this project uses the following concepts and patterns;" />
                     <LineBreak /><LineBreak />
                     <Run Text="• SplitView navigation pattern" /><LineBreak />
                     <Run Text="• Adaptive layout using the new AdaptiveTrigger of the VisualStateManager" /><LineBreak />

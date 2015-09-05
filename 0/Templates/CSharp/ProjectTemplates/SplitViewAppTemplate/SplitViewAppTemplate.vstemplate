@@ -4,7 +4,7 @@
     <Name>🌼 SplitView App (Universal Windows)</Name>
     <Description>A project for a multi-page Universal Windows Platform app with an adaptive split view layout.</Description>
     <Icon>SplitViewAppTemplate.ico</Icon>
-    <TemplateID>FirstFloor.CS.UWP.SplitViewApp</TemplateID>
+    <TemplateID>Intense.CSharp.SplitViewApp</TemplateID>
     <TemplateGroupID>WinRT-Managed</TemplateGroupID>
     <ProjectType>CSharp</ProjectType>
     <SortOrder>1001</SortOrder>
