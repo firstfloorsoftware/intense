@@ -51,10 +51,6 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="index.html" />
-    <Content Include="stylesheet.css" />
-  </ItemGroup>
-  <ItemGroup>
     <ProjectReference Include="..\CSharp\ProjectTemplates\BlankAppTemplate\BlankAppTemplate.csproj">
       <Project>{6CD5EBCF-7203-4BD5-A5F7-96192189582B}</Project>
       <Name>BlankAppTemplate</Name>
