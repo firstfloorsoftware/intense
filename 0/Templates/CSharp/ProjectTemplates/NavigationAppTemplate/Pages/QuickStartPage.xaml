@@ -11,11 +11,11 @@
         <StackPanel>
             <TextBlock Text="Quick start" Style="{StaticResource TitleTextBlockStyle}" />
             <TextBlock Text="Congratulations, you have created a fully functional navigation app. Time to start customizing!" Style="{StaticResource ParagraphTextBlockStyle}" />
-            <TextBlock Text="1) Add a new category" Style="{StaticResource SubtitleTextBlockStyle}" />
+            <TextBlock Text="1) Add a new root category" Style="{StaticResource SubtitleTextBlockStyle}" />
             <TextBlock Text="Locate and open the NavigationStructure.xaml in the root of the project. The file contains the full hierachical navigation structure of your app. Add a new NavigationItem before the closing &lt;/NavigationItem&gt; tag at the end of the file. Provide a display name, description and icon." Style="{StaticResource ParagraphTextBlockStyle}" />
             <TextBlock Text="2) Add a page" Style="{StaticResource SubtitleTextBlockStyle}" />
             <TextBlock Text="Add a new page control to the Pages folder of the project." Style="{StaticResource ParagraphTextBlockStyle}" />
-            <TextBlock Text="Add a new NavigationItem inside the item created in step 1. Set a display name, and set the PageType to the type of the added page in the form pages:[PageTypeName]" Style="{StaticResource ParagraphTextBlockStyle}" />
+            <TextBlock Text="Add a new NavigationItem inside the category item created in step 1. Set a display name, and set the PageType to the typename of the page added to the Pages folder. " Style="{StaticResource ParagraphTextBlockStyle}" />
             <TextBlock Text="Save and run your app, the new category and page are now visible." Style="{StaticResource ParagraphTextBlockStyle}" />
         </StackPanel>
     </ScrollViewer>

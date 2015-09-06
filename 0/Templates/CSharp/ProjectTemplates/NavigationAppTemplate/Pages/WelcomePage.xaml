@@ -10,7 +10,7 @@
     <ScrollViewer Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" Padding="{x:Bind Frame.Padding, Mode=OneWay}">
         <StackPanel>
             <TextBlock Text="Welcome" Style="{StaticResource TitleTextBlockStyle}" />
-            <TextBlock Text="Thank you for installing the Intense templates. This is a Univeral Windows project template for creating a hierarchical navigation app, similar to the Windows 10 settings app. The template provides an adaptive master-detail layout, and an easy to understand navigation structure."  Style="{StaticResource ParagraphTextBlockStyle}" />
+            <TextBlock Text="Thank you for installing the Intense templates. This is a Univeral Windows project template for creating a hierarchical navigation app. The template provides an adaptive master-detail layout, and an easy to learn navigation structure."  Style="{StaticResource ParagraphTextBlockStyle}" />
             <TextBlock Text="Project structure" Style="{StaticResource TitleTextBlockStyle}" />
             <TextBlock Style="{StaticResource ParagraphTextBlockStyle}">
                 <Run Text="Assets" FontWeight="Bold" />
@@ -36,6 +36,11 @@
                 <Run Text="UI" FontWeight="Bold" />
                 <LineBreak />
                 <Run Text="The UI elements for rendering navigation structure in adaptive layout. You typically do not need to modify the contents of this folder" />
+                <LineBreak />
+                <LineBreak />
+                <Run Text="NavigationStructure.xaml" FontWeight="Bold" />
+                <LineBreak />
+                <Run Text="Represents the full hierarchical navigation structure of the app" />
                 <LineBreak />
                 <LineBreak />
             </TextBlock>

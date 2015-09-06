@@ -2,7 +2,7 @@
 <VSTemplate Version="3.0.0" Type="Project" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" xmlns:sdk="http://schemas.microsoft.com/developer/vstemplate-sdkextension/2010">
   <TemplateData>
     <Name>🔟 Navigation App (Universal Windows)</Name>
-    <Description>A project for a multi-level navigation UWP app with an adaptive layout, similar to the Windows 10 settings app</Description>
+    <Description>A project for a multi-level navigation Universal Windows Platform app with an adaptive layout.</Description>
     <Icon>NavigationAppTemplate.ico</Icon>
     <TemplateID>Intense.CSharp.NavigationApp</TemplateID>
     <TemplateGroupID>WinRT-Managed</TemplateGroupID>
