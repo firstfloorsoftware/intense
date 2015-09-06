@@ -73,8 +73,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Properties\AssemblyInfo.cs" />
     <None Include="Application_TemporaryKey.pfx" />
+    <None Include="Properties\AssemblyInfo.cs" />
     <None Include="template.Package.appxmanifest">
       <SubType>Designer</SubType>
     </None>
