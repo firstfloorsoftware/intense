@@ -1,0 +1,102 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<VSTemplate Version="3.0.0" Type="Project" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" xmlns:sdk="http://schemas.microsoft.com/developer/vstemplate-sdkextension/2010">
+  <TemplateData>
+    <Name>🔟 Navigation App (Universal Windows)</Name>
+    <Description>A project for a multi-level navigation UWP app with an adaptive layout, similar to the Windows 10 settings app</Description>
+    <Icon>NavigationAppTemplate.ico</Icon>
+    <TemplateID>Intense.CSharp.NavigationApp</TemplateID>
+    <TemplateGroupID>WinRT-Managed</TemplateGroupID>
+    <ProjectType>CSharp</ProjectType>
+    <SortOrder>1002</SortOrder>
+    <CreateNewFolder>true</CreateNewFolder>
+    <DefaultName>NavigationApp</DefaultName>
+    <ProvideDefaultName>true</ProvideDefaultName>
+    <LocationField>Enabled</LocationField>
+    <EnableLocationBrowseButton>true</EnableLocationBrowseButton>
+    <NumberOfParentCategoriesToRollUp>2</NumberOfParentCategoriesToRollUp>
+    <TargetPlatformName>Windows</TargetPlatformName>
+    <RequiredPlatformVersion>6.1.0</RequiredPlatformVersion>
+    <CreateInPlace>true</CreateInPlace>
+    <PreviewImage>NavigationApp.png</PreviewImage>
+    <AppIdFilter>blend</AppIdFilter>
+  </TemplateData>
+  <TemplateContent PreferedSolutionConfiguration="Debug|x86">
+    <Project File="ProjectTemplate.csproj" ReplaceParameters="true">
+      <ProjectItem ReplaceParameters="true" TargetFileName="App.xaml">App.xaml</ProjectItem>
+      <ProjectItem ReplaceParameters="true" OpenInEditor="!blend" TargetFileName="App.xaml.cs">App.xaml.cs</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="NavigationStructure.xaml">NavigationStructure.xaml</ProjectItem>
+      <ProjectItem ReplaceParameters="true" OpenInEditor="!blend" TargetFileName="NavigationStructure.xaml.cs">NavigationStructure.xaml.cs</ProjectItem>
+      <ProjectItem ReplaceParameters="false" TargetFileName="project.json">template.project.json</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="Package.appxmanifest">template.Package.appxmanifest</ProjectItem>
+      <ProjectItem ReplaceParameters="false" TargetFileName="$projectname$_TemporaryKey.pfx" BlendDoNotCreate="true">Application_TemporaryKey.pfx</ProjectItem>
+      <Folder Name="Properties" TargetFolderName="Properties">
+        <ProjectItem ReplaceParameters="true" TargetFileName="AssemblyInfo.cs">AssemblyInfo.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="Default.rd.xml">Default.rd.xml</ProjectItem>
+      </Folder>
+      <Folder Name="Assets" TargetFolderName="Assets">
+        <ProjectItem ReplaceParameters="false" TargetFileName="LockScreenLogo.scale-200.png">LockScreenLogo.scale-200.png</ProjectItem>
+        <ProjectItem ReplaceParameters="false" TargetFileName="SplashScreen.scale-200.png">SplashScreen.scale-200.png</ProjectItem>
+        <ProjectItem ReplaceParameters="false" TargetFileName="Square150x150Logo.scale-200.png">Square150x150Logo.scale-200.png</ProjectItem>
+        <ProjectItem ReplaceParameters="false" TargetFileName="Square44x44Logo.scale-200.png">Square44x44Logo.scale-200.png</ProjectItem>
+        <ProjectItem ReplaceParameters="false" TargetFileName="Square44x44Logo.targetsize-24_altform-unplated.png">Square44x44Logo.targetsize-24_altform-unplated.png</ProjectItem>
+        <ProjectItem ReplaceParameters="false" TargetFileName="StoreLogo.png">StoreLogo.png</ProjectItem>
+        <ProjectItem ReplaceParameters="false" TargetFileName="Wide310x150Logo.scale-200.png">Wide310x150Logo.scale-200.png</ProjectItem>
+      </Folder>
+      <Folder Name="Pages" TargetFolderName="Pages">
+        <ProjectItem ReplaceParameters="true" OpenInEditor="blend" TargetFileName="LoremPage.xaml">LoremPage.xaml</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="LoremPage.xaml.cs">LoremPage.xaml.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" OpenInEditor="blend" TargetFileName="QuickStartPage.xaml">QuickStartPage.xaml</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="QuickStartPage.xaml.cs">QuickStartPage.xaml.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" OpenInEditor="blend" TargetFileName="TipsAndTricksPage.xaml">TipsAndTricksPage.xaml</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="TipsAndTricksPage.xaml.cs">TipsAndTricksPage.xaml.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" OpenInEditor="blend" TargetFileName="WelcomePage.xaml">WelcomePage.xaml</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="WelcomePage.xaml.cs">WelcomePage.xaml.cs</ProjectItem>
+      </Folder>
+      <Folder Name="Presentation" TargetFolderName="Presentation">
+        <ProjectItem ReplaceParameters="true" TargetFileName="NavigationItem.cs">NavigationItem.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="NavigationItemCollection.cs">NavigationItemCollection.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="NavigationItemExtensions.cs">NavigationItemExtensions.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="NotifyPropertyChanged.cs">NotifyPropertyChanged.cs</ProjectItem>
+      </Folder>
+      <Folder Name="Themes" TargetFolderName="Themes">
+        <ProjectItem ReplaceParameters="true" OpenInEditor="blend" TargetFileName="Brushes.xaml">Brushes.xaml</ProjectItem>
+        <ProjectItem ReplaceParameters="true" OpenInEditor="blend" TargetFileName="Converters.xaml">Converters.xaml</ProjectItem>
+        <ProjectItem ReplaceParameters="true" OpenInEditor="blend" TargetFileName="Frames.xaml">Frames.xaml</ProjectItem>
+        <ProjectItem ReplaceParameters="true" OpenInEditor="blend" TargetFileName="Generic.xaml">Generic.xaml</ProjectItem>
+        <ProjectItem ReplaceParameters="true" OpenInEditor="blend" TargetFileName="Navigation.xaml">Navigation.xaml</ProjectItem>
+        <ProjectItem ReplaceParameters="true" OpenInEditor="!blend" TargetFileName="Navigation.xaml.cs">Navigation.xaml.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" OpenInEditor="blend" TargetFileName="Typography.xaml">Typography.xaml</ProjectItem>
+      </Folder>
+      <Folder Name="UI" TargetFolderName="UI">
+        <Folder Name="Converters" TargetFolderName="Converters">
+          <ProjectItem ReplaceParameters="true" TargetFileName="BooleanToVisibilityConverter.cs">BooleanToVisibilityConverter.cs</ProjectItem>
+          <ProjectItem ReplaceParameters="true" TargetFileName="NavigationItemToObjectConverter.cs">NavigationItemToObjectConverter.cs</ProjectItem>
+          <ProjectItem ReplaceParameters="true" TargetFileName="ValueConverter.cs">ValueConverter.cs</ProjectItem>
+        </Folder>
+        <ProjectItem ReplaceParameters="true" OpenInEditor="blend" TargetFileName="MasterDetailPage.xaml">MasterDetailPage.xaml</ProjectItem>
+        <ProjectItem ReplaceParameters="true" OpenInEditor="!blend" TargetFileName="MasterDetailPage.xaml.cs">MasterDetailPage.xaml.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" OpenInEditor="blend" TargetFileName="MasterPage.xaml">MasterPage.xaml</ProjectItem>
+        <ProjectItem ReplaceParameters="true" OpenInEditor="!blend" TargetFileName="MasterPage.xaml.cs">MasterPage.xaml.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="NavigationPage.cs">NavigationPage.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="PageHeader.cs">PageHeader.cs</ProjectItem>
+      </Folder>
+    </Project>
+  </TemplateContent>
+  <WizardExtension>
+    <Assembly>Microsoft.VisualStudio.WinRT.TemplateWizards, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</Assembly>
+    <FullClassName>Microsoft.VisualStudio.WinRT.TemplateWizards.CreateProjectCertificate.Wizard</FullClassName>
+  </WizardExtension>
+  <WizardExtension>
+    <Assembly>NuGet.VisualStudio.Interop, Version=1.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</Assembly>
+    <FullClassName>NuGet.VisualStudio.TemplateWizard</FullClassName>
+  </WizardExtension>
+  <WizardExtension>
+    <Assembly>Microsoft.VisualStudio.Universal.TemplateWizards, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</Assembly>
+    <FullClassName>Microsoft.VisualStudio.Universal.TemplateWizards.PlatformVersion.Wizard</FullClassName>
+  </WizardExtension>
+  <WizardData>
+    <packages repository="registry" keyName="NETCoreSDK" isPreunzipped="true">
+      <package id="Microsoft.NETCore.UniversalWindowsPlatform" version="5.0.0" skipAssemblyReferences="false" />
+    </packages>
+  </WizardData>
+</VSTemplate>

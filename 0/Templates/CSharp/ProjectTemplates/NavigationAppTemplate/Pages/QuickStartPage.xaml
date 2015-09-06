@@ -1,0 +1,22 @@
+﻿<Page
+    x:Class="$safeprojectname$.Pages.QuickStartPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:$safeprojectname$.Pages"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <ScrollViewer Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" Padding="{x:Bind Frame.Padding, Mode=OneWay}">
+        <StackPanel>
+            <TextBlock Text="Quick start" Style="{StaticResource TitleTextBlockStyle}" />
+            <TextBlock Text="Congratulations, you have created a fully functional navigation app. Time to start customizing!" Style="{StaticResource ParagraphTextBlockStyle}" />
+            <TextBlock Text="1) Add a new category" Style="{StaticResource SubtitleTextBlockStyle}" />
+            <TextBlock Text="Locate and open the NavigationStructure.xaml in the root of the project. The file contains the full hierachical navigation structure of your app. Add a new NavigationItem before the closing &lt;/NavigationItem&gt; tag at the end of the file. Provide a display name, description and icon." Style="{StaticResource ParagraphTextBlockStyle}" />
+            <TextBlock Text="2) Add a page" Style="{StaticResource SubtitleTextBlockStyle}" />
+            <TextBlock Text="Add a new page control to the Pages folder of the project." Style="{StaticResource ParagraphTextBlockStyle}" />
+            <TextBlock Text="Add a new NavigationItem inside the item created in step 1. Set a display name, and set the PageType to the type of the added page in the form pages:[PageTypeName]" Style="{StaticResource ParagraphTextBlockStyle}" />
+            <TextBlock Text="Save and run your app, the new category and page are now visible." Style="{StaticResource ParagraphTextBlockStyle}" />
+        </StackPanel>
+    </ScrollViewer>
+</Page>
