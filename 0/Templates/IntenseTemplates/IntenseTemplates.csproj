@@ -51,6 +51,13 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\CompositionXamlAppVBTemplate\CompositionXamlAppVBTemplate.vbproj">
+      <Project>{DA72C3F9-3C3C-404E-A67A-B687BE9A1217}</Project>
+      <Name>CompositionXamlAppVBTemplate</Name>
+      <VSIXSubPath>ProjectTemplates</VSIXSubPath>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <IncludeOutputGroupsInVSIX>TemplateProjectOutputGroup%3b</IncludeOutputGroupsInVSIX>
+    </ProjectReference>
     <ProjectReference Include="..\CSharp\ProjectTemplates\BlankAppTemplate\BlankAppTemplate.csproj">
       <Project>{6CD5EBCF-7203-4BD5-A5F7-96192189582B}</Project>
       <Name>BlankAppTemplate</Name>
