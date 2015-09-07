@@ -31,6 +31,8 @@ Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "BlankAppVBTemplate", "Visua
 EndProject
 Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "SplitViewAppVBTemplate", "VisualBasic\ProjectTemplates\SplitViewAppVBTemplate\SplitViewAppVBTemplate.vbproj", "{3408FEA7-ED5E-467C-AEB9-13D541A52D3F}"
 EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "CompositionAppVBTemplate", "VisualBasic\ProjectTemplates\CompositionAppVBTemplate\CompositionAppVBTemplate.vbproj", "{AA0897E3-C140-43B4-95D8-13AA907EDB63}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -69,6 +71,10 @@ Global
 		{3408FEA7-ED5E-467C-AEB9-13D541A52D3F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3408FEA7-ED5E-467C-AEB9-13D541A52D3F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3408FEA7-ED5E-467C-AEB9-13D541A52D3F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AA0897E3-C140-43B4-95D8-13AA907EDB63}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AA0897E3-C140-43B4-95D8-13AA907EDB63}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AA0897E3-C140-43B4-95D8-13AA907EDB63}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AA0897E3-C140-43B4-95D8-13AA907EDB63}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -85,5 +91,6 @@ Global
 		{5737A694-060D-4DC1-95AF-FCECE695B8E6} = {6F7054F4-DB82-4925-94A7-4373F5CA4A0B}
 		{FEEB6266-35F5-4596-B24C-B50C7D6BF5AD} = {A9255C39-9F6F-43A7-BDE8-C279926BF6B6}
 		{3408FEA7-ED5E-467C-AEB9-13D541A52D3F} = {A9255C39-9F6F-43A7-BDE8-C279926BF6B6}
+		{AA0897E3-C140-43B4-95D8-13AA907EDB63} = {A9255C39-9F6F-43A7-BDE8-C279926BF6B6}
 	EndGlobalSection
 EndGlobal

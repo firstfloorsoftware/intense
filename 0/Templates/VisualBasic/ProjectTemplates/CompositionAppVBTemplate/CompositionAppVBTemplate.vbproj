@@ -28,10 +28,10 @@
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectTypeGuids>{82b43b9b-a64c-4715-b499-d71e9ca2bd60};{F184B08F-C81C-45f6-A57F-5ABD9991F28F}</ProjectTypeGuids>
-    <ProjectGuid>{3408FEA7-ED5E-467C-AEB9-13D541A52D3F}</ProjectGuid>
+    <ProjectGuid>{AA0897E3-C140-43B4-95D8-13AA907EDB63}</ProjectGuid>
     <OutputType>Library</OutputType>
-    <RootNamespace>SplitViewAppVBTemplate</RootNamespace>
-    <AssemblyName>SplitViewAppVBTemplate</AssemblyName>
+    <RootNamespace>CompositionAppVBTemplate</RootNamespace>
+    <AssemblyName>CompositionAppVBTemplate</AssemblyName>
     <FileAlignment>512</FileAlignment>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <OptionExplicit>On</OptionExplicit>
@@ -85,40 +85,23 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Application_TemporaryKey.pfx" />
-    <None Include="AssemblyInfo.vb" />
-    <None Include="ProjectTemplate.vbproj" />
+    <None Include="ProjectTemplate.vbproj">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="template.Package.appxmanifest">
       <SubType>Designer</SubType>
     </None>
     <None Include="template.project.json" />
   </ItemGroup>
   <ItemGroup>
-    <VSTemplate Include="SplitViewAppTemplate.vstemplate">
-      <OutputSubPath>Windows\Universal</OutputSubPath>
-    </VSTemplate>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Assets\LockScreenLogo.scale-200.png" />
-    <None Include="Assets\SplashScreen.scale-200.png" />
-    <None Include="Assets\Square150x150Logo.scale-200.png" />
-    <None Include="Assets\Square44x44Logo.scale-200.png" />
-    <None Include="Assets\Square44x44Logo.targetsize-24_altform-unplated.png" />
-    <None Include="Assets\StoreLogo.png" />
-    <None Include="Assets\Wide310x150Logo.scale-200.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="App.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </None>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="App.xaml.vb">
-      <DependentUpon>App.xaml</DependentUpon>
-    </None>
+    <None Include="AssemblyInfo.vb" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Default.rd.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="MainView.vb" />
+    <None Include="MainViewFactory.vb" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="My Project\" />
@@ -136,60 +119,37 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <None Include="SplitViewApp.png" />
+    <None Include="CompositionApp.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Presentation\Command.vb" />
-    <None Include="Presentation\MenuItem.vb" />
-    <None Include="Presentation\NotifyPropertyChanged.vb" />
-    <None Include="Presentation\ObjectToMenuItemConverter.vb" />
-    <None Include="Presentation\ShellViewModel.vb" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Pages\Page1.xaml">
-      <Generator>MSBuild:Compile</Generator>
+    <VSTemplate Include="CompositionAppTemplate.vstemplate">
       <SubType>Designer</SubType>
-    </None>
-    <None Include="Pages\Page2.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Pages\Page3.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Pages\WelcomePage.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </None>
+      <OutputSubPath>Windows\Universal</OutputSubPath>
+    </VSTemplate>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Pages\Page1.xaml.vb">
-      <DependentUpon>Page1.xaml</DependentUpon>
-    </None>
-    <None Include="Pages\Page2.xaml.vb">
-      <DependentUpon>Page2.xaml</DependentUpon>
-    </None>
-    <None Include="Pages\Page3.xaml.vb">
-      <DependentUpon>Page3.xaml</DependentUpon>
-    </None>
-    <None Include="Pages\WelcomePage.xaml.vb">
-      <DependentUpon>WelcomePage.xaml</DependentUpon>
-    </None>
+    <None Include="Assets\LockScreenLogo.scale-200.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Shell.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </None>
+    <None Include="Assets\SplashScreen.scale-200.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Shell.xaml.vb">
-      <DependentUpon>Shell.xaml</DependentUpon>
-    </None>
+    <None Include="Assets\Square150x150Logo.scale-200.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="SplitViewAppTemplate.ico" />
+    <None Include="Assets\Square44x44Logo.scale-200.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\Square44x44Logo.targetsize-24_altform-unplated.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\StoreLogo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\Wide310x150Logo.scale-200.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="CompositionAppTemplate.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <Import Project="$(VSToolsPath)\VSSDK\Microsoft.VsSDK.targets" Condition="'$(VSToolsPath)' != ''" />

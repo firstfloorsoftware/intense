@@ -131,7 +131,6 @@
     <None Include="Assets\StoreLogo.png" />
     <None Include="Assets\Wide310x150Logo.scale-200.png" />
     <None Include="BlankApp.png" />
-    <None Include="BlankAppTemplate.ico" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.xaml">
@@ -145,6 +144,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Default.rd.xml" />
+    <None Include="BlankAppTemplate.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <Import Project="$(VSToolsPath)\VSSDK\Microsoft.VsSDK.targets" Condition="'$(VSToolsPath)' != ''" />
