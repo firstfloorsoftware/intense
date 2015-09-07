@@ -93,6 +93,13 @@
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
       <IncludeOutputGroupsInVSIX>TemplateProjectOutputGroup%3b</IncludeOutputGroupsInVSIX>
     </ProjectReference>
+    <ProjectReference Include="..\VisualBasic\ProjectTemplates\SplitViewAppVBTemplate\SplitViewAppVBTemplate.vbproj">
+      <Project>{3408FEA7-ED5E-467C-AEB9-13D541A52D3F}</Project>
+      <Name>SplitViewAppVBTemplate</Name>
+      <VSIXSubPath>ProjectTemplates</VSIXSubPath>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <IncludeOutputGroupsInVSIX>TemplateProjectOutputGroup%3b</IncludeOutputGroupsInVSIX>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <Content Include="Intense.png">
