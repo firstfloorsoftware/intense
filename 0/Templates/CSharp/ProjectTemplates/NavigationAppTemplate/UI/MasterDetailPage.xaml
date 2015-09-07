@@ -26,13 +26,7 @@
                 <ListView ItemsSource="{x:Bind NavigationItem.Items, Mode=OneWay}"
                           ItemContainerTransitions="{x:Null}"
                           SelectedItem="{x:Bind SelectedItem, Mode=TwoWay, Converter={StaticResource NavigationItemToObjectConverter}}"
-                          Style="{StaticResource BasicNavigationListViewStyle}">
-                    <ListView.ItemTemplate>
-                        <DataTemplate x:DataType="presentation:NavigationItem">
-                            <TextBlock Text="{x:Bind DisplayName, Mode=OneWay}" Style="{StaticResource BasicNavigationItemTitleTextBlockStyle}" />
-                        </DataTemplate>
-                    </ListView.ItemTemplate>
-                </ListView>
+                          Style="{StaticResource BasicNavigationListViewStyle}" />
             </SplitView.Pane>
             <SplitView.Content>
                 <Frame x:Name="ContentFrame" Style="{StaticResource ContentFrameStyle}" Navigated="OnContentFrameNavigated" />
