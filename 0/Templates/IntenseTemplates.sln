@@ -33,7 +33,7 @@ Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "SplitViewAppVBTemplate", "V
 EndProject
 Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "CompositionAppVBTemplate", "VisualBasic\ProjectTemplates\CompositionAppVBTemplate\CompositionAppVBTemplate.vbproj", "{AA0897E3-C140-43B4-95D8-13AA907EDB63}"
 EndProject
-Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "CompositionXamlAppVBTemplate", "CompositionXamlAppVBTemplate\CompositionXamlAppVBTemplate.vbproj", "{DA72C3F9-3C3C-404E-A67A-B687BE9A1217}"
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "CompositionXamlAppVBTemplate", "VisualBasic\ProjectTemplates\CompositionXamlAppVBTemplate\CompositionXamlAppVBTemplate.vbproj", "{DA72C3F9-3C3C-404E-A67A-B687BE9A1217}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
