@@ -1,0 +1,21 @@
+﻿<NavigationItem xmlns="using:$safeprojectname$.Presentation"                            
+                xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                xmlns:pages="using:$safeprojectname$"
+                x:Class="$safeprojectname$.NavigationStructure"
+                DisplayName="$safeprojectname$"
+                Icon="">
+    <NavigationItem DisplayName="Welcome" Description="Hello" Icon="" PageType="pages:WelcomePage" />
+    <NavigationItem DisplayName="How to" Description="Learn how to use this template" Icon="">
+        <NavigationItem DisplayName="Quick start" PageType="pages:QuickStartPage" />
+        <NavigationItem DisplayName="Tips &amp; tricks" PageType="pages:TipsAndTricksPage" />
+    </NavigationItem>
+    <NavigationItem DisplayName="Lorem ipsum" Description="Lorem ipsum dolor sit amet, consectetur adipiscing elit." Icon="">
+        <NavigationItem DisplayName="Page 1" PageType="pages:LoremPage" PageParameter="Page 1" />
+        <NavigationItem DisplayName="Page 2" PageType="pages:LoremPage" PageParameter="Page 2" />
+        <NavigationItem DisplayName="Page 3" PageType="pages:LoremPage" PageParameter="Page 3" />
+        <NavigationItem DisplayName="Page 4" PageType="pages:LoremPage" PageParameter="Page 4" />
+        <NavigationItem DisplayName="Page 5" PageType="pages:LoremPage" PageParameter="Page 5" />
+    </NavigationItem>
+</NavigationItem>
+
+    
