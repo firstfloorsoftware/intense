@@ -1,4 +1,4 @@
-﻿using $safeprojectname$.Presentation;
+﻿using Intense.Presentation;
 
 namespace $safeprojectname$
 {

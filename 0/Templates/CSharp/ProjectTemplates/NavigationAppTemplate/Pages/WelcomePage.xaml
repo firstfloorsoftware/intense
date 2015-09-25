@@ -23,21 +23,6 @@
                 <Run Text="The location for application pages. This is the folder where you create your app pages" />
                 <LineBreak />
                 <LineBreak />
-                <Run Text="Presentation" FontWeight="Bold" />
-                <LineBreak />
-                <Run Text="View model classes providing the navigation structure" />
-                <LineBreak />
-                <LineBreak />
-                <Run Text="Themes" FontWeight="Bold" />
-                <LineBreak />
-                <Run Text="Styles and resources, all referenced in App.xaml" />
-                <LineBreak />
-                <LineBreak />
-                <Run Text="UI" FontWeight="Bold" />
-                <LineBreak />
-                <Run Text="The UI elements for rendering navigation structure in adaptive layout. You typically do not need to modify the contents of this folder" />
-                <LineBreak />
-                <LineBreak />
                 <Run Text="NavigationStructure.xaml" FontWeight="Bold" />
                 <LineBreak />
                 <Run Text="Represents the full hierarchical navigation structure of the app" />

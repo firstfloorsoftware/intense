@@ -1,19 +1,15 @@
-﻿<Application
+﻿<ui:NavigationApp
     x:Class="$safeprojectname$.App"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    xmlns:themes="using:$safeprojectname$.Themes"
+    xmlns:ui="using:Intense.UI"
     RequestedTheme="Light">
 
-    <Application.Resources>
+    <ui:NavigationApp.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
-                <ResourceDictionary Source="Themes/Brushes.xaml" />
-                <ResourceDictionary Source="Themes/Converters.xaml" />
-                <ResourceDictionary Source="Themes/Frames.xaml" />
-                <ResourceDictionary Source="Themes/Typography.xaml" />
-                <themes:Navigation />
+                <ResourceDictionary Source="ms-appx:///Intense/Themes/Intense.xaml" />
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
-    </Application.Resources>
-</Application>
+    </ui:NavigationApp.Resources>
+</ui:NavigationApp>

@@ -129,39 +129,6 @@
     <None Include="Assets\Wide310x150Logo.scale-200.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Presentation\NavigationItem.cs" />
-    <None Include="Presentation\NavigationItemCollection.cs" />
-    <None Include="Presentation\NavigationItemExtensions.cs" />
-    <None Include="Presentation\NotifyPropertyChanged.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Themes\Brushes.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Themes\Converters.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Themes\Frames.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Themes\Generic.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Themes\Navigation.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </None>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Themes\Navigation.xaml.cs">
-      <DependentUpon>Navigation.xaml</DependentUpon>
-    </None>
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Pages\QuickStartPage.xaml.cs">
       <DependentUpon>QuickStartPage.xaml</DependentUpon>
     </None>
@@ -171,31 +138,6 @@
     <None Include="Pages\WelcomePage.xaml.cs">
       <DependentUpon>WelcomePage.xaml</DependentUpon>
     </None>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="UI\MasterDetailPage.xaml.cs">
-      <DependentUpon>MasterDetailPage.xaml</DependentUpon>
-    </None>
-    <None Include="UI\MasterPage.xaml.cs">
-      <DependentUpon>MasterPage.xaml</DependentUpon>
-    </None>
-    <None Include="UI\NavigationPage.cs" />
-    <None Include="UI\PageHeader.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="UI\MasterDetailPage.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="UI\MasterPage.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </None>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="UI\Converters\BooleanToVisibilityConverter.cs" />
-    <None Include="UI\Converters\NavigationItemToObjectConverter.cs" />
-    <None Include="UI\Converters\ValueConverter.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.xaml.cs">
@@ -211,12 +153,6 @@
       <SubType>Designer</SubType>
     </None>
     <None Include="NavigationStructure.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </None>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Themes\Typography.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </None>
