@@ -1,0 +1,10 @@
+﻿<NavigationItem xmlns="using:Intense.Presentation"                            
+                xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                xmlns:pages="using:Intense.TestApp.Pages"
+                x:Class="Intense.TestApp.NavigationStructure"
+                DisplayName="Intense.TestApp"
+                Icon="">
+    <NavigationItem DisplayName="Appearance" PageType="pages:AppearancePage" />
+</NavigationItem>
+
+    

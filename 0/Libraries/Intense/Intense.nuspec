@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package>
+  <metadata>
+    <id>Intense</id>
+    <version>0.1.0-beta</version>
+    <title>Intense Toolkit for UWP</title>
+    <authors>First Floor Software</authors>
+    <owners>First Floor Software</owners>
+    <licenseUrl>https://raw.githubusercontent.com/firstfloorsoftware/intense/master/LICENSE</licenseUrl>
+    <projectUrl>https://github.com/firstfloorsoftware/intense</projectUrl>
+    <iconUrl>http://intense-toolkit.com/media/intense.32.png</iconUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <description>Controls, templates, and tools for building Universal Windows Platform apps with XAML</description>
+    <releaseNotes>0.1.0 Initial release</releaseNotes>
+    <copyright>Copyright 2015 First Floor Software</copyright>
+    <tags>uwp xaml uap</tags>
+    <dependencies>
+      <group targetFramework="uap10.0">
+        <dependency id="System.Xml.XDocument" version="4.0.10" />
+        <dependency id="System.Collections" version="4.0.10" />
+        <dependency id="System.Diagnostics.Debug" version="4.0.10" />
+        <dependency id="System.Diagnostics.Tools" version="4.0.0" />
+        <dependency id="System.Linq" version="4.0.0" />
+        <dependency id="System.ObjectModel" version="4.0.10" />
+        <dependency id="System.Runtime" version="4.0.20" />
+        <dependency id="System.Runtime.Extensions" version="4.0.10" />
+        <dependency id="System.Runtime.InteropServices.WindowsRuntime" version="4.0.0" />
+        <dependency id="System.Threading" version="4.0.10" />
+        <dependency id="System.Threading.Tasks" version="4.0.10" />
+      </group>
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="bin\Release\Intense.dll" target="lib\uap10.0" />
+    <file src="bin\Release\Intense.xml" target="lib\uap10.0" />
+    <file src="bin\Release\Intense.pri" target="lib\uap10.0" />
+    <file src="bin\Release\Intense.xr.xml" target="lib\uap10.0\Intense" />
+    <file src="Properties\Intense.rd.xml" target="lib\uap10.0\Intense\Properties" />
+  </files>
+</package>

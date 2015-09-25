@@ -1,0 +1,17 @@
+﻿<ui:NavigationApp
+    x:Class="Intense.TestApp.App"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Intense.TestApp"
+    xmlns:ui="using:Intense.UI"
+    RequestedTheme="Light">
+
+    <ui:NavigationApp.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="ms-appx:///Intense/Themes/Intense.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </ui:NavigationApp.Resources>
+   
+</ui:NavigationApp>
