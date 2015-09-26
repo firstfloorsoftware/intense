@@ -1,5 +1,6 @@
 ﻿{
   "dependencies": {
+    "Intense": "0.1.0-beta"
   },
 
   "frameworks": {

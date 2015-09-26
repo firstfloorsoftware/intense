@@ -189,66 +189,6 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Presentation\NavigationItem.vb" />
-    <None Include="Presentation\NavigationItemCollection.vb" />
-    <None Include="Presentation\NavigationItemExtensions.vb" />
-    <None Include="Presentation\NotifyPropertyChanged.vb" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Themes\Brushes.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Themes\Converters.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Themes\Frames.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Themes\Generic.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Themes\Navigation.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Themes\Typography.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </None>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Themes\Navigation.xaml.vb">
-      <DependentUpon>Navigation.xaml</DependentUpon>
-    </None>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="UI\MasterDetailPage.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="UI\MasterPage.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </None>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="UI\Converters\BooleanToVisibilityConverter.vb" />
-    <None Include="UI\Converters\NavigationItemToObjectConverter.vb" />
-    <None Include="UI\Converters\ValueConverter.vb" />
-    <None Include="UI\MasterDetailPage.xaml.vb">
-      <DependentUpon>MasterDetailPage.xaml</DependentUpon>
-    </None>
-    <None Include="UI\MasterPage.xaml.vb">
-      <DependentUpon>MasterPage.xaml</DependentUpon>
-    </None>
-    <None Include="UI\NavigationPage.vb" />
-    <None Include="UI\PageHeader.vb" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="NavigationStructure.xaml.vb">
       <DependentUpon>NavigationStructure.xaml</DependentUpon>
     </None>

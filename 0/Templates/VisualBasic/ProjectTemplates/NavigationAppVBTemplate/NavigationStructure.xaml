@@ -1,4 +1,4 @@
-﻿<NavigationItem xmlns="using:$safeprojectname$.Presentation"                            
+﻿<NavigationItem xmlns="using:Intense.Presentation"                            
                 xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
                 xmlns:pages="using:$safeprojectname$"
                 x:Class="$safeprojectname$.NavigationStructure"

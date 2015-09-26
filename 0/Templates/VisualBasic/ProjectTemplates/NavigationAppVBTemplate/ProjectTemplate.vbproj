@@ -122,24 +122,6 @@
     <Compile Include="Pages\WelcomePage.xaml.vb">
       <DependentUpon>WelcomePage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Presentation\NavigationItem.vb"/>
-    <Compile Include="Presentation\NavigationItemCollection.vb"/>
-    <Compile Include="Presentation\NavigationItemExtensions.vb"/>
-    <Compile Include="Presentation\NotifyPropertyChanged.vb"/>
-    <Compile Include="Themes\Navigation.xaml.vb">
-      <DependentUpon>Navigation.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="UI\MasterDetailPage.xaml.vb">
-      <DependentUpon>MasterDetailPage.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="UI\MasterPage.xaml.vb">
-      <DependentUpon>MasterPage.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="UI\NavigationPage.vb" />
-    <Compile Include="UI\PageHeader.vb" />
-    <Compile Include="UI\Converters\BooleanToVisibilityConverter.vb" />
-    <Compile Include="UI\Converters\NavigationItemToObjectConverter.vb" />
-    <Compile Include="UI\Converters\ValueConverter.vb" />
   </ItemGroup>
   <ItemGroup>
     <AppxManifest Include="Package.appxmanifest">
@@ -181,38 +163,6 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Include="Pages\WelcomePage.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="Themes\Brushes.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="Themes\Converters.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="Themes\Frames.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="Themes\Generic.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="Themes\Navigation.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="Themes\Typography.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="UI\MasterDetailPage.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="UI\MasterPage.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>

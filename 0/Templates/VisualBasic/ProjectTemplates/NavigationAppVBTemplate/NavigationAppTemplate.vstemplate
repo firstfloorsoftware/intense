@@ -50,34 +50,6 @@
         <ProjectItem ReplaceParameters="true" OpenInEditor="blend" TargetFileName="WelcomePage.xaml">WelcomePage.xaml</ProjectItem>
         <ProjectItem ReplaceParameters="true" TargetFileName="WelcomePage.xaml.vb">WelcomePage.xaml.vb</ProjectItem>
       </Folder>
-      <Folder Name="Presentation" TargetFolderName="Presentation">
-        <ProjectItem ReplaceParameters="true" TargetFileName="NavigationItem.vb">NavigationItem.vb</ProjectItem>
-        <ProjectItem ReplaceParameters="true" TargetFileName="NavigationItemCollection.vb">NavigationItemCollection.vb</ProjectItem>
-        <ProjectItem ReplaceParameters="true" TargetFileName="NavigationItemExtensions.vb">NavigationItemExtensions.vb</ProjectItem>
-        <ProjectItem ReplaceParameters="true" TargetFileName="NotifyPropertyChanged.vb">NotifyPropertyChanged.vb</ProjectItem>
-      </Folder>
-      <Folder Name="Themes" TargetFolderName="Themes">
-        <ProjectItem ReplaceParameters="true" OpenInEditor="blend" TargetFileName="Brushes.xaml">Brushes.xaml</ProjectItem>
-        <ProjectItem ReplaceParameters="true" OpenInEditor="blend" TargetFileName="Converters.xaml">Converters.xaml</ProjectItem>
-        <ProjectItem ReplaceParameters="true" OpenInEditor="blend" TargetFileName="Frames.xaml">Frames.xaml</ProjectItem>
-        <ProjectItem ReplaceParameters="true" OpenInEditor="blend" TargetFileName="Generic.xaml">Generic.xaml</ProjectItem>
-        <ProjectItem ReplaceParameters="true" OpenInEditor="blend" TargetFileName="Navigation.xaml">Navigation.xaml</ProjectItem>
-        <ProjectItem ReplaceParameters="true" OpenInEditor="!blend" TargetFileName="Navigation.xaml.vb">Navigation.xaml.vb</ProjectItem>
-        <ProjectItem ReplaceParameters="true" OpenInEditor="blend" TargetFileName="Typography.xaml">Typography.xaml</ProjectItem>
-      </Folder>
-      <Folder Name="UI" TargetFolderName="UI">
-        <Folder Name="Converters" TargetFolderName="Converters">
-          <ProjectItem ReplaceParameters="true" TargetFileName="BooleanToVisibilityConverter.vb">BooleanToVisibilityConverter.vb</ProjectItem>
-          <ProjectItem ReplaceParameters="true" TargetFileName="NavigationItemToObjectConverter.vb">NavigationItemToObjectConverter.vb</ProjectItem>
-          <ProjectItem ReplaceParameters="true" TargetFileName="ValueConverter.vb">ValueConverter.vb</ProjectItem>
-        </Folder>
-        <ProjectItem ReplaceParameters="true" OpenInEditor="blend" TargetFileName="MasterDetailPage.xaml">MasterDetailPage.xaml</ProjectItem>
-        <ProjectItem ReplaceParameters="true" OpenInEditor="!blend" TargetFileName="MasterDetailPage.xaml.vb">MasterDetailPage.xaml.vb</ProjectItem>
-        <ProjectItem ReplaceParameters="true" OpenInEditor="blend" TargetFileName="MasterPage.xaml">MasterPage.xaml</ProjectItem>
-        <ProjectItem ReplaceParameters="true" OpenInEditor="!blend" TargetFileName="MasterPage.xaml.vb">MasterPage.xaml.vb</ProjectItem>
-        <ProjectItem ReplaceParameters="true" TargetFileName="NavigationPage.vb">NavigationPage.vb</ProjectItem>
-        <ProjectItem ReplaceParameters="true" TargetFileName="PageHeader.vb">PageHeader.vb</ProjectItem>
-      </Folder>
     </Project>
   </TemplateContent>
   <WizardExtension>
