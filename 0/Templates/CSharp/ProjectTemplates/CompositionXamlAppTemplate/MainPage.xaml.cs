@@ -13,9 +13,9 @@ namespace $safeprojectname$
     /// </summary>
     public sealed partial class MainPage : Page
     {
-        private ContainerVisual container;
-        private SolidColorVisual background;
         private Compositor compositor;
+        private Visual root;
+        private SpriteVisual background;
 
         public MainPage()
         {
@@ -31,26 +31,19 @@ namespace $safeprojectname$
 
         private void Host_Loaded(object sender, RoutedEventArgs e)
         {
-            this.container = (ContainerVisual)ElementCompositionPreview.GetContainerVisual(this.Host);
-            this.compositor = container.Compositor;
+            this.root = ElementCompositionPreview.GetElementVisual(this.Host);
+            this.compositor = this.root.Compositor;
 
-            this.background = this.compositor.CreateSolidColorVisual();
-            this.background.Color = Colors.LightGreen;
+            this.background = this.compositor.CreateSpriteVisual();
+            this.background.Brush = this.compositor.CreateColorBrush(Colors.LightGreen);
+            ElementCompositionPreview.SetElementChildVisual(this.Host, this.background);
 
-            this.container.Children.InsertAtBottom(background);
             UpdateSize();
         }
 
         private void Host_SizeChanged(object sender, SizeChangedEventArgs e)
         {
             UpdateSize();
-        }
-
-        private void Host_Unloaded(object sender, RoutedEventArgs e)
-        {
-            this.background.Dispose();
-            this.container.Dispose();
-            this.compositor.Dispose();
         }
     }
 }

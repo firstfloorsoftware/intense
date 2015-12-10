@@ -13,6 +13,6 @@
             <RowDefinition />
         </Grid.RowDefinitions>
         <TextBlock Text="XAML and the visual layer" Style="{StaticResource TitleTextBlockStyle}" Margin="12" />
-        <Grid x:Name="Host" Grid.Row="1" Loaded="Host_Loaded" Unloaded="Host_Unloaded" SizeChanged="Host_SizeChanged" />
+        <Grid x:Name="Host" Grid.Row="1" Loaded="Host_Loaded" SizeChanged="Host_SizeChanged" />
     </Grid>
 </Page>

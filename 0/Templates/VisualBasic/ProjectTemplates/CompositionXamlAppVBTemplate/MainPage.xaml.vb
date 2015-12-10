@@ -9,9 +9,10 @@ Imports Windows.UI.Xaml.Hosting
 Public NotInheritable Class MainPage
     Inherits Page
 
-    Private container As ContainerVisual
-    Private backgroundVisual As SolidColorVisual
     Private compositor As Compositor
+    Private root As Visual
+    Private backgroundVisual As SpriteVisual
+
 
     Private Sub UpdateSize()
         If backgroundVisual Is Nothing Or Host Is Nothing Then
@@ -22,20 +23,14 @@ Public NotInheritable Class MainPage
     End Sub
 
     Private Sub Host_Loaded(sender As Object, e As RoutedEventArgs)
-        container = TryCast(ElementCompositionPreview.GetContainerVisual(Host), ContainerVisual)
-        compositor = container.Compositor
+        root = ElementCompositionPreview.GetElementVisual(Host)
+        compositor = root.Compositor
 
-        backgroundVisual = compositor.CreateSolidColorVisual()
-        backgroundVisual.Color = Colors.LightGreen
+        backgroundVisual = compositor.CreateSpriteVisual()
+        backgroundVisual.Brush = compositor.CreateColorBrush(Colors.LightGreen)
+        ElementCompositionPreview.SetElementChildVisual(Host, backgroundVisual)
 
-        container.Children.InsertAtBottom(backgroundVisual)
         UpdateSize()
-    End Sub
-
-    Private Sub Host_Unloaded(sender As Object, e As RoutedEventArgs)
-        backgroundVisual.Dispose()
-        container.Dispose()
-        compositor.Dispose()
     End Sub
 
     Private Sub Host_SizeChanged(sender As Object, e As SizeChangedEventArgs)

@@ -14,7 +14,7 @@ namespace $safeprojectname$
         private Compositor compositor;
         private CompositionTarget compositionTarget;
         private ContainerVisual rootVisual;
-        private SolidColorVisual background;
+        private SpriteVisual background;
 
         private void InitializeComposition()
         {
@@ -27,8 +27,8 @@ namespace $safeprojectname$
             this.compositionTarget.Root = this.rootVisual;
 
             // add a solid color background
-            this.background = this.compositor.CreateSolidColorVisual();
-            this.background.Color = Colors.LightGreen;
+            this.background = this.compositor.CreateSpriteVisual();
+            this.background.Brush = this.compositor.CreateColorBrush(Colors.LightGreen);
             this.rootVisual.Children.InsertAtBottom(this.background);
 
             UpdateSize();

@@ -12,7 +12,7 @@ Public Class MainView
     Private compositor As Compositor
     Private compositionTarget As CompositionTarget
     Private rootVisual As ContainerVisual
-    Private background As SolidColorVisual
+    Private background As SpriteVisual
 
     Private Sub InitializeComposition()
         ' setup compositor And root visual
@@ -24,8 +24,8 @@ Public Class MainView
         compositionTarget.Root = rootVisual
 
         ' add a solid color background
-        background = compositor.CreateSolidColorVisual()
-        background.Color = Colors.LightGreen
+        background = compositor.CreateSpriteVisual()
+        background.Brush = compositor.CreateColorBrush(Colors.LightGreen)
         rootVisual.Children.InsertAtBottom(background)
 
         UpdateSize()
