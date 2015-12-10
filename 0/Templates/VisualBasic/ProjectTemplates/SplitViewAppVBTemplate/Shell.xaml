@@ -33,8 +33,8 @@
                     <ListView.ItemTemplate>
                         <DataTemplate x:DataType="presentation:MenuItem">
                             <StackPanel Orientation="Horizontal" Height="48">
-                                <TextBlock Grid.RowSpan="2" Text="{x:Bind Icon, Mode=OneWay}" Style="{StaticResource IconTextBlockStyle}" />
-                                <TextBlock Grid.Column="1" Text="{x:Bind Title, Mode=OneWay}" Style="{StaticResource MenuTitleTextBlockStyle}" />
+                                <TextBlock Text="{x:Bind Icon, Mode=OneWay}" ToolTipService.ToolTip="{x:Bind Title, Mode=OneWay}" Style="{StaticResource IconTextBlockStyle}" />
+                                <TextBlock Text="{x:Bind Title, Mode=OneWay}" Style="{StaticResource MenuTitleTextBlockStyle}" />
                             </StackPanel>
                         </DataTemplate>
                     </ListView.ItemTemplate>
@@ -49,10 +49,20 @@
             <VisualStateGroup x:Name="WindowStates">
                 <VisualState x:Name="WideState">
                     <VisualState.StateTriggers>
-                        <AdaptiveTrigger MinWindowWidth="720" />
+                        <AdaptiveTrigger MinWindowWidth="1024" />
                     </VisualState.StateTriggers>
                     <VisualState.Setters>
                         <Setter Target="SplitView.DisplayMode" Value="CompactInline" />
+                        <Setter Target="SplitView.IsPaneOpen" Value="True" />
+                    </VisualState.Setters>
+                </VisualState>
+                <VisualState x:Name="MediumState">
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="720" />
+                    </VisualState.StateTriggers>
+                    <VisualState.Setters>
+                        <Setter Target="SplitView.DisplayMode" Value="CompactOverlay" />
+                        <Setter Target="SplitView.IsPaneOpen" Value="False" />
                     </VisualState.Setters>
                 </VisualState>
                 <VisualState x:Name="NarrowState">
@@ -61,6 +71,7 @@
                     </VisualState.StateTriggers>
                     <VisualState.Setters>
                         <Setter Target="SplitView.DisplayMode" Value="Overlay" />
+                        <Setter Target="SplitView.IsPaneOpen" Value="False" />
                     </VisualState.Setters>
                 </VisualState>
             </VisualStateGroup>
