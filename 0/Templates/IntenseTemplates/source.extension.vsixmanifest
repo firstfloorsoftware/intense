@@ -26,5 +26,6 @@
     <Asset Type="Microsoft.VisualStudio.ProjectTemplate" d:Source="Project" d:ProjectName="CompositionAppVBTemplate" d:TargetPath="|CompositionAppVBTemplate;TemplateProjectOutputGroup|" Path="ProjectTemplates" d:VsixSubPath="ProjectTemplates" />
     <Asset Type="Microsoft.VisualStudio.ProjectTemplate" d:Source="Project" d:ProjectName="CompositionXamlAppVBTemplate" d:TargetPath="|CompositionXamlAppVBTemplate;TemplateProjectOutputGroup|" Path="ProjectTemplates" d:VsixSubPath="ProjectTemplates" />
     <Asset Type="Microsoft.VisualStudio.ProjectTemplate" d:Source="Project" d:ProjectName="NavigationAppVBTemplate" d:TargetPath="|NavigationAppVBTemplate;TemplateProjectOutputGroup|" Path="ProjectTemplates" d:VsixSubPath="ProjectTemplates" />
+    <Asset Type="intense.0.1.0-beta.nupkg" d:Source="File" Path="Packages\intense.0.1.0-beta.nupkg" d:VsixSubPath="Packages" />
   </Assets>
 </PackageManifest>

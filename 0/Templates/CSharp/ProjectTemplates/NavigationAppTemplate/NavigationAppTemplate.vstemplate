@@ -19,6 +19,7 @@
     <CreateInPlace>true</CreateInPlace>
     <PreviewImage>NavigationApp.png</PreviewImage>
     <AppIdFilter>blend</AppIdFilter>
+    <PromptForSaveOnCreation>true</PromptForSaveOnCreation>
   </TemplateData>
   <TemplateContent PreferedSolutionConfiguration="Debug|x86">
     <Project File="ProjectTemplate.csproj" ReplaceParameters="true">
@@ -70,7 +71,7 @@
     <packages repository="registry" keyName="NETCoreSDK" isPreunzipped="true">
       <package id="Microsoft.NETCore.UniversalWindowsPlatform" version="5.0.0" skipAssemblyReferences="false" />
     </packages>
-    <packages>
+    <packages repository="extension" repositoryId="UWPTemplates.FirstFloorSoftware.41bbea9a-56db-4624-b59b-62b70adcc598">
       <package id="Intense" version="0.1.0-beta" />
     </packages>
   </WizardData>

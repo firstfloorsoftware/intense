@@ -19,6 +19,7 @@
     <CreateInPlace>true</CreateInPlace>
     <PreviewImage>SplitViewApp.png</PreviewImage>
     <AppIdFilter>blend</AppIdFilter>
+    <PromptForSaveOnCreation>true</PromptForSaveOnCreation>
   </TemplateData>
   <TemplateContent PreferedSolutionConfiguration="Debug|x86">
     <Project File="ProjectTemplate.csproj" ReplaceParameters="true">

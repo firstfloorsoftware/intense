@@ -19,6 +19,7 @@
     <CreateInPlace>true</CreateInPlace>
     <PreviewImage>CompositionApp.png</PreviewImage>
     <AppIdFilter>blend</AppIdFilter>
+    <PromptForSaveOnCreation>true</PromptForSaveOnCreation>
   </TemplateData>
   <TemplateContent PreferedSolutionConfiguration="Debug|x86">
     <Project File="ProjectTemplate.vbproj" ReplaceParameters="true">
