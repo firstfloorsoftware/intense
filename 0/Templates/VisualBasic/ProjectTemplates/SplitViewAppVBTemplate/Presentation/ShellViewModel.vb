@@ -9,6 +9,9 @@
 
         Public Sub New()
             _toggleSplitViewPaneCommand = New Command(Sub() IsSplitViewPaneOpen = Not IsSplitViewPaneOpen)
+
+            ' open splitview pane in wide state
+            IsSplitViewPaneOpen = IsWideState()
         End Sub
 
         Public ReadOnly Property ToggleSplitViewPaneCommand As ICommand
@@ -35,8 +38,10 @@
                 If SetProperty(_selectedMenuItem, Value) Then
                     OnPropertyChanged("SelectedPageType")
 
-                    ' auto-close split view pane
-                    IsSplitViewPaneOpen = False
+                    ' auto-close split view pane (only when not in widestate)
+                    If Not IsWideState() Then
+                        IsSplitViewPaneOpen = False
+                    End If
                 End If
             End Set
         End Property
@@ -59,6 +64,12 @@
                 Return _menuItems
             End Get
         End Property
+
+        ' a helper determining whether we are in a wide window state
+        ' mvvm purists probably don't appreciate this approach
+        Private Function IsWideState() As Boolean
+            Return Window.Current.Bounds.Width >= 1024
+        End Function
 
     End Class
 End Namespace

@@ -2,6 +2,7 @@
 using System.Collections.ObjectModel;
 using System.Linq;
 using System.Windows.Input;
+using Windows.UI.Xaml;
 
 namespace $safeprojectname$.Presentation
 {
@@ -14,6 +15,9 @@ namespace $safeprojectname$.Presentation
         public ShellViewModel()
         {
             this.ToggleSplitViewPaneCommand = new Command(() => this.IsSplitViewPaneOpen = !this.IsSplitViewPaneOpen);
+
+            // open splitview pane in wide state
+            this.IsSplitViewPaneOpen = IsWideState();
         }
 
         public ICommand ToggleSplitViewPaneCommand { get; private set; }
@@ -32,8 +36,10 @@ namespace $safeprojectname$.Presentation
                 if (Set(ref this.selectedMenuItem, value)) {
                     OnPropertyChanged("SelectedPageType");
 
-                    // auto-close split view pane
-                    this.IsSplitViewPaneOpen = false;
+                    // auto-close split view pane (only when not in widestate)
+                    if (!IsWideState()) {
+                        this.IsSplitViewPaneOpen = false;
+                    }
                 }
             }
         }
@@ -54,6 +60,13 @@ namespace $safeprojectname$.Presentation
         public ObservableCollection<MenuItem> MenuItems
         {
             get { return this.menuItems; }
+        }
+
+        // a helper determining whether we are in a wide window state
+        // mvvm purists probably don't appreciate this approach
+        private bool IsWideState()
+        {
+            return Window.Current.Bounds.Width >= 1024;
         }
     }
 }
