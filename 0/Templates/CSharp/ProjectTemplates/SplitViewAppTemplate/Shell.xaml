@@ -22,23 +22,41 @@
         </StackPanel>
 
         <SplitView x:Name="SplitView" Grid.Row="1" IsPaneOpen="{x:Bind ViewModel.IsSplitViewPaneOpen, Mode=TwoWay}" >
+            <SplitView.Resources>
+                <Style TargetType="ListView">
+                    <Setter Property="ItemContainerStyle">
+                        <Setter.Value>
+                            <Style TargetType="ListViewItem">
+                                <Setter Property="Padding" Value="0" />
+                            </Style>
+                        </Setter.Value>
+                    </Setter>
+                </Style>
+                <DataTemplate x:Key="MenuItemTemplate" x:DataType="presentation:MenuItem">
+                    <StackPanel Orientation="Horizontal" Height="48">
+                        <TextBlock Text="{x:Bind Icon, Mode=OneWay}" ToolTipService.ToolTip="{x:Bind Title, Mode=OneWay}" Style="{StaticResource IconTextBlockStyle}" />
+                        <TextBlock Text="{x:Bind Title, Mode=OneWay}" Style="{StaticResource MenuTitleTextBlockStyle}" />
+                    </StackPanel>
+                </DataTemplate>
+            </SplitView.Resources>
             <SplitView.Pane>
-                <ListView ItemsSource="{x:Bind ViewModel.MenuItems}"
-                          SelectedItem="{x:Bind ViewModel.SelectedMenuItem, Mode=TwoWay, Converter={StaticResource ObjectToMenuItemConverter}}">
-                    <ListView.ItemContainerStyle>
-                        <Style TargetType="ListViewItem">
-                            <Setter Property="Padding" Value="0" />
-                        </Style>
-                    </ListView.ItemContainerStyle>
-                    <ListView.ItemTemplate>
-                        <DataTemplate x:DataType="presentation:MenuItem">
-                            <StackPanel Orientation="Horizontal" Height="48">
-                                <TextBlock Text="{x:Bind Icon, Mode=OneWay}" ToolTipService.ToolTip="{x:Bind Title, Mode=OneWay}" Style="{StaticResource IconTextBlockStyle}" />
-                                <TextBlock Text="{x:Bind Title, Mode=OneWay}" Style="{StaticResource MenuTitleTextBlockStyle}" />
-                            </StackPanel>
-                        </DataTemplate>
-                    </ListView.ItemTemplate>
-                </ListView>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition />
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+
+                    <!-- top menu-->
+                    <ListView ItemsSource="{x:Bind ViewModel.MenuItems}"
+                              SelectedItem="{x:Bind ViewModel.SelectedMenuItem, Mode=TwoWay, Converter={StaticResource ObjectToMenuItemConverter}}"
+                              ItemTemplate="{StaticResource MenuItemTemplate}" />
+
+                    <!-- bottom menu-->
+                    <ListView Grid.Row="1"
+                              ItemsSource="{x:Bind ViewModel.BottomMenuItems}"
+                              SelectedItem="{x:Bind ViewModel.SelectedBottomMenuItem, Mode=TwoWay, Converter={StaticResource ObjectToMenuItemConverter}}"
+                              ItemTemplate="{StaticResource MenuItemTemplate}" />
+                </Grid>
             </SplitView.Pane>
             <SplitView.Content>
                 <Frame x:Name="Frame" SourcePageType="{x:Bind ViewModel.SelectedPageType, Mode=TwoWay}" />

@@ -12,9 +12,11 @@ Public NotInheritable Class Shell
 
         _viewModel = New ShellViewModel
         _viewModel.MenuItems.Add(New MenuItem With {.Icon = "", .Title = "Welcome", .PageType = GetType(WelcomePage)})
-        _viewModel.MenuItems.Add(New MenuItem With {.Icon = "", .Title = "Page 1", .PageType = GetType(Page1)})
+        _viewModel.MenuItems.Add(New MenuItem With {.Icon = "", .Title = "Page 1", .PageType = GetType(Page1)})
         _viewModel.MenuItems.Add(New MenuItem With {.Icon = "", .Title = "Page 2", .PageType = GetType(Page2)})
         _viewModel.MenuItems.Add(New MenuItem With {.Icon = "", .Title = "Page 3", .PageType = GetType(Page3)})
+
+        _viewModel.BottomMenuItems.Add(New MenuItem With {.Icon = "", .Title = "Settings", .PageType = GetType(SettingsPage)})
 
         ' selected the first menu item
         _viewModel.SelectedMenuItem = _viewModel.MenuItems.First

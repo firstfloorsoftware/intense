@@ -10,6 +10,8 @@ namespace $safeprojectname$.Presentation
     {
         private ObservableCollection<MenuItem> menuItems = new ObservableCollection<MenuItem>();
         private MenuItem selectedMenuItem;
+        private ObservableCollection<MenuItem> bottomMenuItems = new ObservableCollection<MenuItem>();
+        private MenuItem selectedBottomMenuItem;
         private bool isSplitViewPaneOpen;
 
         public ShellViewModel()
@@ -33,13 +35,19 @@ namespace $safeprojectname$.Presentation
             get { return this.selectedMenuItem; }
             set
             {
-                if (Set(ref this.selectedMenuItem, value)) {
-                    OnPropertyChanged("SelectedPageType");
+                if (Set(ref this.selectedMenuItem, value) && value != null) {
+                    OnSelectedMenuItemChanged(true);
+                }
+            }
+        }
 
-                    // auto-close split view pane (only when not in widestate)
-                    if (!IsWideState()) {
-                        this.IsSplitViewPaneOpen = false;
-                    }
+        public MenuItem SelectedBottomMenuItem
+        {
+            get { return this.selectedBottomMenuItem; }
+            set
+            {
+                if (Set(ref this.selectedBottomMenuItem, value) && value != null) {
+                    OnSelectedMenuItemChanged(false);
                 }
             }
         }
@@ -48,18 +56,40 @@ namespace $safeprojectname$.Presentation
         {
             get
             {
-                return this.selectedMenuItem?.PageType;
+                return (this.selectedMenuItem ?? this.selectedBottomMenuItem)?.PageType;
             }
             set
             {
                 // select associated menu item
                 this.SelectedMenuItem = this.menuItems.FirstOrDefault(m => m.PageType == value);
+                this.SelectedBottomMenuItem = this.bottomMenuItems.FirstOrDefault(m => m.PageType == value);
             }
         }
 
         public ObservableCollection<MenuItem> MenuItems
         {
             get { return this.menuItems; }
+        }
+
+        public ObservableCollection<MenuItem> BottomMenuItems
+        {
+            get { return this.bottomMenuItems; }
+        }
+
+        private void OnSelectedMenuItemChanged(bool top)
+        {
+            if (top) {
+                this.SelectedBottomMenuItem = null;
+            }
+            else {
+                this.SelectedMenuItem = null;
+            }
+            OnPropertyChanged("SelectedPageType");
+
+            // auto-close split view pane (only when not in widestate)
+            if (!IsWideState()) {
+                this.IsSplitViewPaneOpen = false;
+            }
         }
 
         // a helper determining whether we are in a wide window state

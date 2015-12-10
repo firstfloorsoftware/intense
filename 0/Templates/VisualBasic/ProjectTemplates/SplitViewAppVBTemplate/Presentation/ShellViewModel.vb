@@ -4,6 +4,8 @@
 
         Private _menuItems As ObservableCollection(Of MenuItem) = New ObservableCollection(Of MenuItem)
         Private _selectedMenuItem As MenuItem
+        Private _bottomMenuItems As ObservableCollection(Of MenuItem) = New ObservableCollection(Of MenuItem)
+        Private _selectedBottomMenuItem As MenuItem
         Private _isSplitViewPaneOpen As Boolean
         Private _toggleSplitViewPaneCommand As ICommand
 
@@ -35,27 +37,38 @@
 
             End Get
             Set
-                If SetProperty(_selectedMenuItem, Value) Then
-                    OnPropertyChanged("SelectedPageType")
+                If SetProperty(_selectedMenuItem, Value) And Not Value Is Nothing Then
+                    OnSelectedMenuItemChanged(True)
+                End If
+            End Set
+        End Property
 
-                    ' auto-close split view pane (only when not in widestate)
-                    If Not IsWideState() Then
-                        IsSplitViewPaneOpen = False
-                    End If
+        Public Property SelectedBottomMenuItem As MenuItem
+            Get
+                Return _selectedBottomMenuItem
+
+            End Get
+            Set
+                If SetProperty(_selectedBottomMenuItem, Value) And Not Value Is Nothing Then
+                    OnSelectedMenuItemChanged(False)
                 End If
             End Set
         End Property
 
         Public Property SelectedPageType As Type
             Get
-                If _selectedMenuItem Is Nothing Then
-                    Return Nothing
+                If Not _selectedMenuItem Is Nothing Then
+                    Return _selectedMenuItem.PageType
                 End If
-                Return _selectedMenuItem.PageType
+                If Not _selectedBottomMenuItem Is Nothing Then
+                    Return _selectedBottomMenuItem.PageType
+                End If
+                Return Nothing
             End Get
             Set
                 ' select associated menu item
                 SelectedMenuItem = _menuItems.FirstOrDefault(Function(m) m.PageType.Equals(Value))
+                SelectedBottomMenuItem = _bottomMenuItems.FirstOrDefault(Function(m) m.PageType.Equals(Value))
             End Set
         End Property
 
@@ -64,6 +77,26 @@
                 Return _menuItems
             End Get
         End Property
+
+        Public ReadOnly Property BottomMenuItems As ObservableCollection(Of MenuItem)
+            Get
+                Return _bottomMenuItems
+            End Get
+        End Property
+
+        Private Sub OnSelectedMenuItemChanged(top As Boolean)
+            If top Then
+                SelectedBottomMenuItem = Nothing
+            Else
+                SelectedMenuItem = Nothing
+            End If
+            OnPropertyChanged("SelectedPageType")
+
+            ' auto-close split view pane (only when not in widestate)
+            If Not IsWideState() Then
+                IsSplitViewPaneOpen = False
+            End If
+        End Sub
 
         ' a helper determining whether we are in a wide window state
         ' mvvm purists probably don't appreciate this approach

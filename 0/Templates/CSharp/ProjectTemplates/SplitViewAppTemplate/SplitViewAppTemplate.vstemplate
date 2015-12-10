@@ -50,6 +50,8 @@
         <ProjectItem ReplaceParameters="true" TargetFileName="Page2.xaml.cs">Page2.xaml.cs</ProjectItem>
         <ProjectItem ReplaceParameters="true" OpenInEditor="blend" TargetFileName="Page3.xaml">Page3.xaml</ProjectItem>
         <ProjectItem ReplaceParameters="true" TargetFileName="Page3.xaml.cs">Page3.xaml.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" OpenInEditor="blend" TargetFileName="SettingsPage.xaml">SettingsPage.xaml</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="SettingsPage.xaml.cs">SettingsPage.xaml.cs</ProjectItem>
         <ProjectItem ReplaceParameters="true" OpenInEditor="blend" TargetFileName="WelcomePage.xaml">WelcomePage.xaml</ProjectItem>
         <ProjectItem ReplaceParameters="true" TargetFileName="WelcomePage.xaml.cs">WelcomePage.xaml.cs</ProjectItem>
       </Folder>

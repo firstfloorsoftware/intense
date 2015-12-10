@@ -14,9 +14,11 @@ namespace $safeprojectname$
 
             var vm = new ShellViewModel();
             vm.MenuItems.Add(new MenuItem { Icon = "", Title = "Welcome", PageType = typeof(WelcomePage) });
-            vm.MenuItems.Add(new MenuItem { Icon = "", Title = "Page 1", PageType = typeof(Page1) });
+            vm.MenuItems.Add(new MenuItem { Icon = "", Title = "Page 1", PageType = typeof(Page1) });
             vm.MenuItems.Add(new MenuItem { Icon = "", Title = "Page 2", PageType = typeof(Page2) });
             vm.MenuItems.Add(new MenuItem { Icon = "", Title = "Page 3", PageType = typeof(Page3) });
+
+            vm.BottomMenuItems.Add(new MenuItem { Icon = "", Title = "Settings", PageType = typeof(SettingsPage) });
 
             // select the first menu item
             vm.SelectedMenuItem = vm.MenuItems.First();
