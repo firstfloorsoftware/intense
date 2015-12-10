@@ -4,7 +4,7 @@
                 x:Class="Intense.TestApp.NavigationStructure"
                 DisplayName="Intense.TestApp"
                 Icon="">
-    <NavigationItem DisplayName="Appearance" PageType="pages:AppearancePage" />
+    <NavigationItem Icon=""  DisplayName="Appearance" Description="Configure the look &amp; feel"  PageType="pages:AppearancePage" />
 </NavigationItem>
 
     
