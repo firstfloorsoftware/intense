@@ -19,7 +19,8 @@
         <local:PageHeader x:Name="PageHeader"
                           Frame="{x:Bind Frame, Mode=OneWay}"
                           Icon="{x:Bind RootItem.Icon, Mode=OneWay}"
-                          Title="{x:Bind NavigationItem.DisplayNameUppercase, Mode=OneWay}" />
+                          Title="{x:Bind NavigationItem.DisplayNameUppercase, Mode=OneWay}"
+                          IsSearchBoxVisible="False" />
 
         <SplitView x:Name="SplitView" Grid.Row="1" IsPaneOpen="True" DisplayMode="Inline" OpenPaneLength="320">
             <SplitView.Pane>

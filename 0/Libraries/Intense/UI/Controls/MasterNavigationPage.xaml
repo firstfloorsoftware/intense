@@ -18,7 +18,8 @@
 
         <local:PageHeader Frame="{x:Bind Frame, Mode=OneWay}"
                           Icon="{x:Bind RootItem.Icon, Mode=OneWay}" 
-                          Title="{x:Bind NavigationItem.DisplayNameUppercase, Mode=OneWay}" />
+                          Title="{x:Bind NavigationItem.DisplayNameUppercase, Mode=OneWay}"
+                          IsSearchBoxVisible="False" />
 
         <ListView x:Name="NavigationList" 
                   Grid.Row="1"
