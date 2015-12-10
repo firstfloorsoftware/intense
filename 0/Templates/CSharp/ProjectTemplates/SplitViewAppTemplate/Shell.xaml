@@ -16,7 +16,7 @@
             <RowDefinition />
         </Grid.RowDefinitions>
 
-        <StackPanel Orientation="Horizontal" Background="{ThemeResource SystemChromeMediumColor}">
+        <StackPanel Orientation="Horizontal" Background="{ThemeResource SystemChromeLowColor}">
             <Button Content="&#xE700;" Command="{x:Bind ViewModel.ToggleSplitViewPaneCommand}" Style="{StaticResource IconButtonStyle}"/>
             <TextBlock Text="SPLITVIEW TEMPLATE" Style="{StaticResource AppTitleTextBlockStyle}" />
         </StackPanel>
