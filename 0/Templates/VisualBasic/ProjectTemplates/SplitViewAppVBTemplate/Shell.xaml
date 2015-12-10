@@ -11,40 +11,38 @@
     d:DesignWidth="400">
 
     <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="Auto" />
-            <RowDefinition />
-        </Grid.RowDefinitions>
-
-        <StackPanel Orientation="Horizontal" Background="{ThemeResource SystemChromeLowColor}">
-            <Button Content="&#xE700;" Command="{x:Bind ViewModel.ToggleSplitViewPaneCommand}" Style="{StaticResource IconButtonStyle}"/>
-            <TextBlock Text="SPLITVIEW TEMPLATE" Style="{StaticResource AppTitleTextBlockStyle}" />
-        </StackPanel>
-
-        <SplitView x:Name="SplitView" Grid.Row="1" IsPaneOpen="{x:Bind ViewModel.IsSplitViewPaneOpen, Mode=TwoWay}" >
+        <SplitView x:Name="SplitView" IsPaneOpen="{x:Bind ViewModel.IsSplitViewPaneOpen, Mode=TwoWay}" >
             <SplitView.Resources>
                 <DataTemplate x:Key="MenuItemTemplate" x:DataType="presentation:MenuItem">
                     <StackPanel Orientation="Horizontal" Height="48">
-                        <TextBlock Text="{x:Bind Icon, Mode=OneWay}" ToolTipService.ToolTip="{x:Bind Title, Mode=OneWay}" Style="{StaticResource IconTextBlockStyle}" />
-                        <TextBlock Text="{x:Bind Title, Mode=OneWay}" Style="{StaticResource MenuTitleTextBlockStyle}" />
+                        <TextBlock Text="{x:Bind Icon, Mode=OneWay}" ToolTipService.ToolTip="{x:Bind Title, Mode=OneWay}" Style="{StaticResource MenuItemIconTextBlockStyle}" />
+                        <TextBlock Text="{x:Bind Title, Mode=OneWay}" Style="{StaticResource MenuItemTitleTextBlockStyle}" />
                     </StackPanel>
                 </DataTemplate>
             </SplitView.Resources>
             <SplitView.Pane>
                 <Grid>
                     <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
                         <RowDefinition />
                         <RowDefinition Height="Auto" />
                     </Grid.RowDefinitions>
 
+                    <!-- hamburger and title -->
+                    <StackPanel Orientation="Horizontal">
+                        <Button Content="&#xE700;" Command="{x:Bind ViewModel.ToggleSplitViewPaneCommand}" Style="{StaticResource IconButtonStyle}"/>
+                        <TextBlock Text="SPLITVIEW TEMPLATE" Style="{StaticResource AppTitleTextBlockStyle}" />
+                    </StackPanel>
+
                     <!-- top menu-->
-                    <ListView ItemsSource="{x:Bind ViewModel.MenuItems}"
+                    <ListView Grid.Row="1"
+                              ItemsSource="{x:Bind ViewModel.MenuItems}"
                               SelectedItem="{x:Bind ViewModel.SelectedMenuItem, Mode=TwoWay, Converter={StaticResource ObjectToMenuItemConverter}}"
                               ItemTemplate="{StaticResource MenuItemTemplate}" 
                               ItemContainerStyle="{StaticResource MenuListViewItemStyle}" />
 
                     <!-- bottom menu-->
-                    <ListView Grid.Row="1"
+                    <ListView Grid.Row="2"
                               ItemsSource="{x:Bind ViewModel.BottomMenuItems}"
                               SelectedItem="{x:Bind ViewModel.SelectedBottomMenuItem, Mode=TwoWay, Converter={StaticResource ObjectToMenuItemConverter}}"
                               ItemTemplate="{StaticResource MenuItemTemplate}"
@@ -67,21 +65,12 @@
                         <Setter Target="SplitView.IsPaneOpen" Value="True" />
                     </VisualState.Setters>
                 </VisualState>
-                <VisualState x:Name="MediumState">
-                    <VisualState.StateTriggers>
-                        <AdaptiveTrigger MinWindowWidth="720" />
-                    </VisualState.StateTriggers>
-                    <VisualState.Setters>
-                        <Setter Target="SplitView.DisplayMode" Value="CompactOverlay" />
-                        <Setter Target="SplitView.IsPaneOpen" Value="False" />
-                    </VisualState.Setters>
-                </VisualState>
                 <VisualState x:Name="NarrowState">
                     <VisualState.StateTriggers>
                         <AdaptiveTrigger MinWindowWidth="0" />
                     </VisualState.StateTriggers>
                     <VisualState.Setters>
-                        <Setter Target="SplitView.DisplayMode" Value="Overlay" />
+                        <Setter Target="SplitView.DisplayMode" Value="CompactOverlay" />
                         <Setter Target="SplitView.IsPaneOpen" Value="False" />
                     </VisualState.Setters>
                 </VisualState>
