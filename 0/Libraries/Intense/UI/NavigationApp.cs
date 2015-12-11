@@ -38,6 +38,9 @@ namespace Intense.UI
             if (frame == null) {
                 frame = new Frame();
 
+                // assign navigation root style
+                frame.Style = (Style)Resources["NavigationRootFrameStyle"];
+
                 frame.Navigated += OnFrameNavigated;
                 frame.NavigationFailed += OnFrameNavigationFailed;
 
