@@ -7,7 +7,7 @@
     <TemplateID>Intense.VisualBasic.SplitViewApp</TemplateID>
     <TemplateGroupID>WinRT-Managed</TemplateGroupID>
     <ProjectType>VisualBasic</ProjectType>
-    <SortOrder>1001</SortOrder>
+    <SortOrder>1005</SortOrder>
     <CreateNewFolder>true</CreateNewFolder>
     <DefaultName>SplitViewApp</DefaultName>
     <ProvideDefaultName>true</ProvideDefaultName>

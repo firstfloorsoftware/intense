@@ -29,7 +29,7 @@ namespace $safeprojectname$.Presentation
             set
             {
                 if (Set(ref this.isPaneOpen, value) && !value) {
-                    // unpane pane when closed
+                    // unpin pane when closed
                     this.IsPanePinned = false;
                 }
             }

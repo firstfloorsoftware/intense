@@ -7,7 +7,7 @@
     <TemplateID>Intense.VisualBasic.NavigationApp</TemplateID>
     <TemplateGroupID>WinRT-Managed</TemplateGroupID>
     <ProjectType>VisualBasic</ProjectType>
-    <SortOrder>1002</SortOrder>
+    <SortOrder>1004</SortOrder>
     <CreateNewFolder>true</CreateNewFolder>
     <DefaultName>NavigationApp</DefaultName>
     <ProvideDefaultName>true</ProvideDefaultName>

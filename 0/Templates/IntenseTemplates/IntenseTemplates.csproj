@@ -117,6 +117,13 @@
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
       <IncludeOutputGroupsInVSIX>TemplateProjectOutputGroup%3b</IncludeOutputGroupsInVSIX>
     </ProjectReference>
+    <ProjectReference Include="..\VisualBasic\ProjectTemplates\ContentAppVBTemplate\ContentAppVBTemplate.vbproj">
+      <Project>{2e6af52e-5b5a-4ddb-bf1e-f4b47d79d573}</Project>
+      <Name>ContentAppVBTemplate</Name>
+      <VSIXSubPath>ProjectTemplates</VSIXSubPath>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <IncludeOutputGroupsInVSIX>TemplateProjectOutputGroup%3b</IncludeOutputGroupsInVSIX>
+    </ProjectReference>
     <ProjectReference Include="..\VisualBasic\ProjectTemplates\NavigationAppVBTemplate\NavigationAppVBTemplate.vbproj">
       <Project>{E9D363F0-B05F-4C88-87E4-842037A81639}</Project>
       <Name>NavigationAppVBTemplate</Name>

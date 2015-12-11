@@ -1,15 +1,15 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <VSTemplate Version="3.0.0" Type="Project" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005">
   <TemplateData>
-    <Name>🔟 Composition App (Universal Windows)</Name>
-    <Description>A framework-less project for starting with the Windows.UI.Composition APIs in Universal Windows Apps.</Description>
-    <Icon>CompositionAppTemplate.ico</Icon>
-    <TemplateID>Intense.VisualBasic.CompositionApp</TemplateID>
+    <Name>🔟 Content App (Universal Windows)</Name>
+    <Description>A content focused project with command bar and pinnable pane.</Description>
+    <Icon>ContentAppTemplate.ico</Icon>
+    <TemplateID>Intense.VisualBasic.ContentApp</TemplateID>
     <TemplateGroupID>WinRT-Managed</TemplateGroupID>
     <ProjectType>VisualBasic</ProjectType>
-    <SortOrder>1001</SortOrder>
+    <SortOrder>1003</SortOrder>
     <CreateNewFolder>true</CreateNewFolder>
-    <DefaultName>CompositionApp</DefaultName>
+    <DefaultName>ContentApp</DefaultName>
     <ProvideDefaultName>true</ProvideDefaultName>
     <LocationField>Enabled</LocationField>
     <EnableLocationBrowseButton>true</EnableLocationBrowseButton>
@@ -17,14 +17,16 @@
     <TargetPlatformName>Windows</TargetPlatformName>
     <RequiredPlatformVersion>6.1.0</RequiredPlatformVersion>
     <CreateInPlace>true</CreateInPlace>
-    <PreviewImage>CompositionApp.png</PreviewImage>
+    <PreviewImage>ContentApp.png</PreviewImage>
     <AppIdFilter>blend</AppIdFilter>
     <PromptForSaveOnCreation>true</PromptForSaveOnCreation>
   </TemplateData>
   <TemplateContent PreferedSolutionConfiguration="Debug|x86">
     <Project File="ProjectTemplate.vbproj" ReplaceParameters="true">
-      <ProjectItem ReplaceParameters="true" TargetFileName="MainView.vb">MainView.vb</ProjectItem>
-      <ProjectItem ReplaceParameters="true" TargetFileName="MainViewFactory.vb">MainViewFactory.vb</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="App.xaml">App.xaml</ProjectItem>
+      <ProjectItem ReplaceParameters="true" OpenInEditor="!blend" TargetFileName="App.xaml.vb">App.xaml.vb</ProjectItem>
+      <ProjectItem ReplaceParameters="true" OpenInEditor="blend" TargetFileName="Shell.xaml">Shell.xaml</ProjectItem>
+      <ProjectItem ReplaceParameters="true" OpenInEditor="!blend" TargetFileName="Shell.xaml.vb">Shell.xaml.vb</ProjectItem>
       <ProjectItem ReplaceParameters="false" TargetFileName="project.json">template.project.json</ProjectItem>
       <ProjectItem ReplaceParameters="true" TargetFileName="Package.appxmanifest">template.Package.appxmanifest</ProjectItem>
       <ProjectItem ReplaceParameters="false" TargetFileName="$projectname$_TemporaryKey.pfx" BlendDoNotCreate="true">Application_TemporaryKey.pfx</ProjectItem>
@@ -38,6 +40,12 @@
         <ProjectItem ReplaceParameters="false" TargetFileName="Square44x44Logo.targetsize-24_altform-unplated.png">Square44x44Logo.targetsize-24_altform-unplated.png</ProjectItem>
         <ProjectItem ReplaceParameters="false" TargetFileName="StoreLogo.png">StoreLogo.png</ProjectItem>
         <ProjectItem ReplaceParameters="false" TargetFileName="Wide310x150Logo.scale-200.png">Wide310x150Logo.scale-200.png</ProjectItem>
+      </Folder>
+      <Folder Name="Presentation" TargetFolderName="Presentation">
+        <ProjectItem ReplaceParameters="true" TargetFileName="BooleanToVisibilityConverter.vb">BooleanToVisibilityConverter.vb</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="Command.vb">Command.vb</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="ContentViewModel.vb">ContentViewModel.vb</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="NotifyPropertyChanged.vb">NotifyPropertyChanged.vb</ProjectItem>
       </Folder>
     </Project>
   </TemplateContent>
