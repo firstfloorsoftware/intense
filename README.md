@@ -1,6 +1,8 @@
 # Intense
 Controls, templates, and tools for building Universal Windows Platform apps with XAML
 
+[![Build status](https://ci.appveyor.com/api/projects/status/ayu8ka9jhggfr9s1?svg=true)](https://ci.appveyor.com/project/kozw/intense)
+
 ## Intense Templates
 Adds new project and item templates to Visual Studio 2015 for creating Universal Windows apps.
 
