@@ -7,7 +7,7 @@
     <TemplateID>Intense.CSharp.SplitViewApp</TemplateID>
     <TemplateGroupID>WinRT-Managed</TemplateGroupID>
     <ProjectType>CSharp</ProjectType>
-    <SortOrder>1001</SortOrder>
+    <SortOrder>1005</SortOrder>
     <CreateNewFolder>true</CreateNewFolder>
     <DefaultName>SplitViewApp</DefaultName>
     <ProvideDefaultName>true</ProvideDefaultName>

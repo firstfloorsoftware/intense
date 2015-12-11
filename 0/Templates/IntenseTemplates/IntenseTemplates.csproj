@@ -75,6 +75,13 @@
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
       <IncludeOutputGroupsInVSIX>TemplateProjectOutputGroup%3b</IncludeOutputGroupsInVSIX>
     </ProjectReference>
+    <ProjectReference Include="..\CSharp\ProjectTemplates\ContentAppTemplate\ContentAppTemplate.csproj">
+      <Project>{7e3d32e3-62a1-4d48-a112-f995b5545233}</Project>
+      <Name>ContentAppTemplate</Name>
+      <VSIXSubPath>ProjectTemplates</VSIXSubPath>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <IncludeOutputGroupsInVSIX>TemplateProjectOutputGroup%3b</IncludeOutputGroupsInVSIX>
+    </ProjectReference>
     <ProjectReference Include="..\CSharp\ProjectTemplates\NavigationAppTemplate\NavigationAppTemplate.csproj">
       <Project>{5737A694-060D-4DC1-95AF-FCECE695B8E6}</Project>
       <Name>NavigationAppTemplate</Name>

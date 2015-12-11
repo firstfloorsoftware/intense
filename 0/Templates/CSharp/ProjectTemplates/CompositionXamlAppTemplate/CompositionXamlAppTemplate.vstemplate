@@ -7,7 +7,7 @@
     <TemplateID>Intense.CSharp.CompositionXamlApp</TemplateID>
     <TemplateGroupID>WinRT-Managed</TemplateGroupID>
     <ProjectType>CSharp</ProjectType>
-    <SortOrder>1004</SortOrder>
+    <SortOrder>1002</SortOrder>
     <CreateNewFolder>true</CreateNewFolder>
     <DefaultName>CompositionXamlApp</DefaultName>
     <ProvideDefaultName>true</ProvideDefaultName>

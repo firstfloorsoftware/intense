@@ -1,0 +1,66 @@
+﻿<UserControl
+    x:Class="$safeprojectname$.Shell"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:$safeprojectname$"
+    xmlns:presentation="using:$safeprojectname$.Presentation"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    d:DesignHeight="300"
+    d:DesignWidth="400">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <CommandBar>
+            <CommandBar.Content>
+                <Grid Height="48">
+                    <TextBlock Text="CONTENT TEMPLATE" Style="{StaticResource AppTitleTextBlockStyle}" />
+                </Grid>
+            </CommandBar.Content>
+            <CommandBar.PrimaryCommands>
+                <AppBarButton Icon="Back" Label="Back" />
+                <AppBarButton Icon="Forward" Label="Forward" />
+            </CommandBar.PrimaryCommands>
+            <CommandBar.SecondaryCommands>
+                <AppBarButton Label="Option 1" />
+                <AppBarButton Label="Option 2" />
+                <AppBarSeparator />
+                <AppBarButton Label="Show pane" Command="{x:Bind ViewModel.ShowPaneCommand}" />
+            </CommandBar.SecondaryCommands>
+        </CommandBar>
+
+        <SplitView Grid.Row="1"
+                   IsPaneOpen="{x:Bind ViewModel.IsPaneOpen, Mode=TwoWay}"
+                   DisplayMode="{x:Bind ViewModel.PaneDisplayMode, Mode=OneWay}"
+                   PanePlacement="Right">
+            <SplitView.Pane>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="48" />
+                        <RowDefinition />
+                    </Grid.RowDefinitions>
+
+                    <Grid>
+                        <TextBlock Text="PANE" Style="{StaticResource AppTitleTextBlockStyle}" />
+                        <Button Content="&#xE718;" HorizontalAlignment="Right"  Style="{StaticResource IconButtonStyle}"
+                                Command="{x:Bind ViewModel.PinPaneCommand}"
+                                Visibility="{x:Bind ViewModel.IsPanePinned, Converter={StaticResource FalseToVisibleConverter}, Mode=OneWay}"/>
+                        <Button Content="&#xE711;" HorizontalAlignment="Right" Style="{StaticResource IconButtonStyle}"
+                                Command="{x:Bind ViewModel.HidePaneCommand}"
+                                Visibility="{x:Bind ViewModel.IsPanePinned, Converter={StaticResource TrueToVisibleConverter}, Mode=OneWay}"/>
+                        <Rectangle Fill="{ThemeResource SystemChromeBlackLowColor}" Height="1" VerticalAlignment="Bottom" />
+                    </Grid>
+
+                    <TextBlock Grid.Row="1" Text="Pane content here" Style="{StaticResource TitleTextBlockStyle}" HorizontalAlignment="Center" VerticalAlignment="Center" Opacity=".5" />
+                </Grid>
+            </SplitView.Pane>
+            <SplitView.Content>
+                <TextBlock Text="Your content here" Style="{StaticResource TitleTextBlockStyle}" HorizontalAlignment="Center" VerticalAlignment="Center" Opacity=".5" />
+            </SplitView.Content>
+        </SplitView>
+    </Grid>
+</UserControl>
