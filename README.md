@@ -1,10 +1,7 @@
 # Intense
-Controls, templates, and tools for building Universal Windows Platform apps with XAML
+Controls, templates, and tools for building Universal Windows Platform apps for Windows 10.
 
-## Intense Templates
-Adds new project and item templates to Visual Studio 2015 for creating Universal Windows apps.
-
-The Intense Templates VSIX and documentation is available in the [Visual Studio Gallery](https://visualstudiogallery.msdn.microsoft.com/b7076e96-d4ab-4150-b2c6-12730abd5666)
+More info, documentation and screenshots at http://intense-toolkit.com
 
 ## Build status
 Intense
