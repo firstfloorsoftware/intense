@@ -16,6 +16,13 @@ namespace Intense.Presentation
     {
         private NavigationItem parent;
 
+        /// <summary>
+        /// Initializes a default instance of the <see cref="NavigationItemCollection"/>.
+        /// </summary>
+        public NavigationItemCollection()
+        {
+        }
+
         internal NavigationItemCollection(NavigationItem parent)
         {
             this.parent = parent;

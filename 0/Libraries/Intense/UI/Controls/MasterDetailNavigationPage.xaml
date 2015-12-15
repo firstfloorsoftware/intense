@@ -30,7 +30,7 @@
                           Style="{StaticResource BasicNavigationListViewStyle}" />
             </SplitView.Pane>
             <SplitView.Content>
-                <Frame x:Name="ContentFrame" Style="{StaticResource ContentFrameStyle}" Navigated="OnContentFrameNavigated" />
+                <local:ContentFrame x:Name="ContentFrame" Navigated="OnContentFrameNavigated" />
             </SplitView.Content>
         </SplitView>
 

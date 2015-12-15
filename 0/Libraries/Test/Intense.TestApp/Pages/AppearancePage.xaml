@@ -7,10 +7,14 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
-    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" Padding="{x:Bind Frame.Padding, Mode=OneWay}">
-        <StackPanel Orientation="Horizontal">
-            <Button Content="Light" Click="Light_Click" />
-            <Button Content="Dark" Click="Dark_Click" />
-        </StackPanel>
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" >
+        <ScrollViewer Padding="{x:Bind Frame.Padding, Mode=OneWay}">
+            <StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <Button Content="Light" Click="Light_Click" />
+                    <Button Content="Dark" Click="Dark_Click" />
+                </StackPanel>
+            </StackPanel>
+        </ScrollViewer>
     </Grid>
 </Page>
