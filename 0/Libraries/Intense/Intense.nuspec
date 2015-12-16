@@ -7,7 +7,7 @@
     <authors>First Floor Software</authors>
     <owners>First Floor Software</owners>
     <licenseUrl>https://raw.githubusercontent.com/firstfloorsoftware/intense/master/LICENSE</licenseUrl>
-    <projectUrl>https://github.com/firstfloorsoftware/intense</projectUrl>
+    <projectUrl>http://intense-toolkit.com</projectUrl>
     <iconUrl>http://intense-toolkit.com/images/intense-icon.png</iconUrl>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
     <description>Controls, templates, and tools for building Universal Windows Platform apps with XAML</description>
