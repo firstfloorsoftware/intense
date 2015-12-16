@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Intense.Presentation;
+using System;
 using System.Collections.ObjectModel;
 using System.Linq;
 using System.Windows.Input;
@@ -8,15 +9,15 @@ namespace $safeprojectname$.Presentation
 {
     public class ShellViewModel : NotifyPropertyChanged
     {
-        private ObservableCollection<MenuItem> menuItems = new ObservableCollection<MenuItem>();
-        private MenuItem selectedMenuItem;
-        private ObservableCollection<MenuItem> bottomMenuItems = new ObservableCollection<MenuItem>();
-        private MenuItem selectedBottomMenuItem;
+        private NavigationItemCollection topItems = new NavigationItemCollection();
+        private NavigationItem selectedTopItem;
+        private NavigationItemCollection bottomItems = new NavigationItemCollection();
+        private NavigationItem selectedBottomItem;
         private bool isSplitViewPaneOpen;
 
         public ShellViewModel()
         {
-            this.ToggleSplitViewPaneCommand = new Command(() => this.IsSplitViewPaneOpen = !this.IsSplitViewPaneOpen);
+            this.ToggleSplitViewPaneCommand = new RelayCommand(() => this.IsSplitViewPaneOpen = !this.IsSplitViewPaneOpen);
 
             // open splitview pane in wide state
             this.IsSplitViewPaneOpen = IsWideState();
@@ -30,25 +31,35 @@ namespace $safeprojectname$.Presentation
             set { Set(ref this.isSplitViewPaneOpen, value); }
         }
 
-        public MenuItem SelectedMenuItem
+        public NavigationItem SelectedTopItem
         {
-            get { return this.selectedMenuItem; }
+            get { return this.selectedTopItem; }
             set
             {
-                if (Set(ref this.selectedMenuItem, value) && value != null) {
-                    OnSelectedMenuItemChanged(true);
+                if (Set(ref this.selectedTopItem, value) && value != null) {
+                    OnSelectedItemChanged(true);
                 }
             }
         }
 
-        public MenuItem SelectedBottomMenuItem
+        public NavigationItem SelectedBottomItem
         {
-            get { return this.selectedBottomMenuItem; }
+            get { return this.selectedBottomItem; }
             set
             {
-                if (Set(ref this.selectedBottomMenuItem, value) && value != null) {
-                    OnSelectedMenuItemChanged(false);
+                if (Set(ref this.selectedBottomItem, value) && value != null) {
+                    OnSelectedItemChanged(false);
                 }
+            }
+        }
+
+        public NavigationItem SelectedItem
+        {
+            get { return this.selectedTopItem ?? this.selectedBottomItem; }
+            set
+            {
+                this.SelectedTopItem = this.topItems.FirstOrDefault(m => m == value);
+                this.SelectedBottomItem = this.bottomItems.FirstOrDefault(m => m == value);
             }
         }
 
@@ -56,34 +67,35 @@ namespace $safeprojectname$.Presentation
         {
             get
             {
-                return (this.selectedMenuItem ?? this.selectedBottomMenuItem)?.PageType;
+                return this.SelectedItem?.PageType;
             }
             set
             {
                 // select associated menu item
-                this.SelectedMenuItem = this.menuItems.FirstOrDefault(m => m.PageType == value);
-                this.SelectedBottomMenuItem = this.bottomMenuItems.FirstOrDefault(m => m.PageType == value);
+                this.SelectedTopItem = this.topItems.FirstOrDefault(m => m.PageType == value);
+                this.SelectedBottomItem = this.bottomItems.FirstOrDefault(m => m.PageType == value);
             }
         }
 
-        public ObservableCollection<MenuItem> MenuItems
+        public NavigationItemCollection TopItems
         {
-            get { return this.menuItems; }
+            get { return this.topItems; }
         }
 
-        public ObservableCollection<MenuItem> BottomMenuItems
+        public NavigationItemCollection BottomItems
         {
-            get { return this.bottomMenuItems; }
+            get { return this.bottomItems; }
         }
 
-        private void OnSelectedMenuItemChanged(bool top)
+        private void OnSelectedItemChanged(bool top)
         {
             if (top) {
-                this.SelectedBottomMenuItem = null;
+                this.SelectedBottomItem = null;
             }
             else {
-                this.SelectedMenuItem = null;
+                this.SelectedTopItem = null;
             }
+            OnPropertyChanged("SelectedItem");
             OnPropertyChanged("SelectedPageType");
 
             // auto-close split view pane (only when not in widestate)

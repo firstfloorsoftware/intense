@@ -187,10 +187,6 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Presentation\Command.cs" />
-    <None Include="Presentation\MenuItem.cs" />
-    <None Include="Presentation\NotifyPropertyChanged.cs" />
-    <None Include="Presentation\ObjectToMenuItemConverter.cs" />
     <None Include="Presentation\ShellViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
