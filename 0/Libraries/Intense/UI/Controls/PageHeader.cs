@@ -20,13 +20,17 @@ namespace Intense.UI.Controls
         /// </summary>
         public static readonly DependencyProperty IconProperty = DependencyProperty.Register("Icon", typeof(string), typeof(PageHeader), null);
         /// <summary>
+        /// Identifies the IconButtonStyle dependency property.
+        /// </summary>
+        public static readonly DependencyProperty IconButtonStyleProperty = DependencyProperty.Register("IconButtonStyle", typeof(Style), typeof(PageHeader), null);
+        /// <summary>
         /// Identifies the IconCommand dependency property.
         /// </summary>
         public static readonly DependencyProperty IconCommandProperty = DependencyProperty.Register("IconCommand", typeof(ICommand), typeof(PageHeader), null);
         /// <summary>
         /// Identifies the IsSearchBoxVisible dependency property.
         /// </summary>
-        public static readonly DependencyProperty IsSearchBoxVisibleProperty = DependencyProperty.Register("IsSearchBoxVisible", typeof(bool), typeof(PageHeader), new PropertyMetadata(true));
+        public static readonly DependencyProperty IsSearchBoxVisibleProperty = DependencyProperty.Register("IsSearchBoxVisible", typeof(bool), typeof(PageHeader), new PropertyMetadata(false));
         /// <summary>
         /// Identifies the SearchTerm dependency property.
         /// </summary>
@@ -51,6 +55,15 @@ namespace Intense.UI.Controls
         {
             get { return (string)GetValue(IconProperty); }
             set { SetValue(IconProperty, value); }
+        }
+
+        /// <summary>
+        /// Gets or sets the icon button style.
+        /// </summary>
+        public Style IconButtonStyle
+        {
+            get { return (Style)GetValue(IconButtonStyleProperty); }
+            set { SetValue(IconButtonStyleProperty, value); }
         }
 
         /// <summary>

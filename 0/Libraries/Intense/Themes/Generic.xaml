@@ -64,6 +64,7 @@
 
     <Style TargetType="controls:PageHeader">
         <Setter Property="Background" Value="{ThemeResource IntenseControlBackgroundMediumBrush}" />
+        <Setter Property="IconButtonStyle" Value="{StaticResource PageHeaderButtonStyle}" />
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="controls:PageHeader">
@@ -77,7 +78,7 @@
                             <ColumnDefinition Width="Auto" />
                         </Grid.ColumnDefinitions>
                         <StackPanel Orientation="Horizontal" Margin="0,0,12,0" MinHeight="48">
-                            <Button x:Name="IconButton" Content="{TemplateBinding Icon}" Command="{TemplateBinding IconCommand}" Style="{StaticResource PageHeaderButtonStyle}" />
+                            <Button x:Name="IconButton" Content="{TemplateBinding Icon}" Command="{TemplateBinding IconCommand}" Style="{TemplateBinding IconButtonStyle}" />
                             <TextBlock Text="{TemplateBinding Title}" Style="{StaticResource PageHeaderTitleTextBlockStyle}" />
                         </StackPanel>
 
