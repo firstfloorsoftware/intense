@@ -42,8 +42,8 @@
         <ProjectItem ReplaceParameters="false" TargetFileName="Wide310x150Logo.scale-200.png">Wide310x150Logo.scale-200.png</ProjectItem>
       </Folder>
       <Folder Name="Pages" TargetFolderName="Pages">
-        <ProjectItem ReplaceParameters="true" OpenInEditor="blend" TargetFileName="LoremPage.xaml">LoremPage.xaml</ProjectItem>
-        <ProjectItem ReplaceParameters="true" TargetFileName="LoremPage.xaml.vb">LoremPage.xaml.vb</ProjectItem>
+        <ProjectItem ReplaceParameters="true" OpenInEditor="blend" TargetFileName="AppearancePage.xaml">AppearancePage.xaml</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="AppearancePage.xaml.vb">AppearancePage.xaml.vb</ProjectItem>
         <ProjectItem ReplaceParameters="true" OpenInEditor="blend" TargetFileName="QuickStartPage.xaml">QuickStartPage.xaml</ProjectItem>
         <ProjectItem ReplaceParameters="true" TargetFileName="QuickStartPage.xaml.vb">QuickStartPage.xaml.vb</ProjectItem>
         <ProjectItem ReplaceParameters="true" OpenInEditor="blend" TargetFileName="TipsAndTricksPage.xaml">TipsAndTricksPage.xaml</ProjectItem>
@@ -70,7 +70,7 @@
       <package id="Microsoft.NETCore.UniversalWindowsPlatform" version="5.0.0" skipAssemblyReferences="false" />
     </packages>
     <packages repository="extension" repositoryId="UWPTemplates.FirstFloorSoftware.41bbea9a-56db-4624-b59b-62b70adcc598">
-      <package id="Intense" version="0.2.0" />
+      <package id="Intense" version="0.2.1" />
     </packages>
   </WizardData>
 </VSTemplate>

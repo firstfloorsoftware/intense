@@ -110,8 +110,8 @@
       <DependentUpon>NavigationStructure.xaml</DependentUpon>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb"/>
-    <Compile Include="Pages\LoremPage.xaml.vb">
-      <DependentUpon>LoremPage.xaml</DependentUpon>
+    <Compile Include="Pages\AppearancePage.xaml.vb">
+      <DependentUpon>AppearancePage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pages\QuickStartPage.xaml.vb">
       <DependentUpon>QuickStartPage.xaml</DependentUpon>
@@ -150,7 +150,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="Pages\LoremPage.xaml">
+    <Page Include="Pages\AppearancePage.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>

@@ -158,17 +158,6 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Pages\LoremPage.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </None>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Pages\LoremPage.xaml.cs">
-      <DependentUpon>LoremPage.xaml</DependentUpon>
-    </None>
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Pages\QuickStartPage.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -180,6 +169,17 @@
     <None Include="Pages\WelcomePage.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Pages\AppearancePage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Pages\AppearancePage.xaml.cs">
+      <DependentUpon>AppearancePage.xaml</DependentUpon>
     </None>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

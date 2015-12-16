@@ -157,7 +157,7 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Pages\LoremPage.xaml">
+    <None Include="Pages\AppearancePage.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </None>
@@ -175,8 +175,8 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Pages\LoremPage.xaml.vb">
-      <DependentUpon>LoremPage.xaml</DependentUpon>
+    <None Include="Pages\AppearancePage.xaml.vb">
+      <DependentUpon>AppearancePage.xaml</DependentUpon>
     </None>
     <None Include="Pages\QuickStartPage.xaml.vb">
       <DependentUpon>QuickStartPage.xaml</DependentUpon>
