@@ -11,7 +11,7 @@
     d:DesignHeight="300"
     d:DesignWidth="400">
 
-    <Grid>
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto" />
             <RowDefinition />
@@ -53,7 +53,15 @@
                 </Grid>
             </SplitView.Pane>
             <SplitView.Content>
-                <intense:ContentFrame x:Name="Frame" SourcePageType="{x:Bind ViewModel.SelectedPageType, Mode=TwoWay}" />
+                <intense:ContentFrame x:Name="Frame" SourcePageType="{x:Bind ViewModel.SelectedPageType, Mode=TwoWay}">
+                    <intense:ContentFrame.ContentTransitions>
+                        <TransitionCollection>
+                            <NavigationThemeTransition>
+                                <EntranceNavigationTransitionInfo />
+                            </NavigationThemeTransition>
+                        </TransitionCollection>
+                    </intense:ContentFrame.ContentTransitions>
+                </intense:ContentFrame>
             </SplitView.Content>
         </SplitView>
 
