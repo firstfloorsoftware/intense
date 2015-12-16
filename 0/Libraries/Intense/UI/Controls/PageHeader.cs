@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Input;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 
@@ -15,13 +16,13 @@ namespace Intense.UI.Controls
         : Control
     {
         /// <summary>
-        /// Identifies the Frame dependency property.
-        /// </summary>
-        public static readonly DependencyProperty FrameProperty = DependencyProperty.Register("Frame", typeof(Frame), typeof(PageHeader), new PropertyMetadata(null, OnFrameChanged));
-        /// <summary>
         /// Identifies the Icon dependency property.
         /// </summary>
         public static readonly DependencyProperty IconProperty = DependencyProperty.Register("Icon", typeof(string), typeof(PageHeader), null);
+        /// <summary>
+        /// Identifies the IconCommand dependency property.
+        /// </summary>
+        public static readonly DependencyProperty IconCommandProperty = DependencyProperty.Register("IconCommand", typeof(ICommand), typeof(PageHeader), null);
         /// <summary>
         /// Identifies the IsSearchBoxVisible dependency property.
         /// </summary>
@@ -35,68 +36,12 @@ namespace Intense.UI.Controls
         /// </summary>
         public static readonly DependencyProperty TitleProperty = DependencyProperty.Register("Title", typeof(string), typeof(PageHeader), null);
 
-        private Button iconButton;
-
         /// <summary>
         /// Initializes a new instance of the <see cref="PageHeader"/> control.
         /// </summary>
         public PageHeader()
         {
             this.DefaultStyleKey = typeof(PageHeader);
-        }
-
-        private static void OnFrameChanged(DependencyObject o, DependencyPropertyChangedEventArgs args)
-        {
-            ((PageHeader)o).OnFrameChanged();
-        }
-
-        private void OnFrameChanged()
-        {
-            UpdateIconButtonState();
-        }
-
-        /// <summary>
-        /// Occurs when the control's template has been applied to this instance.
-        /// </summary>
-        protected override void OnApplyTemplate()
-        {
-            base.OnApplyTemplate();
-
-            if (this.iconButton != null) {
-                this.iconButton.Click -= OnIconButtonClick;
-            }
-
-            this.iconButton = GetTemplateChild("IconButton") as Button;
-            if (this.iconButton != null) {
-                this.iconButton.Click += OnIconButtonClick;
-            }
-
-            UpdateIconButtonState();
-        }
-
-        private void OnIconButtonClick(object sender, RoutedEventArgs e)
-        {
-            // attemp to navigate back to the first element in the frame's navigation stack
-            while (this.Frame?.CanGoBack ?? false) {
-                this.Frame.GoBack();
-            }
-        }
-
-        private void UpdateIconButtonState()
-        {
-            if (this.iconButton == null) {
-                return;
-            }
-            this.iconButton.IsEnabled = this.Frame?.CanGoBack ?? false;
-        }
-
-        /// <summary>
-        /// Gets or sets the controlling frame.
-        /// </summary>
-        public Frame Frame
-        {
-            get { return (Frame)GetValue(FrameProperty); }
-            set { SetValue(FrameProperty, value); }
         }
 
         /// <summary>
@@ -106,6 +51,15 @@ namespace Intense.UI.Controls
         {
             get { return (string)GetValue(IconProperty); }
             set { SetValue(IconProperty, value); }
+        }
+
+        /// <summary>
+        /// Gets or sets the icon command.
+        /// </summary>
+        public ICommand IconCommand
+        {
+            get { return (ICommand)GetValue(IconCommandProperty); }
+            set { SetValue(IconCommandProperty, value); }
         }
 
         /// <summary>

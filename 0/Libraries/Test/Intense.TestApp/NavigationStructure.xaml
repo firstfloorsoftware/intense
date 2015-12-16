@@ -5,6 +5,7 @@
                 DisplayName="Intense.TestApp"
                 Icon="">
     <NavigationItem Icon=""  DisplayName="Appearance" Description="Configure the look &amp; feel"  PageType="pages:AppearancePage" />
+    <NavigationItem Icon="&#xE774;"  DisplayName="Navigation" Description="Navigation commands"  PageType="pages:NavigationPage" />
 </NavigationItem>
 
     

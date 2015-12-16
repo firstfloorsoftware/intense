@@ -120,12 +120,14 @@
     <Compile Include="IHierarchyServiceExtensions.cs" />
     <Compile Include="Presentation\Command.cs" />
     <Compile Include="Presentation\Displayable.cs" />
+    <Compile Include="Presentation\FrameCommands.cs" />
     <Compile Include="Presentation\NavigationItem.cs" />
     <Compile Include="Presentation\NavigationItemCollection.cs" />
     <Compile Include="Presentation\NavigationItemExtensions.cs" />
     <Compile Include="Presentation\NavigationItemHierarchyService.cs" />
     <Compile Include="Presentation\NotifyPropertyChanged.cs" />
     <Compile Include="Presentation\RelayCommand.cs" />
+    <Compile Include="Presentation\ThemeCommands.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Resources\ResourceHelper.cs" />
     <Compile Include="Themes\Navigation.xaml.cs">

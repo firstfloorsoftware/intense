@@ -16,8 +16,8 @@
             <RowDefinition Height="*" />
         </Grid.RowDefinitions>
 
-        <local:PageHeader Frame="{x:Bind Frame, Mode=OneWay}"
-                          Icon="{x:Bind RootItem.Icon, Mode=OneWay}" 
+        <local:PageHeader Icon="{x:Bind RootItem.Icon, Mode=OneWay}" 
+                          IconCommand="{Binding GoHomeCommand, Source={StaticResource FrameCommands}}"
                           Title="{x:Bind NavigationItem.DisplayNameUppercase, Mode=OneWay}"
                           IsSearchBoxVisible="False" />
 

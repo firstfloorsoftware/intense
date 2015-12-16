@@ -123,4 +123,7 @@
   <data name="LoadPageFailed" xml:space="preserve">
     <value>Failed to load Page {0}</value>
   </data>
+  <data name="NoFrameAssigned" xml:space="preserve">
+    <value>No frame assigned</value>
+  </data>
 </root>

@@ -103,6 +103,9 @@
     <Compile Include="Pages\AppearancePage.xaml.cs">
       <DependentUpon>AppearancePage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Pages\NavigationPage.xaml.cs">
+      <DependentUpon>NavigationPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -130,6 +133,10 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Include="Pages\AppearancePage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\NavigationPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

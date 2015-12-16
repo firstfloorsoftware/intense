@@ -39,10 +39,13 @@ namespace Intense.UI
                 frame = new Frame();
 
                 // assign navigation root style
-                frame.Style = (Style)Resources["NavigationRootFrameStyle"];
+                frame.Style = (Style)this.Resources["NavigationRootFrameStyle"];
 
                 frame.Navigated += OnFrameNavigated;
                 frame.NavigationFailed += OnFrameNavigationFailed;
+
+                // add frame commands to global resources
+                this.Resources.Add("FrameCommands", new FrameCommands { Frame = frame });
 
                 Window.Current.Content = frame;
 
