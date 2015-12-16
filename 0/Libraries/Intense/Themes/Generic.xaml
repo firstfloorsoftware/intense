@@ -50,16 +50,6 @@
         </Setter>
     </Style>
 
-    <Style x:Key="PageHeaderTitleTextBlockStyle" TargetType="TextBlock" BasedOn="{StaticResource BaseTextBlockStyle}">
-        <Setter Property="Margin" Value="12,6,0,6" />
-        <Setter Property="MaxLines" Value="2" />
-        <Setter Property="TextLineBounds" Value="Tight" />
-        <Setter Property="TextTrimming" Value="Clip" />
-        <Setter Property="TextWrapping" Value="Wrap" />
-        <Setter Property="OpticalMarginAlignment" Value="TrimSideBearings" />
-        <Setter Property="VerticalAlignment" Value="Center" />
-    </Style>
-
     <Style x:Key="WideSearchBoxStyle" TargetType="TextBox">
         <Setter Property="Margin" Value="12,0" />
         <Setter Property="Width" Value="296" />
