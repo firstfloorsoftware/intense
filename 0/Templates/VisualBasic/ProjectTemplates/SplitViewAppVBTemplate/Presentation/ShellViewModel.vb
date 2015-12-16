@@ -1,16 +1,18 @@
-﻿Namespace Presentation
+﻿Imports Intense.Presentation
+
+Namespace Presentation
     Public Class ShellViewModel
         Inherits NotifyPropertyChanged
 
-        Private _menuItems As ObservableCollection(Of MenuItem) = New ObservableCollection(Of MenuItem)
-        Private _selectedMenuItem As MenuItem
-        Private _bottomMenuItems As ObservableCollection(Of MenuItem) = New ObservableCollection(Of MenuItem)
-        Private _selectedBottomMenuItem As MenuItem
+        Private _topItems As NavigationItemCollection = New NavigationItemCollection
+        Private _selectedTopItem As NavigationItem
+        Private _bottomItems As NavigationItemCollection = New NavigationItemCollection
+        Private _selectedBottomItem As NavigationItem
         Private _isSplitViewPaneOpen As Boolean
         Private _toggleSplitViewPaneCommand As ICommand
 
         Public Sub New()
-            _toggleSplitViewPaneCommand = New Command(Sub() IsSplitViewPaneOpen = Not IsSplitViewPaneOpen)
+            _toggleSplitViewPaneCommand = New RelayCommand(Sub() IsSplitViewPaneOpen = Not IsSplitViewPaneOpen)
 
             ' open splitview pane in wide state
             IsSplitViewPaneOpen = IsWideState()
@@ -27,69 +29,81 @@
                 Return _isSplitViewPaneOpen
             End Get
             Set
-                SetProperty(_isSplitViewPaneOpen, Value)
+                Me.Set(_isSplitViewPaneOpen, Value)
             End Set
         End Property
 
-        Public Property SelectedMenuItem As MenuItem
+        Public Property SelectedTopItem As NavigationItem
             Get
-                Return _selectedMenuItem
+                Return _selectedTopItem
 
             End Get
             Set
-                If SetProperty(_selectedMenuItem, Value) And Not Value Is Nothing Then
+                If Me.Set(_selectedTopItem, Value) And Not Value Is Nothing Then
                     OnSelectedMenuItemChanged(True)
                 End If
             End Set
         End Property
 
-        Public Property SelectedBottomMenuItem As MenuItem
+        Public Property SelectedBottomItem As NavigationItem
             Get
-                Return _selectedBottomMenuItem
+                Return _selectedBottomItem
 
             End Get
             Set
-                If SetProperty(_selectedBottomMenuItem, Value) And Not Value Is Nothing Then
+                If Me.Set(_selectedBottomItem, Value) And Not Value Is Nothing Then
                     OnSelectedMenuItemChanged(False)
                 End If
             End Set
         End Property
 
+        Public Property SelectedItem As NavigationItem
+            Get
+                If Not _selectedTopItem Is Nothing Then
+                    Return _selectedTopItem
+                End If
+                Return _selectedBottomItem
+            End Get
+            Set
+                SelectedTopItem = _topItems.FirstOrDefault(Function(m) m.Equals(Value))
+                SelectedBottomItem = _bottomItems.FirstOrDefault(Function(m) m.Equals(Value))
+            End Set
+        End Property
+
         Public Property SelectedPageType As Type
             Get
-                If Not _selectedMenuItem Is Nothing Then
-                    Return _selectedMenuItem.PageType
-                End If
-                If Not _selectedBottomMenuItem Is Nothing Then
-                    Return _selectedBottomMenuItem.PageType
+                Dim item = SelectedItem
+                If Not item Is Nothing Then
+                    Return item.PageType
                 End If
                 Return Nothing
             End Get
             Set
                 ' select associated menu item
-                SelectedMenuItem = _menuItems.FirstOrDefault(Function(m) m.PageType.Equals(Value))
-                SelectedBottomMenuItem = _bottomMenuItems.FirstOrDefault(Function(m) m.PageType.Equals(Value))
+                SelectedTopItem = _topItems.FirstOrDefault(Function(m) m.PageType.Equals(Value))
+                SelectedBottomItem = _bottomItems.FirstOrDefault(Function(m) m.PageType.Equals(Value))
             End Set
         End Property
 
-        Public ReadOnly Property MenuItems As ObservableCollection(Of MenuItem)
+        Public ReadOnly Property TopItems As NavigationItemCollection
             Get
-                Return _menuItems
+                Return _topItems
             End Get
         End Property
 
-        Public ReadOnly Property BottomMenuItems As ObservableCollection(Of MenuItem)
+        Public ReadOnly Property BottomItems As NavigationItemCollection
             Get
-                Return _bottomMenuItems
+                Return _bottomItems
             End Get
         End Property
 
         Private Sub OnSelectedMenuItemChanged(top As Boolean)
             If top Then
-                SelectedBottomMenuItem = Nothing
+                SelectedBottomItem = Nothing
             Else
-                SelectedMenuItem = Nothing
+                SelectedTopItem = Nothing
             End If
+            OnPropertyChanged("SelectedItem")
             OnPropertyChanged("SelectedPageType")
 
             ' auto-close split view pane (only when not in widestate)

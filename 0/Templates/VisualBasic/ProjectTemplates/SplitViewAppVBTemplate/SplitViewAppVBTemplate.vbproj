@@ -139,10 +139,6 @@
     <None Include="SplitViewApp.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Presentation\Command.vb" />
-    <None Include="Presentation\MenuItem.vb" />
-    <None Include="Presentation\NotifyPropertyChanged.vb" />
-    <None Include="Presentation\ObjectToMenuItemConverter.vb" />
     <None Include="Presentation\ShellViewModel.vb" />
   </ItemGroup>
   <ItemGroup>

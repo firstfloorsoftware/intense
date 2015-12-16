@@ -125,10 +125,6 @@
     <Compile Include="Pages\WelcomePage.xaml.vb">
       <DependentUpon>WelcomePage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Presentation\Command.vb"/>
-    <Compile Include="Presentation\MenuItem.vb"/>
-    <Compile Include="Presentation\NotifyPropertyChanged.vb"/>
-    <Compile Include="Presentation\ObjectToMenuItemConverter.vb"/>
     <Compile Include="Presentation\ShellViewModel.vb"/>
   </ItemGroup>
   <ItemGroup>

@@ -8,9 +8,9 @@
     mc:Ignorable="d">
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-        <ScrollViewer Style="{StaticResource PageScrollViewerStyle}">
+        <ScrollViewer Padding="{x:Bind Frame.Padding, Mode=OneWay}">
             <StackPanel>
-                <TextBlock Text="Page 1" Style="{StaticResource TitleTextBlockStyle}" />
+                <TextBlock Text="Page 1" Style="{StaticResource TitleTextBlockStyle}" DataContext="{x:Bind Frame}" Visibility="{Binding PageTitleVisibility}" />
                 <TextBlock Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce vulputate posuere erat viverra ornare. Proin a massa a mi porttitor consequat vitae non lacus. Vivamus efficitur dui non ipsum sagittis, a maximus neque ornare. Donec vehicula viverra lacus, at placerat odio. Integer at ipsum sed est commodo ultricies et quis ipsum. Vivamus condimentum velit eget diam sodales ullamcorper. Nunc arcu nisl, tincidunt vel iaculis nec, malesuada quis ipsum. Nunc tincidunt risus quis venenatis dictum. Donec cursus ac enim eu pulvinar. Sed ultricies, risus in ullamcorper bibendum, metus sem hendrerit est, ac eleifend neque nulla a risus. Aenean accumsan nunc eu massa fermentum, at pellentesque lorem commodo. Proin congue sagittis ex vitae fermentum. Phasellus rutrum in erat vitae cursus. Quisque quis lacus sed felis dictum tempor nec non orci. In nec risus faucibus, efficitur est eget, luctus tellus." Style="{StaticResource ParagraphTextBlockStyle}" />
             </StackPanel>
         </ScrollViewer>

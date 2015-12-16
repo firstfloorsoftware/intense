@@ -8,9 +8,9 @@
     mc:Ignorable="d">
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-        <ScrollViewer Style="{StaticResource PageScrollViewerStyle}">
+        <ScrollViewer Padding="{x:Bind Frame.Padding, Mode=OneWay}">
             <StackPanel>
-                <TextBlock Text="Welcome" Style="{StaticResource TitleTextBlockStyle}" />
+                <TextBlock Text="Welcome" Style="{StaticResource TitleTextBlockStyle}" DataContext="{x:Bind Frame}" Visibility="{Binding PageTitleVisibility}" />
                 <TextBlock Style="{StaticResource ParagraphTextBlockStyle}">
                     <Run Text="Thank you for installing the Intense templates. This is a Univeral Windows project template for multi-page apps. Among others this project uses the following concepts and patterns;" />
                     <LineBreak /><LineBreak />

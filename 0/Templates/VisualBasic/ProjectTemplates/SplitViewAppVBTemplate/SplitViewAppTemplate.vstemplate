@@ -54,10 +54,6 @@
         <ProjectItem ReplaceParameters="true" TargetFileName="WelcomePage.xaml.vb">WelcomePage.xaml.vb</ProjectItem>
       </Folder>
       <Folder Name="Presentation" TargetFolderName="Presentation">
-        <ProjectItem ReplaceParameters="true" TargetFileName="Command.vb">Command.vb</ProjectItem>
-        <ProjectItem ReplaceParameters="true" TargetFileName="MenuItem.vb">MenuItem.vb</ProjectItem>
-        <ProjectItem ReplaceParameters="true" TargetFileName="NotifyPropertyChanged.vb">NotifyPropertyChanged.vb</ProjectItem>
-        <ProjectItem ReplaceParameters="true" TargetFileName="ObjectToMenuItemConverter.vb">ObjectToMenuItemConverter.vb</ProjectItem>
         <ProjectItem ReplaceParameters="true" TargetFileName="ShellViewModel.vb">ShellViewModel.vb</ProjectItem>
       </Folder>
     </Project>
@@ -77,6 +73,9 @@
   <WizardData>
     <packages repository="registry" keyName="NETCoreSDK" isPreunzipped="true">
       <package id="Microsoft.NETCore.UniversalWindowsPlatform" version="5.0.0" skipAssemblyReferences="false" />
+    </packages>
+    <packages repository="extension" repositoryId="UWPTemplates.FirstFloorSoftware.41bbea9a-56db-4624-b59b-62b70adcc598">
+      <package id="Intense" version="0.2.1" />
     </packages>
   </WizardData>
 </VSTemplate>
