@@ -14,13 +14,14 @@ Public NotInheritable Class MainPage
     Private backgroundVisual As SpriteVisual
     Private target As SpriteVisual
 
-
     Private Sub UpdateSize()
-        If backgroundVisual Is Nothing Or Host Is Nothing Then
-            Return
+        If Host Is Nothing Then Return
+        If Not backgroundVisual Is Nothing Then
+            backgroundVisual.Size = New Vector2(Host.ActualWidth, Host.ActualHeight)
         End If
-
-        backgroundVisual.Size = New Vector2(Host.ActualWidth, Host.ActualHeight)
+        If Not target Is Nothing Then
+            target.Offset = New Vector3(Host.ActualWidth / 2 - 75, Host.ActualHeight / 2 - 75, 0.0F)
+        End If
     End Sub
 
     Private Sub Host_Loaded(sender As Object, e As RoutedEventArgs)
@@ -40,17 +41,17 @@ Public NotInheritable Class MainPage
         target = compositor.CreateSpriteVisual()
         target.Brush = compositor.CreateColorBrush(Colors.Green)
         target.Size = New Vector2(150.0F, 150.0F)
-        target.Offset = New Vector3(250.0F, 250.0F, 0.0F)
         target.CenterPoint = New Vector3(75.0F, 75.0F, 0.0F)
         root.Children.InsertAtTop(target)
-
-        ' animate square
-        Animate(target)
 
         UpdateSize()
     End Sub
 
-    Private Sub Animate(visual As Visual)
+    Private Sub Host_SizeChanged(sender As Object, e As SizeChangedEventArgs)
+        UpdateSize()
+    End Sub
+
+    Private Sub Start_Click(sender As Object, e As RoutedEventArgs)
         Dim easing = compositor.CreateCubicBezierEasingFunction(New Vector2(0.5F, 0.1F), New Vector2(0.5F, 0.75F))
         Dim animation = compositor.CreateScalarKeyFrameAnimation()
 
@@ -60,10 +61,10 @@ Public NotInheritable Class MainPage
         animation.Duration = TimeSpan.FromMilliseconds(2000)
         animation.IterationBehavior = AnimationIterationBehavior.Forever
 
-        visual.StartAnimation("RotationAngleinDegrees", animation)
+        target.StartAnimation("RotationAngleinDegrees", animation)
     End Sub
 
-    Private Sub Host_SizeChanged(sender As Object, e As SizeChangedEventArgs)
-        UpdateSize()
+    Private Sub Stop_Click(sender As Object, e As RoutedEventArgs)
+        target.StopAnimation("RotationAngleinDegrees")
     End Sub
 End Class

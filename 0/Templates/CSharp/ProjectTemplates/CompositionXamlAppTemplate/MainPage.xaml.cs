@@ -25,8 +25,17 @@ namespace $safeprojectname$
 
         private void UpdateSize()
         {
-            if (this.background != null && this.Host != null) {
+            if (this.Host == null) {
+                return;
+            }
+
+            // make sure background fits window
+            if (this.background != null) {
                 this.background.Size = new Vector2((float)this.Host.ActualWidth, (float)this.Host.ActualHeight);
+            }
+            // center animated target
+            if (this.target != null) {
+                this.target.Offset = new Vector3((float)this.Host.ActualWidth / 2 - 75, (float)this.Host.ActualHeight / 2 - 75, 0f);
             }
         }
 
@@ -48,18 +57,19 @@ namespace $safeprojectname$
             var colorVisual = this.compositor.CreateSpriteVisual();
             colorVisual.Brush = this.compositor.CreateColorBrush(Colors.Green);
             colorVisual.Size = new Vector2(150.0f, 150.0f);
-            colorVisual.Offset = new Vector3(250.0f, 250.0f, 0.0f);
             colorVisual.CenterPoint = new Vector3(75.0f, 75.0f, 0.0f);
             this.target = colorVisual;
             this.root.Children.InsertAtTop(this.target);
 
-            // animate square
-            Animate(this.target);
-
             UpdateSize();
         }
 
-        private void Animate(Visual visual)
+        private void Host_SizeChanged(object sender, SizeChangedEventArgs e)
+        {
+            UpdateSize();
+        }
+
+        private void Start_Click(object sender, RoutedEventArgs e)
         {
             var easing = this.compositor.CreateCubicBezierEasingFunction(new Vector2(.5f, .1f), new Vector2(.5f, .75f));
             var animation = this.compositor.CreateScalarKeyFrameAnimation();
@@ -70,12 +80,12 @@ namespace $safeprojectname$
             animation.Duration = TimeSpan.FromMilliseconds(2000);
             animation.IterationBehavior = AnimationIterationBehavior.Forever;
 
-            visual.StartAnimation("RotationAngleinDegrees", animation);
+            this.target.StartAnimation("RotationAngleinDegrees", animation);
         }
 
-        private void Host_SizeChanged(object sender, SizeChangedEventArgs e)
+        private void Stop_Click(object sender, RoutedEventArgs e)
         {
-            UpdateSize();
+            this.target.StopAnimation("RotationAngleinDegrees");
         }
     }
 }

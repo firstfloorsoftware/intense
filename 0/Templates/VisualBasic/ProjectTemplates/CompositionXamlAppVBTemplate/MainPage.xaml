@@ -11,8 +11,13 @@
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto" />
             <RowDefinition />
+            <RowDefinition Height="Auto" />
         </Grid.RowDefinitions>
         <TextBlock Text="XAML and the visual layer" Style="{StaticResource TitleTextBlockStyle}" Margin="12" />
         <Grid x:Name="Host" Grid.Row="1" Loaded="Host_Loaded" SizeChanged="Host_SizeChanged" />
+        <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Center" Padding="8">
+            <Button Content="Start" Click="Start_Click" />
+            <Button Content="Stop" Click="Stop_Click" Margin="8,0,0,0" />
+        </StackPanel>
     </Grid>
 </Page>

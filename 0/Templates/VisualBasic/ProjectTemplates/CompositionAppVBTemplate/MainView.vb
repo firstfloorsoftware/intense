@@ -33,7 +33,6 @@ Public Class MainView
         target = compositor.CreateSpriteVisual()
         target.Brush = compositor.CreateColorBrush(Colors.Green)
         target.Size = New Vector2(150.0F, 150.0F)
-        target.Offset = New Vector3(250.0F, 250.0F, 0.0F)
         target.CenterPoint = New Vector3(75.0F, 75.0F, 0.0F)
         root.Children.InsertAtTop(target)
 
@@ -57,11 +56,14 @@ Public Class MainView
     End Sub
 
     Private Sub UpdateSize()
-        If (background Is Nothing Or window Is Nothing) Then
-            Return
-        End If
+        If window Is Nothing Then Return
 
-        background.Size = New Vector2(window.Bounds.Width, window.Bounds.Height)
+        If Not background Is Nothing Then
+            background.Size = New Vector2(window.Bounds.Width, window.Bounds.Height)
+        End If
+        If Not target Is Nothing Then
+            target.Offset = New Vector3(window.Bounds.Width / 2 - 75, window.Bounds.Height / 2 - 75, 0.0F)
+        End If
     End Sub
 
     Private Sub OnWindowSizeChanged(sender As CoreWindow, args As WindowSizeChangedEventArgs)

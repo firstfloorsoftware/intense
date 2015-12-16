@@ -36,7 +36,6 @@ namespace $safeprojectname$
             var colorVisual = this.compositor.CreateSpriteVisual();
             colorVisual.Brush = this.compositor.CreateColorBrush(Colors.Green);
             colorVisual.Size = new Vector2(150.0f, 150.0f);
-            colorVisual.Offset = new Vector3(250.0f, 250.0f, 0.0f);
             colorVisual.CenterPoint = new Vector3(75.0f, 75.0f, 0.0f);
             this.target = colorVisual;
             this.root.Children.InsertAtTop(this.target);
@@ -63,8 +62,17 @@ namespace $safeprojectname$
 
         private void UpdateSize()
         {
-            if (this.background != null && this.window != null) {
+            if (this.window == null) {
+                return;
+            }
+
+            // make sure background fits window
+            if (this.background != null) {
                 this.background.Size = new Vector2((float)this.window.Bounds.Width, (float)this.window.Bounds.Height);
+            }
+            // center animated target
+            if (this.target != null) {
+                this.target.Offset = new Vector3((float)this.window.Bounds.Width / 2 - 75, (float)this.window.Bounds.Height / 2 - 75, 0f);
             }
         }
 
