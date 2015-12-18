@@ -2,7 +2,7 @@
 <package>
   <metadata>
     <id>Intense</id>
-    <version>0.2.1</version>
+    <version>0.3.0</version>
     <title>Intense Toolkit for UWP</title>
     <authors>First Floor Software</authors>
     <owners>First Floor Software</owners>
@@ -11,7 +11,7 @@
     <iconUrl>http://intense-toolkit.com/images/intense-icon.png</iconUrl>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
     <description>Controls, templates, and tools for building Universal Windows Platform apps with XAML</description>
-    <releaseNotes>0.2.1 Improved adaptive UI in mobile scenarios
+    <releaseNotes>0.3.0 Improved adaptive UI, added commands
       0.2.0 Minor UI changes
       0.1.0 Initial release</releaseNotes>
     <copyright>Copyright 2015 First Floor Software</copyright>
