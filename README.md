@@ -18,6 +18,7 @@ Intense Templates
 * Improved adaptive UI in SplitView App template for mobile scenarios
 * Added theme and frame commands
 * Added toggle dark/light theme button to templates
+
 ### 0.2.0 (December 11, 2015)
 * New Content App template for both C# and VB 
 * Redesigned SplitView App template; added bottom menu items, restyled menu, moved app header 
