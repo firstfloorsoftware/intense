@@ -72,7 +72,7 @@
       <package id="Microsoft.NETCore.UniversalWindowsPlatform" version="5.0.0" skipAssemblyReferences="false" />
     </packages>
     <packages repository="extension" repositoryId="UWPTemplates.FirstFloorSoftware.41bbea9a-56db-4624-b59b-62b70adcc598">
-      <package id="Intense" version="0.2.1" />
+      <package id="Intense" version="0.3.0" />
     </packages>
   </WizardData>
 </VSTemplate>
