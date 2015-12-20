@@ -4,7 +4,7 @@
     <Identity Id="UWPTemplates.FirstFloorSoftware.41bbea9a-56db-4624-b59b-62b70adcc598" Version="0.3.0" Language="en-US" Publisher="First Floor Software" />
     <DisplayName>Intense Templates</DisplayName>
     <Description xml:space="preserve">A collection of additional project and item templates for creating Universal Windows Platform (UWP) apps.</Description>
-    <MoreInfo>https://github.com/firstfloorsoftware/intense</MoreInfo>
+    <MoreInfo>http://intense-toolkit.com</MoreInfo>
     <License>License.txt</License>
     <Icon>Intense.png</Icon>
     <PreviewImage>Preview.png</PreviewImage>
