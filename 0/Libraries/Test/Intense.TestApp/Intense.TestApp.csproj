@@ -100,8 +100,11 @@
     <Compile Include="NavigationStructure.xaml.cs">
       <DependentUpon>NavigationStructure.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Pages\AppearancePage.xaml.cs">
-      <DependentUpon>AppearancePage.xaml</DependentUpon>
+    <Compile Include="Pages\ThemePage.xaml.cs">
+      <DependentUpon>ThemePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\ApplicationViewPage.xaml.cs">
+      <DependentUpon>ApplicationViewPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pages\NavigationPage.xaml.cs">
       <DependentUpon>NavigationPage.xaml</DependentUpon>
@@ -132,7 +135,11 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="Pages\AppearancePage.xaml">
+    <Page Include="Pages\ThemePage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\ApplicationViewPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

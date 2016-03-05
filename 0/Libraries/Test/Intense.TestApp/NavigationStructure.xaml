@@ -4,8 +4,11 @@
                 x:Class="Intense.TestApp.NavigationStructure"
                 DisplayName="Intense.TestApp"
                 Icon="">
-    <NavigationItem Icon=""  DisplayName="Appearance" Description="Configure the look &amp; feel"  PageType="pages:AppearancePage" />
-    <NavigationItem Icon="&#xE774;"  DisplayName="Navigation" Description="Navigation commands"  PageType="pages:NavigationPage" />
+    <NavigationItem Icon="" DisplayName="Commands" Description="Demonstrates the use of builtin Intense commands">
+        <NavigationItem DisplayName="Application view" PageType="pages:ApplicationViewPage" />
+        <NavigationItem DisplayName="Navigation" PageType="pages:NavigationPage" />
+        <NavigationItem DisplayName="Theme" PageType="pages:ThemePage" />
+    </NavigationItem>
 </NavigationItem>
 
     
