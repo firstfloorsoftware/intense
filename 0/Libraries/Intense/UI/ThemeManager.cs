@@ -12,9 +12,19 @@ namespace Intense.UI
     /// </summary>
     public static class ThemeManager
     {
+        /// <summary>
+        /// Occurs when the theme has changed.
+        /// </summary>
+        public static event EventHandler ThemeChanged;
+
         private static FrameworkElement GetRoot()
         {
             return Window.Current.Content.GetAncestorsAndSelf().OfType<FrameworkElement>().Last();
+        }
+
+        private static void OnThemeChanged()
+        {
+            ThemeChanged?.Invoke(null, EventArgs.Empty);
         }
 
         /// <summary>
@@ -35,6 +45,7 @@ namespace Intense.UI
             }
             set
             {
+                var oldTheme = Theme;
                 var elementTheme = ElementTheme.Default;
 
                 if (Application.Current.RequestedTheme != value) {
@@ -45,6 +56,13 @@ namespace Intense.UI
                 }
                 var root = GetRoot();
                 root.RequestedTheme = elementTheme;
+
+                var newTheme = Theme;
+
+                if (oldTheme != newTheme) {
+                    // raise Theme changed event
+                    OnThemeChanged();
+                }
             }
         }
     }

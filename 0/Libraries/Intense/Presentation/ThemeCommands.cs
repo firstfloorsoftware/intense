@@ -14,27 +14,57 @@ namespace Intense.Presentation
     /// </summary>
     public class ThemeCommands
     {
+        class WeakThemeChangedEventHandler
+        {
+            private WeakReference<ThemeCommands> reference;
+
+            public WeakThemeChangedEventHandler(ThemeCommands target)
+            {
+                this.reference = new WeakReference<ThemeCommands>(target);
+                ThemeManager.ThemeChanged += OnThemeChanged;
+            }
+
+            private void OnThemeChanged(object source, EventArgs e)
+            {
+                ThemeCommands target;
+                if (this.reference.TryGetTarget(out target)) {
+                    target.UpdateCommandStates();
+                }
+                else {
+                    ThemeManager.ThemeChanged -= OnThemeChanged;
+                }
+            }
+        }
+
         /// <summary>
         /// Initializes a new instance of the <see cref="ThemeCommands"/> class.
         /// </summary>
         public ThemeCommands()
         {
-            this.SetDarkThemeCommand = new RelayCommand(o => ThemeManager.Theme = ApplicationTheme.Dark);
-            this.SetLightThemeCommand = new RelayCommand(o => ThemeManager.Theme = ApplicationTheme.Light);
+            this.SetDarkThemeCommand = new RelayCommand(o => ThemeManager.Theme = ApplicationTheme.Dark, o => ThemeManager.Theme == ApplicationTheme.Light);
+            this.SetLightThemeCommand = new RelayCommand(o => ThemeManager.Theme = ApplicationTheme.Light, o => ThemeManager.Theme == ApplicationTheme.Dark);
             this.ToggleThemeCommand = new RelayCommand(o => ThemeManager.Theme = ThemeManager.Theme == ApplicationTheme.Dark ? ApplicationTheme.Light : ApplicationTheme.Dark);
+
+            new WeakThemeChangedEventHandler(this);
+        }
+
+        private void UpdateCommandStates()
+        {
+            this.SetDarkThemeCommand.OnCanExecuteChanged();
+            this.SetLightThemeCommand.OnCanExecuteChanged();
         }
 
         /// <summary>
         /// The command for setting the dark theme.
         /// </summary>
-        public ICommand SetDarkThemeCommand { get; }
+        public Command SetDarkThemeCommand { get; }
         /// <summary>
         /// The command for setting the light theme.
         /// </summary>
-        public ICommand SetLightThemeCommand { get; }
+        public Command SetLightThemeCommand { get; }
         /// <summary>
         /// The command for toggling between the light and dark theme.
         /// </summary>
-        public ICommand ToggleThemeCommand { get; }
+        public Command ToggleThemeCommand { get; }
     }
 }
