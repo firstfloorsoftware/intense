@@ -118,6 +118,7 @@
     <Compile Include="IEnumerableExtensions.cs" />
     <Compile Include="IHierarchyService.cs" />
     <Compile Include="IHierarchyServiceExtensions.cs" />
+    <Compile Include="Presentation\ApplicationViewCommands.cs" />
     <Compile Include="Presentation\Command.cs" />
     <Compile Include="Presentation\Displayable.cs" />
     <Compile Include="Presentation\FrameCommands.cs" />

@@ -32,7 +32,7 @@ namespace Intense.Presentation
             {
                 FrameCommands target;
                 if (this.reference.TryGetTarget(out target)) {
-                    target.OnFrameNavigated(source, e);
+                    target.UpdateCommandStates();
                 }
                 else {
                     ((Frame)source).Navigated -= OnNavigated;
@@ -67,11 +67,6 @@ namespace Intense.Presentation
                 new WeakNavigatedEventHandler(newFrame, this);
             }
 
-            UpdateCommandStates();
-        }
-
-        internal void OnFrameNavigated(object sender, NavigationEventArgs e)
-        {
             UpdateCommandStates();
         }
 
