@@ -61,15 +61,7 @@ namespace Intense.UI
         public static readonly DependencyProperty StatusBarForegroundColorProperty = DependencyProperty.Register("StatusBarForegroundColor", typeof(Color), typeof(WindowChrome), new PropertyMetadata(null, OnStatusBarForegroundColorChanged));
 
         private FrameworkElement target;
-
-        /// <summary>
-        /// Initializes a new instance of the <see cref="WindowChrome"/>.
-        /// </summary>
-        public WindowChrome()
-        {
-            new WeakVisibleBoundsChangedEventHandler(this);
-            CalculateMargin();
-        }
+        private bool initialized;
 
         private void CalculateMargin()
         { 
@@ -111,6 +103,22 @@ namespace Intense.UI
         private void SetTarget(FrameworkElement target)
         {
             this.target = target;
+            InitializeChrome();
+            ApplyMarginToTarget();
+        }
+
+        private void InitializeChrome()
+        {
+            if (this.initialized) {
+                return;
+            }
+            this.initialized = true;
+
+            SetStatusBarBackground();
+            SetStatusBarForeground();
+
+            new WeakVisibleBoundsChangedEventHandler(this);
+            CalculateMargin();
             ApplyMarginToTarget();
         }
 
@@ -121,6 +129,30 @@ namespace Intense.UI
             }
         }
 
+        private void SetStatusBarBackground()
+        {
+            if (!this.initialized) {
+                return;
+            }
+            StatusBar statusBar;
+            if (TryGetStatusBar(out statusBar)) {
+                // infer opacity from alpha channel of the color
+                statusBar.BackgroundOpacity = (double)this.StatusBarBackgroundColor.A / 255d;
+                statusBar.BackgroundColor = this.StatusBarBackgroundColor;
+            }
+        }
+
+        private void SetStatusBarForeground()
+        {
+            if (!this.initialized) {
+                return;
+            }
+            StatusBar statusBar;
+            if (TryGetStatusBar(out statusBar)) {
+                statusBar.ForegroundColor = this.StatusBarForegroundColor;
+            }
+        }
+
         private static void OnMarginChanged(DependencyObject o, DependencyPropertyChangedEventArgs args)
         {
             ((WindowChrome)o).ApplyMarginToTarget();
@@ -128,21 +160,12 @@ namespace Intense.UI
 
         private static void OnStatusBarBackgroundColorChanged(DependencyObject o, DependencyPropertyChangedEventArgs args)
         {
-            StatusBar statusBar;
-            if (TryGetStatusBar(out statusBar)) {
-                // infer opacity from alpha channel of the color
-                var color = (Color)args.NewValue;
-                statusBar.BackgroundOpacity = (double)color.A / 255d;
-                statusBar.BackgroundColor = (Color)args.NewValue;
-            }
+            ((WindowChrome)o).SetStatusBarBackground();
         }
 
         private static void OnStatusBarForegroundColorChanged(DependencyObject o, DependencyPropertyChangedEventArgs args)
         {
-            StatusBar statusBar;
-            if (TryGetStatusBar(out statusBar)) {
-                statusBar.ForegroundColor = (Color)args.NewValue;
-            }
+            ((WindowChrome)o).SetStatusBarForeground();
         }
 
         /// <summary>
