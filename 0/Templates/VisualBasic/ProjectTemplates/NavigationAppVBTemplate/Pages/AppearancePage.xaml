@@ -11,11 +11,16 @@
     <ScrollViewer Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" Padding="{x:Bind Frame.Padding, Mode=OneWay}">
         <StackPanel>
             <StackPanel.Resources>
+                <intense:ApplicationViewCommands x:Key="ApplicationViewCommands" />
                 <intense:ThemeCommands x:Key="ThemeCommands" />
             </StackPanel.Resources>
 
             <TextBlock Text="Appearance" Style="{StaticResource TitleTextBlockStyle}" />
             <Button Content="Toggle theme" Command="{Binding ToggleThemeCommand, Source={StaticResource ThemeCommands}}" />
+            <StackPanel Orientation="Horizontal" Margin="0,10">
+                <Button Content="Enter fullscreen" Command="{Binding EnterFullScreenModeCommand, Source={StaticResource ApplicationViewCommands}}"/>
+                <Button Content="Exit fullscreen" Command="{Binding ExitFullScreenModeCommand, Source={StaticResource ApplicationViewCommands}}" Margin="10,0" />
+            </StackPanel>
         </StackPanel>
     </ScrollViewer>
 </Page>
