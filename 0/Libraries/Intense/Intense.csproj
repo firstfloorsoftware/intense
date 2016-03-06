@@ -157,7 +157,7 @@
     <Content Include="Properties\Intense.rd.xml" />
   </ItemGroup>
   <ItemGroup>
-    <SDKReference Include="WindowsMobile, Version=10.0.0.1">
+    <SDKReference Include="WindowsMobile, Version=10.0.10240.0">
       <Name>Microsoft Mobile Extension SDK for Universal App Platform</Name>
     </SDKReference>
   </ItemGroup>
