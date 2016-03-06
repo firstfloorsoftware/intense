@@ -153,9 +153,14 @@
     <Compile Include="UI\NavigationApp.cs" />
     <Compile Include="UI\TextElementHierarchyService.cs" />
     <Compile Include="UI\ThemeManager.cs" />
+    <Compile Include="UI\WindowChrome.cs" />
     <Content Include="Properties\Intense.rd.xml" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <SDKReference Include="WindowsMobile, Version=10.0.0.1">
+      <Name>Microsoft Mobile Extension SDK for Universal App Platform</Name>
+    </SDKReference>
+  </ItemGroup>
   <ItemGroup>
     <Page Include="Themes\Brushes.xaml">
       <Generator>MSBuild:Compile</Generator>
