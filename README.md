@@ -13,6 +13,11 @@ Intense Templates
 [![Build status](https://ci.appveyor.com/api/projects/status/raovfoxpha0bvv02?svg=true)](https://ci.appveyor.com/project/kozw/intense-2lj74)
 
 ## Version history
+### 0.4.0 (March 6, 2016)
+* Adding new WindowChrome helper for bindable statusbar colors and auto-visible window bounds layout
+* Added ThemeManager.ThemeChanged event
+* Added ApplicationViewCommands
+* 
 ### 0.3.0 (December 18, 2015)
 * Moved presentation to Intense library, added NuGet reference
 * Improved adaptive UI in SplitView App template for mobile scenarios
