@@ -14,7 +14,7 @@ Intense Templates
 
 ## Version history
 ### 0.4.0 (March 6, 2016)
-* Adding new WindowChrome helper for bindable statusbar colors and auto-visible window bounds layout
+* Added new WindowChrome helper for bindable statusbar colors and auto-visible window bounds layout
 * Added ThemeManager.ThemeChanged event
 * Added ApplicationViewCommands
 
