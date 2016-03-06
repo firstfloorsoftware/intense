@@ -8,11 +8,11 @@ Imports System.Runtime.InteropServices
 
 ' Review the values of the assembly attributes
 
-<Assembly: AssemblyTitle("ContentAppVBTemplate")>
+<Assembly: AssemblyTitle("$projectname$")>
 <Assembly: AssemblyDescription("")>
-<Assembly: AssemblyCompany("Koen Zwikstra")>
-<Assembly: AssemblyProduct("ContentAppVBTemplate")>
-<Assembly: AssemblyCopyright("Copyright © Koen Zwikstra 2015")>
+<Assembly: AssemblyCompany("$registeredorganization$")>
+<Assembly: AssemblyProduct("$projectname$")>
+<Assembly: AssemblyCopyright("Copyright © $registeredorganization$ $year$")>
 <Assembly: AssemblyTrademark("")>
 
 <Assembly: ComVisible(False)>
