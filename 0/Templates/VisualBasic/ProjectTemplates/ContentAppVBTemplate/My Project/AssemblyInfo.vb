@@ -15,11 +15,6 @@ Imports System.Runtime.InteropServices
 <Assembly: AssemblyCopyright("Copyright © $registeredorganization$ $year$")>
 <Assembly: AssemblyTrademark("")>
 
-<Assembly: ComVisible(False)>
-
-'The following GUID is for the ID of the typelib if this project is exposed to COM
-<Assembly: Guid("2e6af52e-5b5a-4ddb-bf1e-f4b47d79d573")>
-
 ' Version information for an assembly consists of the following four values:
 '
 '      Major Version
@@ -33,3 +28,4 @@ Imports System.Runtime.InteropServices
 
 <Assembly: AssemblyVersion("1.0.0.0")>
 <Assembly: AssemblyFileVersion("1.0.0.0")>
+<Assembly: ComVisible(False)>
