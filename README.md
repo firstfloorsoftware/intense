@@ -17,7 +17,7 @@ Intense Templates
 * Adding new WindowChrome helper for bindable statusbar colors and auto-visible window bounds layout
 * Added ThemeManager.ThemeChanged event
 * Added ApplicationViewCommands
-* 
+
 ### 0.3.0 (December 18, 2015)
 * Moved presentation to Intense library, added NuGet reference
 * Improved adaptive UI in SplitView App template for mobile scenarios
