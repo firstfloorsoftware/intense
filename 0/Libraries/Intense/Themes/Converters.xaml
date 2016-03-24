@@ -5,7 +5,9 @@
 
     <converters:BooleanToVisibilityConverter x:Key="TrueToVisibleConverter" />
     <converters:BooleanToVisibilityConverter x:Key="FalseToVisibleConverter" Inverse="True" />
+    <converters:ColorToObjectConverter x:Key="ColorToObjectConverter" />
+    <converters:NavigationItemToObjectConverter x:Key="NavigationItemToObjectConverter" />
     <converters:NullToVisibilityConverter x:Key="NotNullToVisibleConverter" />
     <converters:NullToVisibilityConverter x:Key="NullToVisibleConverter" Inverse="True" />
-    <converters:NavigationItemToObjectConverter x:Key="NavigationItemToObjectConverter" />
+    <converters:SolidColorBrushToObjectConverter x:Key="SolidColorBrushToObjectConverter" />
 </ResourceDictionary>

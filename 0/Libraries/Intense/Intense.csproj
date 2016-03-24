@@ -146,8 +146,10 @@
     <Compile Include="UI\Controls\NavigationPage.cs" />
     <Compile Include="UI\Controls\PageHeader.cs" />
     <Compile Include="UI\Converters\BooleanToVisibilityConverter.cs" />
+    <Compile Include="UI\Converters\ColorToObjectConverter.cs" />
     <Compile Include="UI\Converters\NavigationItemToObjectConverter.cs" />
     <Compile Include="UI\Converters\NullToVisibilityConverter.cs" />
+    <Compile Include="UI\Converters\SolidColorBrushToObjectConverter.cs" />
     <Compile Include="UI\Converters\ToObjectConverter.cs" />
     <Compile Include="UI\Converters\ValueConverter.cs" />
     <Compile Include="UI\DependencyObjectExtensions.cs" />
@@ -161,6 +163,7 @@
     <Compile Include="UI\ThemeManager.cs" />
     <Compile Include="UI\WindowChrome.cs" />
     <Compile Include="UI\WindowExtensions.cs" />
+    <Compile Include="UI\XamlHelper.cs" />
     <Compile Include="WeakEventHandler.cs" />
     <Content Include="Properties\Intense.rd.xml" />
   </ItemGroup>
