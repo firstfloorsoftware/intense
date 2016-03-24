@@ -12,6 +12,7 @@ namespace Intense.Presentation
     /// <summary>
     /// Provides commands for modifying the app's theme at runtime.
     /// </summary>
+    [Obsolete("Use Intense.Presentation.AppearanceCommands")]
     public class ThemeCommands
     {
         /// <summary>
