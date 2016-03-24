@@ -21,15 +21,15 @@ namespace Intense.TestApp.Pages
     /// <summary>
     /// An empty page that can be used on its own or navigated to within a Frame.
     /// </summary>
-    public sealed partial class ThemePage : Page
+    public sealed partial class ColorPage : Page
     {
-        public ThemePage()
+        public ColorPage()
         {
             this.InitializeComponent();
 
-            this.ViewModel = new ThemeViewModel();
+            this.ViewModel = new ColorViewModel();
         }
 
-        public ThemeViewModel ViewModel { get; }
+        public ColorViewModel ViewModel { get; }
     }
 }

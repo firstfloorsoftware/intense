@@ -20,9 +20,9 @@ namespace Intense.TestApp.Pages
     /// <summary>
     /// An empty page that can be used on its own or navigated to within a Frame.
     /// </summary>
-    public sealed partial class NavigationPage : Page
+    public sealed partial class Page1 : Page
     {
-        public NavigationPage()
+        public Page1()
         {
             this.InitializeComponent();
         }

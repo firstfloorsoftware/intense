@@ -10,6 +10,7 @@ namespace Intense.UI
     /// <summary>
     /// Manages the app's theme.
     /// </summary>
+    [Obsolete("Use Intense.UI.AppearanceManager")]
     public static class ThemeManager
     {
         /// <summary>

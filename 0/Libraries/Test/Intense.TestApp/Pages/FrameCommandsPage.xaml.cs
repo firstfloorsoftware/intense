@@ -20,11 +20,16 @@ namespace Intense.TestApp.Pages
     /// <summary>
     /// An empty page that can be used on its own or navigated to within a Frame.
     /// </summary>
-    public sealed partial class ApplicationViewPage : Page
+    public sealed partial class FrameCommandsPage : Page
     {
-        public ApplicationViewPage()
+        public FrameCommandsPage()
         {
             this.InitializeComponent();
+
+            // fill the targetframe backstack
+            TargetFrame.Navigate(typeof(Page3));
+            TargetFrame.BackStack.Add(new PageStackEntry(typeof(Page1), null, null));
+            TargetFrame.BackStack.Add(new PageStackEntry(typeof(Page2), null, null));
         }
     }
 }

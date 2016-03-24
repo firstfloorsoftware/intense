@@ -100,16 +100,34 @@
     <Compile Include="NavigationStructure.xaml.cs">
       <DependentUpon>NavigationStructure.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Pages\AppearanceCommandsPage.xaml.cs">
+      <DependentUpon>AppearanceCommandsPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\ApplicationViewCommandsPage.xaml.cs">
+      <DependentUpon>ApplicationViewCommandsPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\ColorPage.xaml.cs">
+      <DependentUpon>ColorPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\FrameCommandsPage.xaml.cs">
+      <DependentUpon>FrameCommandsPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Page1.xaml.cs">
+      <DependentUpon>Page1.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Page2.xaml.cs">
+      <DependentUpon>Page2.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Page3.xaml.cs">
+      <DependentUpon>Page3.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Pages\ThemePage.xaml.cs">
       <DependentUpon>ThemePage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Pages\ApplicationViewPage.xaml.cs">
-      <DependentUpon>ApplicationViewPage.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Pages\NavigationPage.xaml.cs">
-      <DependentUpon>NavigationPage.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ViewModels\ColorViewModel.cs" />
+    <Compile Include="ViewModels\DisplayableTheme.cs" />
+    <Compile Include="ViewModels\ThemeViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <AppxManifest Include="Package.appxmanifest">
@@ -135,15 +153,35 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
+    <Page Include="Pages\AppearanceCommandsPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\ApplicationViewCommandsPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\ColorPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\FrameCommandsPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\Page1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\Page2.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\Page3.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Pages\ThemePage.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Pages\ApplicationViewPage.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Pages\NavigationPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

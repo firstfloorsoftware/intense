@@ -118,6 +118,7 @@
     <Compile Include="IEnumerableExtensions.cs" />
     <Compile Include="IHierarchyService.cs" />
     <Compile Include="IHierarchyServiceExtensions.cs" />
+    <Compile Include="Presentation\AppearanceCommands.cs" />
     <Compile Include="Presentation\ApplicationViewCommands.cs" />
     <Compile Include="Presentation\Command.cs" />
     <Compile Include="Presentation\Displayable.cs" />
@@ -134,6 +135,9 @@
     <Compile Include="Themes\Navigation.xaml.cs">
       <DependentUpon>Navigation.xaml</DependentUpon>
     </Compile>
+    <Compile Include="UI\AccentColors.cs" />
+    <Compile Include="UI\AppearanceManager.cs" />
+    <Compile Include="UI\AppearanceManagerExtensions.cs" />
     <Compile Include="UI\ApplicationViewExtensions.cs" />
     <Compile Include="UI\Controls\ContentFrame.cs" />
     <Compile Include="UI\Controls\MasterDetailNavigationPage.xaml.cs">
@@ -145,13 +149,17 @@
     <Compile Include="UI\Controls\NavigationPage.cs" />
     <Compile Include="UI\Controls\PageHeader.cs" />
     <Compile Include="UI\Converters\BooleanToVisibilityConverter.cs" />
+    <Compile Include="UI\Converters\ColorToObjectConverter.cs" />
+    <Compile Include="UI\Converters\DisplayableToObjectConverter.cs" />
     <Compile Include="UI\Converters\NavigationItemToObjectConverter.cs" />
     <Compile Include="UI\Converters\NullToVisibilityConverter.cs" />
+    <Compile Include="UI\Converters\SolidColorBrushToObjectConverter.cs" />
     <Compile Include="UI\Converters\ToObjectConverter.cs" />
     <Compile Include="UI\Converters\ValueConverter.cs" />
     <Compile Include="UI\DependencyObjectExtensions.cs" />
     <Compile Include="UI\DependencyObjectHierarchyService.cs" />
     <Compile Include="UI\FrameExtensions.cs" />
+    <Compile Include="UI\IAppearanceManagerEventSink.cs" />
     <Compile Include="UI\IApplicationViewEventSink.cs" />
     <Compile Include="UI\IFrameNavigationEventSink.cs" />
     <Compile Include="UI\IWindowEventSink.cs" />
@@ -160,6 +168,7 @@
     <Compile Include="UI\ThemeManager.cs" />
     <Compile Include="UI\WindowChrome.cs" />
     <Compile Include="UI\WindowExtensions.cs" />
+    <Compile Include="UI\XamlHelper.cs" />
     <Compile Include="WeakEventHandler.cs" />
     <Content Include="Properties\Intense.rd.xml" />
   </ItemGroup>
@@ -169,6 +178,10 @@
     </SDKReference>
   </ItemGroup>
   <ItemGroup>
+    <Page Include="Themes\AccentBrushes.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="Themes\Brushes.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -185,6 +198,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Page>
+    <Page Include="Themes\GridView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
     <Page Include="Themes\Intense.xaml">
       <SubType>Designer</SubType>

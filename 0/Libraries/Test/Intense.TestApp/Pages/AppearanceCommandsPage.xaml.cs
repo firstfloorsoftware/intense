@@ -1,4 +1,4 @@
-﻿using Intense.TestApp.ViewModels;
+﻿using Intense.UI;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -21,15 +21,11 @@ namespace Intense.TestApp.Pages
     /// <summary>
     /// An empty page that can be used on its own or navigated to within a Frame.
     /// </summary>
-    public sealed partial class ThemePage : Page
+    public sealed partial class AppearanceCommandsPage : Page
     {
-        public ThemePage()
+        public AppearanceCommandsPage()
         {
             this.InitializeComponent();
-
-            this.ViewModel = new ThemeViewModel();
         }
-
-        public ThemeViewModel ViewModel { get; }
     }
 }
