@@ -14,28 +14,6 @@ namespace Intense.Presentation
     /// </summary>
     public class ThemeCommands
     {
-        class WeakThemeChangedEventHandler
-        {
-            private WeakReference<ThemeCommands> reference;
-
-            public WeakThemeChangedEventHandler(ThemeCommands target)
-            {
-                this.reference = new WeakReference<ThemeCommands>(target);
-                ThemeManager.ThemeChanged += OnThemeChanged;
-            }
-
-            private void OnThemeChanged(object source, EventArgs e)
-            {
-                ThemeCommands target;
-                if (this.reference.TryGetTarget(out target)) {
-                    target.UpdateCommandStates();
-                }
-                else {
-                    ThemeManager.ThemeChanged -= OnThemeChanged;
-                }
-            }
-        }
-
         /// <summary>
         /// Initializes a new instance of the <see cref="ThemeCommands"/> class.
         /// </summary>
@@ -45,10 +23,13 @@ namespace Intense.Presentation
             this.SetLightThemeCommand = new RelayCommand(o => ThemeManager.Theme = ApplicationTheme.Light, o => ThemeManager.Theme == ApplicationTheme.Dark);
             this.ToggleThemeCommand = new RelayCommand(o => ThemeManager.Theme = ThemeManager.Theme == ApplicationTheme.Dark ? ApplicationTheme.Light : ApplicationTheme.Dark);
 
-            new WeakThemeChangedEventHandler(this);
+            ThemeManager.ThemeChanged += new WeakEventHandler<ThemeCommands, object, object, EventArgs>(this) {
+                Handle = (t, o, e) => t.OnThemeChanged(o, e),
+                Detach = (h, m) => ThemeManager.ThemeChanged -= h.OnEvent
+            }.OnEvent;
         }
 
-        private void UpdateCommandStates()
+        private void OnThemeChanged(object o, EventArgs e)
         {
             this.SetDarkThemeCommand.OnCanExecuteChanged();
             this.SetLightThemeCommand.OnCanExecuteChanged();
