@@ -134,6 +134,7 @@
     <Compile Include="Themes\Navigation.xaml.cs">
       <DependentUpon>Navigation.xaml</DependentUpon>
     </Compile>
+    <Compile Include="UI\AccentColors.cs" />
     <Compile Include="UI\ApplicationViewExtensions.cs" />
     <Compile Include="UI\Controls\ContentFrame.cs" />
     <Compile Include="UI\Controls\MasterDetailNavigationPage.xaml.cs">
