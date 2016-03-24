@@ -8,6 +8,7 @@
         <ResourceDictionary Source="Brushes.xaml" />
         <ResourceDictionary Source="Converters.xaml" />
         <ResourceDictionary Source="Frames.xaml" />
+        <ResourceDictionary Source="GridView.xaml" />
         <ResourceDictionary Source="Typography.xaml" />
     </ResourceDictionary.MergedDictionaries>
     
