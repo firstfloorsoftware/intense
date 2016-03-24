@@ -154,6 +154,7 @@
     <Compile Include="UI\TextElementHierarchyService.cs" />
     <Compile Include="UI\ThemeManager.cs" />
     <Compile Include="UI\WindowChrome.cs" />
+    <Compile Include="WeakEventHandler.cs" />
     <Content Include="Properties\Intense.rd.xml" />
   </ItemGroup>
   <ItemGroup>
