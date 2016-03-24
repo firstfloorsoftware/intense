@@ -9,6 +9,10 @@
         <NavigationItem DisplayName="ApplicationView" PageType="pages:ApplicationViewCommandsPage" />
         <NavigationItem DisplayName="Frame" PageType="pages:FrameCommandsPage" />
     </NavigationItem>
+    <NavigationItem Icon="" DisplayName="Appearance" Description="Configure the appearance of the app">
+        <NavigationItem DisplayName="Color" PageType="pages:ColorPage" />
+        <NavigationItem DisplayName="Theme" PageType="pages:ThemePage" />
+    </NavigationItem>
 </NavigationItem>
 
     
