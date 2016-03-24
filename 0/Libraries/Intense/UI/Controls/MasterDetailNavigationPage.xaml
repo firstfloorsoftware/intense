@@ -26,7 +26,7 @@
             <SplitView.Pane>
                 <ListView ItemsSource="{x:Bind NavigationItem.Items, Mode=OneWay}"
                           ItemContainerTransitions="{x:Null}"
-                          SelectedItem="{x:Bind SelectedItem, Mode=TwoWay, Converter={StaticResource NavigationItemToObjectConverter}}"
+                          SelectedItem="{x:Bind SelectedItem, Mode=TwoWay, Converter={StaticResource DisplayableToObjectConverter}}"
                           Style="{StaticResource BasicNavigationListViewStyle}" />
             </SplitView.Pane>
             <SplitView.Content>
