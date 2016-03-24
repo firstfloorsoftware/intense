@@ -4,10 +4,10 @@
                 x:Class="Intense.TestApp.NavigationStructure"
                 DisplayName="Intense.TestApp"
                 Icon="">
-    <NavigationItem Icon="" DisplayName="Commands" Description="Demonstrates the use of builtin Intense commands">
-        <NavigationItem DisplayName="Application view" PageType="pages:ApplicationViewPage" />
-        <NavigationItem DisplayName="Navigation" PageType="pages:NavigationPage" />
-        <NavigationItem DisplayName="Theme" PageType="pages:ThemePage" />
+    <NavigationItem Icon="" DisplayName="Commands" Description="Demonstrates the use of builtin Intense commands">
+        <NavigationItem DisplayName="Appearance" PageType="pages:AppearanceCommandsPage" />
+        <NavigationItem DisplayName="ApplicationView" PageType="pages:ApplicationViewCommandsPage" />
+        <NavigationItem DisplayName="Frame" PageType="pages:FrameCommandsPage" />
     </NavigationItem>
 </NavigationItem>
 

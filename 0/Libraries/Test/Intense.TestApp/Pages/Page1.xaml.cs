@@ -1,5 +1,4 @@
-﻿using Intense.UI;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -21,9 +20,9 @@ namespace Intense.TestApp.Pages
     /// <summary>
     /// An empty page that can be used on its own or navigated to within a Frame.
     /// </summary>
-    public sealed partial class ThemePage : Page
+    public sealed partial class Page1 : Page
     {
-        public ThemePage()
+        public Page1()
         {
             this.InitializeComponent();
         }
