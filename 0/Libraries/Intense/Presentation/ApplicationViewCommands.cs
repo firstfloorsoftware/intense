@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Intense.UI;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -14,29 +15,8 @@ namespace Intense.Presentation
     /// A set of commands for managing the current application view.
     /// </summary>
     public class ApplicationViewCommands
+        : IWindowEventSink
     {
-        class WeakSizeChangedEventHandler
-        {
-            private WeakReference<ApplicationViewCommands> reference;
-
-            public WeakSizeChangedEventHandler(Window source, ApplicationViewCommands target)
-            {
-                this.reference = new WeakReference<ApplicationViewCommands>(target);
-                source.SizeChanged += OnSizeChanged;
-            }
-
-            private void OnSizeChanged(object source, WindowSizeChangedEventArgs e)
-            {
-                ApplicationViewCommands target;
-                if (this.reference.TryGetTarget(out target)) {
-                    target.UpdateCommandStates();
-                }
-                else {
-                    ((Window)source).SizeChanged -= OnSizeChanged;
-                }
-            }
-        }
-        
         /// <summary>
         /// Initializes a new instance of the <see cref="ApplicationViewCommands"/> class.
         /// </summary>
@@ -47,13 +27,25 @@ namespace Intense.Presentation
             this.EnterFullScreenModeCommand = new RelayCommand(o => view.TryEnterFullScreenMode(), o => !view.IsFullScreenMode);
             this.ExitFullScreenModeCommand = new RelayCommand(o => view.ExitFullScreenMode(), o => view.IsFullScreenMode);
 
-            new WeakSizeChangedEventHandler(Window.Current, this);
+            Window.Current.RegisterEventSink(this);
         }
 
-        private void UpdateCommandStates()
+        void IWindowEventSink.OnActivated(object sender, WindowActivatedEventArgs e)
+        {
+        }
+
+        void IWindowEventSink.OnClosed(object sender, CoreWindowEventArgs e)
+        {
+        }
+
+        void IWindowEventSink.OnSizeChanged(object sender, WindowSizeChangedEventArgs e)
         {
             this.EnterFullScreenModeCommand.OnCanExecuteChanged();
             this.ExitFullScreenModeCommand.OnCanExecuteChanged();
+        }
+
+        void IWindowEventSink.OnVisibilityChanged(object sender, VisibilityChangedEventArgs e)
+        {
         }
 
         /// <summary>

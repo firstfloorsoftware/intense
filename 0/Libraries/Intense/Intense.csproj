@@ -150,10 +150,12 @@
     <Compile Include="UI\Converters\ValueConverter.cs" />
     <Compile Include="UI\DependencyObjectExtensions.cs" />
     <Compile Include="UI\DependencyObjectHierarchyService.cs" />
+    <Compile Include="UI\IWindowEventSink.cs" />
     <Compile Include="UI\NavigationApp.cs" />
     <Compile Include="UI\TextElementHierarchyService.cs" />
     <Compile Include="UI\ThemeManager.cs" />
     <Compile Include="UI\WindowChrome.cs" />
+    <Compile Include="UI\WindowExtensions.cs" />
     <Compile Include="WeakEventHandler.cs" />
     <Content Include="Properties\Intense.rd.xml" />
   </ItemGroup>
