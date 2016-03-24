@@ -150,6 +150,7 @@
     <Compile Include="UI\Controls\PageHeader.cs" />
     <Compile Include="UI\Converters\BooleanToVisibilityConverter.cs" />
     <Compile Include="UI\Converters\ColorToObjectConverter.cs" />
+    <Compile Include="UI\Converters\DisplayableToObjectConverter.cs" />
     <Compile Include="UI\Converters\NavigationItemToObjectConverter.cs" />
     <Compile Include="UI\Converters\NullToVisibilityConverter.cs" />
     <Compile Include="UI\Converters\SolidColorBrushToObjectConverter.cs" />
