@@ -118,6 +118,7 @@
     <Compile Include="IEnumerableExtensions.cs" />
     <Compile Include="IHierarchyService.cs" />
     <Compile Include="IHierarchyServiceExtensions.cs" />
+    <Compile Include="Presentation\AppearanceCommands.cs" />
     <Compile Include="Presentation\ApplicationViewCommands.cs" />
     <Compile Include="Presentation\Command.cs" />
     <Compile Include="Presentation\Displayable.cs" />
@@ -135,6 +136,8 @@
       <DependentUpon>Navigation.xaml</DependentUpon>
     </Compile>
     <Compile Include="UI\AccentColors.cs" />
+    <Compile Include="UI\AppearanceManager.cs" />
+    <Compile Include="UI\AppearanceManagerExtensions.cs" />
     <Compile Include="UI\ApplicationViewExtensions.cs" />
     <Compile Include="UI\Controls\ContentFrame.cs" />
     <Compile Include="UI\Controls\MasterDetailNavigationPage.xaml.cs">
@@ -155,6 +158,7 @@
     <Compile Include="UI\DependencyObjectExtensions.cs" />
     <Compile Include="UI\DependencyObjectHierarchyService.cs" />
     <Compile Include="UI\FrameExtensions.cs" />
+    <Compile Include="UI\IAppearanceManagerEventSink.cs" />
     <Compile Include="UI\IApplicationViewEventSink.cs" />
     <Compile Include="UI\IFrameNavigationEventSink.cs" />
     <Compile Include="UI\IWindowEventSink.cs" />
@@ -173,6 +177,10 @@
     </SDKReference>
   </ItemGroup>
   <ItemGroup>
+    <Page Include="Themes\AccentBrushes.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="Themes\Brushes.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
