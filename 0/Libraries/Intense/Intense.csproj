@@ -134,6 +134,7 @@
     <Compile Include="Themes\Navigation.xaml.cs">
       <DependentUpon>Navigation.xaml</DependentUpon>
     </Compile>
+    <Compile Include="UI\ApplicationViewExtensions.cs" />
     <Compile Include="UI\Controls\ContentFrame.cs" />
     <Compile Include="UI\Controls\MasterDetailNavigationPage.xaml.cs">
       <DependentUpon>MasterDetailNavigationPage.xaml</DependentUpon>
@@ -150,6 +151,9 @@
     <Compile Include="UI\Converters\ValueConverter.cs" />
     <Compile Include="UI\DependencyObjectExtensions.cs" />
     <Compile Include="UI\DependencyObjectHierarchyService.cs" />
+    <Compile Include="UI\FrameExtensions.cs" />
+    <Compile Include="UI\IApplicationViewEventSink.cs" />
+    <Compile Include="UI\IFrameNavigationEventSink.cs" />
     <Compile Include="UI\IWindowEventSink.cs" />
     <Compile Include="UI\NavigationApp.cs" />
     <Compile Include="UI\TextElementHierarchyService.cs" />

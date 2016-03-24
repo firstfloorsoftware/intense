@@ -13,32 +13,8 @@ namespace Intense.UI
     /// <summary>
     /// Describes customizations to the non-client area of the current window.
     /// </summary>
-    public class WindowChrome : DependencyObject
+    public class WindowChrome : DependencyObject, IApplicationViewEventSink
     {
-        class WeakVisibleBoundsChangedEventHandler
-        {
-            private WeakReference<WindowChrome> reference;
-
-            public WeakVisibleBoundsChangedEventHandler(WindowChrome target)
-            {
-                this.reference = new WeakReference<WindowChrome>(target);
-
-                var appView = ApplicationView.GetForCurrentView();
-                appView.VisibleBoundsChanged += OnVisibleBoundsChanged;
-            }
-
-            private void OnVisibleBoundsChanged(ApplicationView sender, object args)
-            {
-                WindowChrome target;
-                if (this.reference.TryGetTarget(out target)) {
-                    target.CalculateMargin();
-                }
-                else {
-                    sender.VisibleBoundsChanged -= OnVisibleBoundsChanged;
-                }
-            }
-        }
-
         /// <summary>
         /// Identifies the Chrome attached property.
         /// </summary>
@@ -64,7 +40,7 @@ namespace Intense.UI
         private bool initialized;
 
         private void CalculateMargin()
-        { 
+        {
             var appView = ApplicationView.GetForCurrentView();
             var visibleBounds = appView.VisibleBounds;
             var wndBounds = Window.Current.Bounds;
@@ -117,7 +93,8 @@ namespace Intense.UI
             SetStatusBarBackground();
             SetStatusBarForeground();
 
-            new WeakVisibleBoundsChangedEventHandler(this);
+            ApplicationView.GetForCurrentView().RegisterEventSink(this);
+
             CalculateMargin();
             ApplyMarginToTarget();
         }
@@ -212,7 +189,7 @@ namespace Intense.UI
         public static WindowChrome GetChrome(DependencyObject o)
         {
             if (o == null) {
-                throw new ArgumentNullException("o");
+                throw new ArgumentNullException(nameof(o));
             }
             return (WindowChrome)o.GetValue(ChromeProperty);
         }
@@ -225,6 +202,15 @@ namespace Intense.UI
         public static void SetChrome(DependencyObject o, WindowChrome chrome)
         {
             o.SetValue(ChromeProperty, chrome);
+        }
+
+        void IApplicationViewEventSink.OnConsolidated(ApplicationView sender, ApplicationViewConsolidatedEventArgs args)
+        {
+        }
+
+        void IApplicationViewEventSink.OnVisibleBoundsChanged(ApplicationView sender, object args)
+        {
+            CalculateMargin();
         }
     }
 }

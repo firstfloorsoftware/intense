@@ -1,4 +1,5 @@
 ﻿using Intense.Resources;
+using Intense.UI;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -16,30 +17,8 @@ namespace Intense.Presentation
     /// Provides a set of commands for navigating a frame.
     /// </summary>
     public class FrameCommands
-        : DependencyObject
+        : DependencyObject, IFrameNavigationEventSink
     {
-        class WeakNavigatedEventHandler
-        {
-            private WeakReference<FrameCommands> reference;
-
-            public WeakNavigatedEventHandler(Frame source, FrameCommands target)
-            {
-                this.reference = new WeakReference<FrameCommands>(target);
-                source.Navigated += OnNavigated;
-            }
-
-            private void OnNavigated(object source, NavigationEventArgs e)
-            {
-                FrameCommands target;
-                if (this.reference.TryGetTarget(out target)) {
-                    target.UpdateCommandStates();
-                }
-                else {
-                    ((Frame)source).Navigated -= OnNavigated;
-                }
-            }
-        }
-
         /// <summary>
         /// Identifies the Frame dependency property.
         /// </summary>
@@ -63,15 +42,14 @@ namespace Intense.Presentation
         private void OnFrameChanged(Frame oldFrame, Frame newFrame)
         {
             if (newFrame != null) {
-                // use a weak event handler, so commands instance can be garbage collected when only reference is the Frame.Navigated event
-                new WeakNavigatedEventHandler(newFrame, this);
+                newFrame.RegisterEventSink(this);
             }
 
             UpdateCommandStates();
         }
 
         private void UpdateCommandStates()
-        { 
+        {
             this.GoBackCommand.OnCanExecuteChanged();
             this.GoForwardCommand.OnCanExecuteChanged();
             this.GoHomeCommand.OnCanExecuteChanged();
@@ -134,6 +112,23 @@ namespace Intense.Presentation
                     this.Frame.GoBack();
                 }
             }
+        }
+
+        void IFrameNavigationEventSink.OnNavigated(object sender, NavigationEventArgs e)
+        {
+            UpdateCommandStates();
+        }
+
+        void IFrameNavigationEventSink.OnNavigating(object sender, NavigatingCancelEventArgs e)
+        {
+        }
+
+        void IFrameNavigationEventSink.OnNavigationFailed(object sender, NavigationFailedEventArgs e)
+        {
+        }
+
+        void IFrameNavigationEventSink.OnNavigationStopped(object sender, NavigationEventArgs e)
+        {
         }
     }
 }
