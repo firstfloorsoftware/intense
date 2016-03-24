@@ -15,7 +15,7 @@
                     <presentation:AppearanceCommands x:Key="AppearanceCommands" />
                 </StackPanel.Resources>
 
-                <TextBlock Text="Appearance" Style="{StaticResource TitleTextBlockStyle}" />
+                <TextBlock Text="Appearance" Style="{StaticResource TitleTextBlockStyle}" DataContext="{x:Bind Frame}" Visibility="{Binding PageTitleVisibility}" />
 
                 <TextBlock Text="Accent color" />
                 <StackPanel Orientation="Horizontal" Margin="0,10,0,16" >

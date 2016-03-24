@@ -11,7 +11,7 @@
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <ScrollViewer Padding="{x:Bind Frame.Padding, Mode=OneWay}">
             <StackPanel>
-                <TextBlock Text="Frame" Style="{StaticResource TitleTextBlockStyle}" />
+                <TextBlock Text="Frame" Style="{StaticResource TitleTextBlockStyle}" DataContext="{x:Bind Frame}" Visibility="{Binding PageTitleVisibility}" />
 
                 <StackPanel Orientation="Horizontal">
                     <StackPanel.Resources>
