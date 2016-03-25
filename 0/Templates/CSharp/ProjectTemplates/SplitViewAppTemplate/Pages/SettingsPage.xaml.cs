@@ -1,5 +1,6 @@
 ﻿using System;
 using Windows.UI.Xaml.Controls;
+using $safeprojectname$.Presentation;
 
 namespace $safeprojectname$.Pages
 {
@@ -11,6 +12,10 @@ namespace $safeprojectname$.Pages
         public SettingsPage()
         {
             this.InitializeComponent();
+
+            this.ViewModel = new SettingsViewModel();
         }
+
+        public SettingsViewModel ViewModel { get; }
     }
 }

@@ -117,6 +117,8 @@
     <Compile Include="Pages\WelcomePage.xaml.cs">
       <DependentUpon>WelcomePage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Presentation\DisplayableTheme.cs" />
+    <Compile Include="Presentation\SettingsViewModel.cs" />
     <Compile Include="Presentation\ShellViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
