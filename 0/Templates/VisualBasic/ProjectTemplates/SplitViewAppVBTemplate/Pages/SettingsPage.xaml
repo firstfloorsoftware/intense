@@ -9,19 +9,35 @@
     mc:Ignorable="d">
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-        <Grid.Resources>
-            <intense:ApplicationViewCommands x:Key="ApplicationViewCommands" />
-            <intense:ThemeCommands x:Key="ThemeCommands" />
-        </Grid.Resources>
-        
         <ScrollViewer Padding="{x:Bind Frame.Padding, Mode=OneWay}">
             <StackPanel>
                 <TextBlock Text="Settings" Style="{StaticResource TitleTextBlockStyle}" DataContext="{x:Bind Frame}" Visibility="{Binding PageTitleVisibility}" />
-                <Button Content="Toggle theme" Command="{Binding ToggleThemeCommand, Source={StaticResource ThemeCommands}}" />
-                <StackPanel Orientation="Horizontal" Margin="0,10">
-                    <Button Content="Enter fullscreen" Command="{Binding EnterFullScreenModeCommand, Source={StaticResource ApplicationViewCommands}}"/>
-                    <Button Content="Exit fullscreen" Command="{Binding ExitFullScreenModeCommand, Source={StaticResource ApplicationViewCommands}}" Margin="10,0" />
-                </StackPanel>
+                <ComboBox Header="Select your theme"
+                          ItemsSource="{x:Bind ViewModel.Themes, Mode=OneTime}"
+                          SelectedItem="{x:Bind ViewModel.SelectedTheme, Mode=TwoWay, Converter={StaticResource DisplayableToObjectConverter}}"
+                          Margin="0,0,0,24"/>
+
+                <TextBlock Text="Choose your color" Style="{StaticResource TitleTextBlockStyle}" />
+
+                <ToggleSwitch Header="Use the system accent color"
+                              IsOn="{x:Bind ViewModel.UseSystemAccentColor, Mode=TwoWay}" />
+
+                <GridView Header="Choose your accent color" 
+                          ItemsSource="{x:Bind ViewModel.Brushes, Mode=OneTime}"
+                          SelectedItem="{x:Bind ViewModel.SelectedBrush, Mode=TwoWay, Converter={StaticResource SolidColorBrushToObjectConverter}}"
+                          Visibility="{x:Bind ViewModel.UseSystemAccentColor, Mode=OneWay, Converter={StaticResource FalseToVisibleConverter}}"
+                          ItemContainerStyle="{StaticResource GridViewItemWithCheckBoxStyle}">
+                    <GridView.ItemsPanel>
+                        <ItemsPanelTemplate>
+                            <WrapGrid Orientation="Horizontal" MaximumRowsOrColumns="6" Margin="0,10,0,20" />
+                        </ItemsPanelTemplate>
+                    </GridView.ItemsPanel>
+                    <GridView.ItemTemplate>
+                        <DataTemplate x:DataType="SolidColorBrush">
+                            <Rectangle Fill="{x:Bind}" Width="60" Height="60" />
+                        </DataTemplate>
+                    </GridView.ItemTemplate>
+                </GridView>
             </StackPanel>
         </ScrollViewer>
     </Grid>

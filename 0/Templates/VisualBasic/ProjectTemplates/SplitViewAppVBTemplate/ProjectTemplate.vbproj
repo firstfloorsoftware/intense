@@ -125,6 +125,8 @@
     <Compile Include="Pages\WelcomePage.xaml.vb">
       <DependentUpon>WelcomePage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Presentation\DisplayableTheme.vb"/>
+    <Compile Include="Presentation\SettingsViewModel.vb"/>
     <Compile Include="Presentation\ShellViewModel.vb"/>
   </ItemGroup>
   <ItemGroup>

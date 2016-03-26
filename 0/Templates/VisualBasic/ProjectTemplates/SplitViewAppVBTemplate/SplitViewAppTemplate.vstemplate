@@ -54,6 +54,8 @@
         <ProjectItem ReplaceParameters="true" TargetFileName="WelcomePage.xaml.vb">WelcomePage.xaml.vb</ProjectItem>
       </Folder>
       <Folder Name="Presentation" TargetFolderName="Presentation">
+        <ProjectItem ReplaceParameters="true" TargetFileName="DisplayableTheme.vb">DisplayableTheme.vb</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="SettingsViewModel.vb">SettingsViewModel.vb</ProjectItem>
         <ProjectItem ReplaceParameters="true" TargetFileName="ShellViewModel.vb">ShellViewModel.vb</ProjectItem>
       </Folder>
     </Project>
