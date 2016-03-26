@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PackageManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011" xmlns:d="http://schemas.microsoft.com/developer/vsx-schema-design/2011">
   <Metadata>
-    <Identity Id="UWPTemplates.FirstFloorSoftware.41bbea9a-56db-4624-b59b-62b70adcc598" Version="0.4.0" Language="en-US" Publisher="First Floor Software" />
+    <Identity Id="UWPTemplates.FirstFloorSoftware.41bbea9a-56db-4624-b59b-62b70adcc598" Version="0.5.0" Language="en-US" Publisher="First Floor Software" />
     <DisplayName>Intense Templates</DisplayName>
     <Description xml:space="preserve">A collection of additional project and item templates for creating Universal Windows Platform (UWP) apps.</Description>
     <MoreInfo>http://intense-toolkit.com</MoreInfo>
@@ -28,6 +28,6 @@
     <Asset Type="Microsoft.VisualStudio.ProjectTemplate" d:Source="Project" d:ProjectName="NavigationAppVBTemplate" d:TargetPath="|NavigationAppVBTemplate;TemplateProjectOutputGroup|" Path="ProjectTemplates" d:VsixSubPath="ProjectTemplates" />
     <Asset Type="Microsoft.VisualStudio.ProjectTemplate" d:Source="Project" d:ProjectName="SplitViewAppTemplate" d:TargetPath="|SplitViewAppTemplate;TemplateProjectOutputGroup|" Path="ProjectTemplates" d:VsixSubPath="ProjectTemplates" />
     <Asset Type="Microsoft.VisualStudio.ProjectTemplate" d:Source="Project" d:ProjectName="SplitViewAppVBTemplate" d:TargetPath="|SplitViewAppVBTemplate;TemplateProjectOutputGroup|" Path="ProjectTemplates" d:VsixSubPath="ProjectTemplates" />
-    <Asset Type="Intense.0.4.0.nupkg" d:Source="File" Path="Packages\Intense.0.4.0.nupkg" d:VsixSubPath="Packages" />
+    <Asset Type="Intense.0.5.0.nupkg" d:Source="File" Path="Packages\Intense.0.5.0.nupkg" d:VsixSubPath="Packages" />
   </Assets>
 </PackageManifest>
