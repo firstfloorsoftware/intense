@@ -1,7 +1,7 @@
 ﻿{
   "dependencies": {
-    "Microsoft.NETCore.UniversalWindowsPlatform": "5.0.0",
-    "NuSpec.ReferenceGenerator": "1.4.0"
+    "Microsoft.NETCore.UniversalWindowsPlatform": "5.1.0",
+    "NuSpec.ReferenceGenerator": "2.0.0-beta-bld14"
   },
   "frameworks": {
     "uap10.0": {}

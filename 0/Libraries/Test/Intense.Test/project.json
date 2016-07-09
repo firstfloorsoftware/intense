@@ -1,7 +1,7 @@
 ﻿{
   "dependencies": {
-    "FluentAssertions": "4.1.0",
-    "Microsoft.NETCore.UniversalWindowsPlatform": "5.0.0"
+    "FluentAssertions": "4.11.0",
+    "Microsoft.NETCore.UniversalWindowsPlatform": "5.1.0"
   },
   "frameworks": {
     "uap10.0": {}
