@@ -92,7 +92,8 @@
   <ItemGroup>
     <!--A reference to the entire .Net Framework and Windows SDK are automatically included-->
     <None Include="Intense.Test_TemporaryKey.pfx" />
-    <None Include="project.json" />
+    <Content Include="project.json" />
+    <Content Include="segmdl2.ttf" />
     <SDKReference Include="MSTestFramework.Universal, Version=$(UnitTestPlatformVersion)" />
     <SDKReference Include="TestPlatform.Universal, Version=$(UnitTestPlatformVersion)" />
   </ItemGroup>
@@ -104,7 +105,11 @@
     <Compile Include="UnitTestApp.xaml.cs">
       <DependentUpon>UnitTestApp.xaml</DependentUpon>
     </Compile>
-    <Compile Include="NavigationItemTests.cs" />
+    <Compile Include="UnitTests\BBCodeParseTests.cs" />
+    <Compile Include="UnitTests\BBCodeTests.cs" />
+    <Compile Include="UnitTests\NavigationItemTests.cs" />
+    <Compile Include="UnitTests\SegoeMDL2FontReaderTests.cs" />
+    <Compile Include="UnitTests\FontUtilityTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <ApplicationDefinition Include="UnitTestApp.xaml">
@@ -137,6 +142,10 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\Intense.Text\Intense.Text.csproj">
+      <Project>{d30c69a5-c02c-4308-bc94-953fad748946}</Project>
+      <Name>Intense.Text</Name>
+    </ProjectReference>
     <ProjectReference Include="..\..\Intense\Intense.csproj">
       <Project>{d2a81c93-b22f-4a64-b582-8ed6ad8adc4f}</Project>
       <Name>Intense</Name>

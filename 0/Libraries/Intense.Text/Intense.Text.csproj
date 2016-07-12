@@ -1,0 +1,265 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D30C69A5-C02C-4308-BC94-953FAD748946}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Intense</RootNamespace>
+    <AssemblyName>Intense.Text</AssemblyName>
+    <DefaultLanguage>en-US</DefaultLanguage>
+    <TargetPlatformIdentifier>UAP</TargetPlatformIdentifier>
+    <TargetPlatformVersion>10.0.10586.0</TargetPlatformVersion>
+    <TargetPlatformMinVersion>10.0.10240.0</TargetPlatformMinVersion>
+    <MinimumVisualStudioVersion>14</MinimumVisualStudioVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{A5A43C5B-DE2A-4C0C-9213-0A381AF9435A};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <DocumentationFile>bin\Debug\Intense.Text.XML</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <PlatformTarget>x86</PlatformTarget>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <DocumentationFile>bin\Release\Intense.Text.XML</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|ARM'">
+    <PlatformTarget>ARM</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\ARM\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>ARM</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|ARM'">
+    <PlatformTarget>ARM</PlatformTarget>
+    <OutputPath>bin\ARM\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>ARM</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <PlatformTarget>x64</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <PlatformTarget>x64</PlatformTarget>
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <ItemGroup>
+    <!-- A reference to the entire .Net Framework and Windows SDK are automatically included -->
+    <None Include="project.json" />
+    <PRIResource Include="Resources\en-US\Resources.resw" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Navigation\DefaultLinkNavigator.cs" />
+    <Compile Include="Navigation\ILinkNavigator.cs" />
+    <Compile Include="Navigation\ILinkNavigatorExtensions.cs" />
+    <Compile Include="Navigation\Navigation.cs" />
+    <Compile Include="Navigation\NavigationCommand.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Resources\ResourceHelper.cs" />
+    <Compile Include="Text\BBCode.cs" />
+    <Compile Include="Text\Fonts\ByteArrayExtensions.cs" />
+    <Compile Include="Text\Fonts\FontFile.cs" />
+    <Compile Include="Text\Fonts\FontNames.cs" />
+    <Compile Include="Text\Fonts\FontReader.cs" />
+    <Compile Include="Text\Fonts\FontReaderExtensions.cs" />
+    <Compile Include="Text\Fonts\FontTable.cs" />
+    <Compile Include="Text\Fonts\FontTableNames.cs" />
+    <Compile Include="Text\Fonts\FontTableRecord.cs" />
+    <Compile Include="Text\Fonts\FontType.cs" />
+    <Compile Include="Text\Fonts\StreamExtensions.cs" />
+    <Compile Include="Text\Fonts\Tables\CmapEncodingTable.cs" />
+    <Compile Include="Text\Fonts\Tables\CmapEncodingTableFormat0.cs" />
+    <Compile Include="Text\Fonts\Tables\CmapEncodingTableFormat10.cs" />
+    <Compile Include="Text\Fonts\Tables\CmapEncodingTableFormat12.cs" />
+    <Compile Include="Text\Fonts\Tables\CmapEncodingTableFormat13.cs" />
+    <Compile Include="Text\Fonts\Tables\CmapEncodingTableFormat14.cs" />
+    <Compile Include="Text\Fonts\Tables\CmapEncodingTableFormat2.cs" />
+    <Compile Include="Text\Fonts\Tables\CmapEncodingTableFormat4.cs" />
+    <Compile Include="Text\Fonts\Tables\CmapEncodingTableFormat6.cs" />
+    <Compile Include="Text\Fonts\Tables\CmapEncodingTableFormat8.cs" />
+    <Compile Include="Text\Fonts\Tables\CodePageRange1.cs" />
+    <Compile Include="Text\Fonts\Tables\CodePageRange2.cs" />
+    <Compile Include="Text\Fonts\Tables\FontEmbeddingRight.cs" />
+    <Compile Include="Text\Fonts\Tables\FontSelection.cs" />
+    <Compile Include="Text\Fonts\Tables\FontTableBASE.cs" />
+    <Compile Include="Text\Fonts\Tables\FontTableCBDT.cs" />
+    <Compile Include="Text\Fonts\Tables\FontTableCBLC.cs" />
+    <Compile Include="Text\Fonts\Tables\FontTableCFF.cs" />
+    <Compile Include="Text\Fonts\Tables\FontTableCmap.cs" />
+    <Compile Include="Text\Fonts\Tables\FontTableCOLR.cs" />
+    <Compile Include="Text\Fonts\Tables\FontTableCPAL.cs" />
+    <Compile Include="Text\Fonts\Tables\FontTableCvt.cs" />
+    <Compile Include="Text\Fonts\Tables\FontTableDSIG.cs" />
+    <Compile Include="Text\Fonts\Tables\FontTableEBDT.cs" />
+    <Compile Include="Text\Fonts\Tables\FontTableEBLC.cs" />
+    <Compile Include="Text\Fonts\Tables\FontTableEBSC.cs" />
+    <Compile Include="Text\Fonts\Tables\FontTableFpgm.cs" />
+    <Compile Include="Text\Fonts\Tables\FontTableGasp.cs" />
+    <Compile Include="Text\Fonts\Tables\FontTableGDEF.cs" />
+    <Compile Include="Text\Fonts\Tables\FontTableGlyf.cs" />
+    <Compile Include="Text\Fonts\Tables\FontTableGPOS.cs" />
+    <Compile Include="Text\Fonts\Tables\FontTableGSUB.cs" />
+    <Compile Include="Text\Fonts\Tables\FontTableHdmx.cs" />
+    <Compile Include="Text\Fonts\Tables\FontTableHead.cs" />
+    <Compile Include="Text\Fonts\Tables\FontTableHhea.cs" />
+    <Compile Include="Text\Fonts\Tables\FontTableHmtx.cs" />
+    <Compile Include="Text\Fonts\Tables\FontTableJSTF.cs" />
+    <Compile Include="Text\Fonts\Tables\FontTableKern.cs" />
+    <Compile Include="Text\Fonts\Tables\FontTableLoca.cs" />
+    <Compile Include="Text\Fonts\Tables\FontTableLTSH.cs" />
+    <Compile Include="Text\Fonts\Tables\FontTableMATH.cs" />
+    <Compile Include="Text\Fonts\Tables\FontTableMaxp.cs" />
+    <Compile Include="Text\Fonts\Tables\FontTableName.cs" />
+    <Compile Include="Text\Fonts\Tables\FontTableOS2.cs" />
+    <Compile Include="Text\Fonts\Tables\FontTablePCLT.cs" />
+    <Compile Include="Text\Fonts\Tables\FontTablePost.cs" />
+    <Compile Include="Text\Fonts\Tables\FontTablePrep.cs" />
+    <Compile Include="Text\Fonts\Tables\FontTableSVG.cs" />
+    <Compile Include="Text\Fonts\Tables\FontTableVDMX.cs" />
+    <Compile Include="Text\Fonts\Tables\FontTableVhea.cs" />
+    <Compile Include="Text\Fonts\Tables\FontTableVmtx.cs" />
+    <Compile Include="Text\Fonts\Tables\FontTableVORG.cs" />
+    <Compile Include="Text\Fonts\Tables\HeaderFlags.cs" />
+    <Compile Include="Text\Fonts\Tables\HorizontalMetric.cs" />
+    <Compile Include="Text\Fonts\Tables\IBMFontClass.cs" />
+    <Compile Include="Text\Fonts\Tables\MacStyle.cs" />
+    <Compile Include="Text\Fonts\Tables\NameID.cs" />
+    <Compile Include="Text\Fonts\Tables\NameRecord.cs" />
+    <Compile Include="Text\Fonts\Tables\Panose.cs" />
+    <Compile Include="Text\Fonts\Tables\PanoseArmStyle.cs" />
+    <Compile Include="Text\Fonts\Tables\PanoseContrast.cs" />
+    <Compile Include="Text\Fonts\Tables\PanoseFamilyType.cs" />
+    <Compile Include="Text\Fonts\Tables\PanoseLetterForm.cs" />
+    <Compile Include="Text\Fonts\Tables\PanoseMidline.cs" />
+    <Compile Include="Text\Fonts\Tables\PanoseProportion.cs" />
+    <Compile Include="Text\Fonts\Tables\PanoseSerifStyle.cs" />
+    <Compile Include="Text\Fonts\Tables\PanoseStrokeVariation.cs" />
+    <Compile Include="Text\Fonts\Tables\PanoseWeight.cs" />
+    <Compile Include="Text\Fonts\Tables\PanoseXHeight.cs" />
+    <Compile Include="Text\Fonts\Tables\PermissionFlags.cs" />
+    <Compile Include="Text\Fonts\Tables\PlatformID.cs" />
+    <Compile Include="Text\Fonts\Tables\RatioRange.cs" />
+    <Compile Include="Text\Fonts\Tables\Signature.cs" />
+    <Compile Include="Text\Fonts\Tables\SignatureFormat.cs" />
+    <Compile Include="Text\Fonts\Tables\UnicodeRange1.cs" />
+    <Compile Include="Text\Fonts\Tables\UnicodeRange2.cs" />
+    <Compile Include="Text\Fonts\Tables\UnicodeRange3.cs" />
+    <Compile Include="Text\Fonts\Tables\UnicodeRange4.cs" />
+    <Compile Include="Text\Fonts\Tables\VerticalMetric.cs" />
+    <Compile Include="Text\Fonts\Typeface.cs" />
+    <Compile Include="Text\Fonts\Utility\FontXmlWriter.cs" />
+    <Compile Include="Text\Fonts\Utility\FontXmlWriterSettings.cs" />
+    <Compile Include="Text\Fonts\Utility\MacintoshGlyphNames.cs" />
+    <Compile Include="Text\Parsers\BBCode\BBCodeLexer.cs" />
+    <Compile Include="Text\Parsers\BBCode\BBCodeParser.cs" />
+    <Compile Include="Text\Parsers\BBCode\BBCodeParserSettings.cs" />
+    <Compile Include="Text\Parsers\BBCode\IBBCodeParserSettings.cs" />
+    <Compile Include="Text\Parsers\CharBuffer.cs" />
+    <Compile Include="Text\Parsers\Lexer.cs" />
+    <Compile Include="Text\Parsers\ParseException.cs" />
+    <Compile Include="Text\Parsers\Parser.cs" />
+    <Compile Include="Text\Parsers\Token.cs" />
+    <Compile Include="Text\Parsers\TokenBuffer.cs" />
+    <Compile Include="Text\QualifiedSize.cs" />
+    <Compile Include="Text\Qualifier.cs" />
+    <Compile Include="Text\Typography.cs" />
+    <Compile Include="UI\Controls\BBCodeBlock.cs" />
+    <Compile Include="UI\Controls\BBCodePage.xaml.cs">
+      <DependentUpon>BBCodePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Controls\LinkNavigationEventArgs.cs" />
+    <Compile Include="UI\Controls\LinkNavigationFailedEventArgs.cs" />
+    <Compile Include="UI\Controls\ParseFailedEventArgs.cs" />
+    <EmbeddedResource Include="Properties\Intense.Text.rd.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Intense\Intense.csproj">
+      <Project>{d2a81c93-b22f-4a64-b582-8ed6ad8adc4f}</Project>
+      <Name>Intense</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="Themes\Generic.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UI\Controls\BBCodePage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+  <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
+    <VisualStudioVersion>14.0</VisualStudioVersion>
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\WindowsXaml\v$(VisualStudioVersion)\Microsoft.Windows.UI.Xaml.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -4,7 +4,7 @@ using FluentAssertions;
 using Intense.Presentation;
 using Microsoft.VisualStudio.TestPlatform.UnitTestFramework.AppContainer;
 
-namespace Intense.Test
+namespace Intense.Test.UnitTests
 {
     [TestClass]
     public class NavigationItemTests

@@ -1,6 +1,7 @@
 ﻿<NavigationItem xmlns="using:Intense.Presentation"                            
                 xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
                 xmlns:pages="using:Intense.TestApp.Pages"
+                xmlns:controls="using:Intense.UI.Controls"
                 x:Class="Intense.TestApp.NavigationStructure"
                 DisplayName="Intense.TestApp"
                 Icon="">
@@ -12,6 +13,11 @@
     <NavigationItem Icon="" DisplayName="Appearance" Description="Configure the appearance of the app">
         <NavigationItem DisplayName="Color" PageType="pages:ColorPage" />
         <NavigationItem DisplayName="Theme" PageType="pages:ThemePage" />
+    </NavigationItem>
+    <NavigationItem Icon="" DisplayName="Text" Description="Intense text features">
+        <NavigationItem DisplayName="BBCodeBlock" PageType="pages:BBCodeBlockPage" />
+        <NavigationItem DisplayName="BBCodePage" PageType="controls:BBCodePage" PageParameter="ms-appx:///Pages/BBCode/Sample.bb" />
+        <NavigationItem DisplayName="BBCode tag reference" PageType="controls:BBCodePage" PageParameter="ms-appx:///Pages/BBCode/Reference.bb" />
     </NavigationItem>
 </NavigationItem>
 

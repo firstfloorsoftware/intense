@@ -1,0 +1,42 @@
+﻿<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:controls="using:Intense.UI.Controls"
+    xmlns:nav="using:Intense.Navigation"
+    xmlns:text="using:Intense.Text">
+
+    <Style TargetType="controls:BBCodeBlock">
+        <!-- HACK: make sure custom types and attached properties are resolved when using XamlReader.Load -->
+        <Setter Property="nav:Navigation.Command" Value="{x:Null}" />
+        <Setter Property="text:Typography.Style">
+            <Setter.Value>
+                <Style TargetType="Button">
+                    <Setter Property="Command">
+                        <Setter.Value>
+                            <nav:NavigationCommand />
+                        </Setter.Value>
+                    </Setter>
+                </Style>
+            </Setter.Value>
+        </Setter>
+
+        <Setter Property="RichTextBlockStyle">
+            <Setter.Value>
+                <Style TargetType="RichTextBlock">
+                    <Setter Property="TextWrapping" Value="Wrap" />
+                    <Setter Property="TextTrimming" Value="CharacterEllipsis" />
+                    <Setter Property="IsTextSelectionEnabled" Value="False" />
+                    <Setter Property="OpticalMarginAlignment" Value="TrimSideBearings" />
+                </Style>
+            </Setter.Value>
+        </Setter>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="controls:BBCodeBlock">
+                    <RichTextBlock x:Name="Text" Style="{TemplateBinding RichTextBlockStyle}" />
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+</ResourceDictionary>

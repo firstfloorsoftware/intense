@@ -91,6 +91,11 @@
   <ItemGroup>
     <!-- A reference to the entire .Net Framework and Windows SDK are automatically included -->
     <None Include="Intense.TestApp_TemporaryKey.pfx" />
+    <Content Include="Pages\BBCodeTagReference.bb" />
+    <Content Include="Pages\BBCodePage.bb" />
+    <Content Include="Pages\BBCode\Reference.bb" />
+    <Content Include="Pages\BBCode\Sample.bb" />
+    <Content Include="Pages\BBCode\title.bb" />
     <None Include="project.json" />
   </ItemGroup>
   <ItemGroup>
@@ -105,6 +110,9 @@
     </Compile>
     <Compile Include="Pages\ApplicationViewCommandsPage.xaml.cs">
       <DependentUpon>ApplicationViewCommandsPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\BBCodeBlockPage.xaml.cs">
+      <DependentUpon>BBCodeBlockPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pages\ColorPage.xaml.cs">
       <DependentUpon>ColorPage.xaml</DependentUpon>
@@ -161,6 +169,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Pages\BBCodeBlockPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Pages\ColorPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -187,6 +199,10 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\Intense.Text\Intense.Text.csproj">
+      <Project>{d30c69a5-c02c-4308-bc94-953fad748946}</Project>
+      <Name>Intense.Text</Name>
+    </ProjectReference>
     <ProjectReference Include="..\..\Intense\Intense.csproj">
       <Project>{d2a81c93-b22f-4a64-b582-8ed6ad8adc4f}</Project>
       <Name>Intense</Name>

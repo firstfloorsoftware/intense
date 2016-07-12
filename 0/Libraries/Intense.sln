@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Intense.Test", "Test\Intens
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Intense.TestApp", "Test\Intense.TestApp\Intense.TestApp.csproj", "{69187C2A-66DF-47FE-AF62-9595E9C5CC51}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Intense.Text", "Intense.Text\Intense.Text.csproj", "{D30C69A5-C02C-4308-BC94-953FAD748946}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -97,6 +99,26 @@ Global
 		{69187C2A-66DF-47FE-AF62-9595E9C5CC51}.Release|x86.ActiveCfg = Release|x86
 		{69187C2A-66DF-47FE-AF62-9595E9C5CC51}.Release|x86.Build.0 = Release|x86
 		{69187C2A-66DF-47FE-AF62-9595E9C5CC51}.Release|x86.Deploy.0 = Release|x86
+		{D30C69A5-C02C-4308-BC94-953FAD748946}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D30C69A5-C02C-4308-BC94-953FAD748946}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D30C69A5-C02C-4308-BC94-953FAD748946}.Debug|ARM.ActiveCfg = Debug|ARM
+		{D30C69A5-C02C-4308-BC94-953FAD748946}.Debug|ARM.Build.0 = Debug|ARM
+		{D30C69A5-C02C-4308-BC94-953FAD748946}.Debug|Mixed Platforms.ActiveCfg = Debug|x86
+		{D30C69A5-C02C-4308-BC94-953FAD748946}.Debug|Mixed Platforms.Build.0 = Debug|x86
+		{D30C69A5-C02C-4308-BC94-953FAD748946}.Debug|x64.ActiveCfg = Debug|x64
+		{D30C69A5-C02C-4308-BC94-953FAD748946}.Debug|x64.Build.0 = Debug|x64
+		{D30C69A5-C02C-4308-BC94-953FAD748946}.Debug|x86.ActiveCfg = Debug|x86
+		{D30C69A5-C02C-4308-BC94-953FAD748946}.Debug|x86.Build.0 = Debug|x86
+		{D30C69A5-C02C-4308-BC94-953FAD748946}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D30C69A5-C02C-4308-BC94-953FAD748946}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D30C69A5-C02C-4308-BC94-953FAD748946}.Release|ARM.ActiveCfg = Release|ARM
+		{D30C69A5-C02C-4308-BC94-953FAD748946}.Release|ARM.Build.0 = Release|ARM
+		{D30C69A5-C02C-4308-BC94-953FAD748946}.Release|Mixed Platforms.ActiveCfg = Release|x86
+		{D30C69A5-C02C-4308-BC94-953FAD748946}.Release|Mixed Platforms.Build.0 = Release|x86
+		{D30C69A5-C02C-4308-BC94-953FAD748946}.Release|x64.ActiveCfg = Release|x64
+		{D30C69A5-C02C-4308-BC94-953FAD748946}.Release|x64.Build.0 = Release|x64
+		{D30C69A5-C02C-4308-BC94-953FAD748946}.Release|x86.ActiveCfg = Release|x86
+		{D30C69A5-C02C-4308-BC94-953FAD748946}.Release|x86.Build.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
